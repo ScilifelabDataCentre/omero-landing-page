@@ -1,0 +1,25 @@
+{{ if eq .Kind "home" }}
+    <div class="container">
+        <section class="scilife-hero">
+            <div class="scilife-hero-content">
+                <h1 class="scilife-hero-title mb-3">SciLifeLab OMERO</h1>
+                <h2 class="scilife-hero-subtitle">
+                    A service for collaborative bioimage data management 
+                </h2>
+            </div>
+        </section>
+    </div>
+{{ else }}
+    <header class="header scilife-banner">
+        <img fetchpriority="high" src="/img/logos/banner_bg.webp" alt="Banner background">
+        <div class="container">
+            <div class="py-2 my-1">
+                {{ if .Params.banner_title }}
+                    <h1>{{ .Params.banner_title | markdownify}}</h1>
+                {{ else }}
+                    <h1>{{ .Title | markdownify }}</h1>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+{{ end }}

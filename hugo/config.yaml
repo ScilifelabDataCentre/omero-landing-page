@@ -1,0 +1,30 @@
+baseURL: "https://omero.scilifelab.se/"
+languageCode: "en-us"
+title: "Swedish National OMERO resource, hosted by SciLifeLab"
+buildFuture: true
+
+params:
+  maxSpeciesPerPage: 8
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 3
+    endLevel: 4
+    ordered: false
+
+menus:
+  main:
+  - name: About
+    pageRef: /
+    weight: 1
+  - name: Get access
+    pageRef: /get-access
+    weight: 2
+  - name: Contact us
+    pageRef: /contact
+    weight: 3
+
+
