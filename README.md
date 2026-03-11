@@ -6,6 +6,10 @@ This repository contains the hugo build files for the static landing page for th
 
 For any questions please contact omero@scilifelab.se or open an issue in this repository. 
 
+## Package
+
+This repository has a GitHub action configured that builds a container image building and serving the static website on pushes to main, as well as releases, and pushes it to the GitHub Container registry. It can also be triggered manually for testing purposes. 
+
 ## Local Development
 
 In order to make (larger) changes to the website, you can edit the files locally. 
