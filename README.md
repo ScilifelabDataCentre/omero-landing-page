@@ -53,7 +53,7 @@ If you have Hugo natively installed on your system you can run the Hugo developm
 cd hugo/
 hugo server
 ```
-The development server monitors the repository for changes and rebuilds the website continously. 
+The development server monitors the repository for changes and rebuilds the website continuously. 
 
 ### Using docker
 
