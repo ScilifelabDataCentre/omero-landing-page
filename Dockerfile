@@ -6,12 +6,17 @@ ARG HUGO_VERSION="0.157.0"
 ARG HUGO_ENV_ARG
 WORKDIR /src
 COPY ./hugo/ /src
-RUN wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" && \
-    tar xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-    rm -r hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-    mv hugo /usr/bin && \
-    chmod 755 /usr/bin/hugo && \
-    mkdir /target && \
+RUN set -eux; \
+    wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"; \
+    wget --quiet "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_checksums.txt"; \
+    # extract the relevant checksum line and verify the tarball
+    grep "hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" "hugo_${HUGO_VERSION}_checksums.txt" > hugo.checksum; \
+    sha256sum -c hugo.checksum; \
+    tar xzf "hugo_${HUGO_VERSION}_Linux-64bit.tar.gz"; \
+    rm -f "hugo_${HUGO_VERSION}_Linux-64bit.tar.gz" "hugo_${HUGO_VERSION}_checksums.txt" hugo.checksum; \
+    mv hugo /usr/bin; \
+    chmod 755 /usr/bin/hugo; \
+    mkdir /target; \
     hugo -d /target -e "${HUGO_ENV_ARG}"
 
 # Serve the generated html using nginx
