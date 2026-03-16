@@ -1,0 +1,69 @@
+name: Build Hugo site and publish static branch
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-static-site
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.157.0'
+          extended: true
+
+      - name: Build Hugo site
+        run: hugo --minify --destination public
+
+      - name: Prepare publish tree
+        run: |
+          set -euo pipefail
+
+          rm -rf out
+          mkdir -p out/site 
+
+          cp -a public/. out/site/
+
+      - name: Publish to static-site-html branch
+        env:
+          BRANCH: static-site-html
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          rm -rf publish-branch
+          mkdir publish-branch
+          cd publish-branch
+
+          git init
+          git checkout -b "${BRANCH}"
+          cp -a ../out/. .
+
+          git add --all
+          git commit -m "Publish static site from ${GITHUB_SHA}" || {
+            echo "No changes to commit"
+            exit 0
+          }
+
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force-with-lease origin "${BRANCH}"
