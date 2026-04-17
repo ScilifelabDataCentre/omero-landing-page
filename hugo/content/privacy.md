@@ -37,4 +37,4 @@ These changes posted on this page are effective immediately.
 
 ### Contact Us
 
-If you have any questions or suggestions about our privacy policy, do not hesitate to <a href="/contact">contact us</a>.
+If you have any questions or suggestions about our privacy policy, do not hesitate to [contact us]({{< relref "contact" >}}).

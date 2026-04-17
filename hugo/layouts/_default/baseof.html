@@ -22,8 +22,12 @@
             integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
 
         <!-- Local CSS -->
-        {{ $cssResource := resources.Get "css/styles.css" | resources.Minify | resources.Fingerprint }}
-        <link rel="stylesheet" href="{{ $cssResource.RelPermalink }}">
+        {{ with resources.Get "css/styles.css" }}
+          {{ with resources.ExecuteAsTemplate "css/styles.css" $ . }}
+            {{ $style := . | resources.Minify | resources.Fingerprint }}
+            <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+          {{ end }}
+        {{ end }}
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

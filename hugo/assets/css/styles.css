@@ -68,7 +68,7 @@ body {
   overflow: hidden;
   padding: 1.2rem 0rem;
   margin-bottom: 1rem;
-  background: url('/img/logos/hero_bg.webp') no-repeat center center;
+  background: url("{{ relURL "img/logos/hero_bg.webp" }}") no-repeat center center;
   background-size: cover;
   color: white;
   display: flex;
