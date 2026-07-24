@@ -92,14 +92,6 @@ function(
               name: 'site',
               emptyDir: {},
             },
-            {
-              name: 'hugo-ssh',
-              secret: {
-                optional: true,
-                defaultMode: 256,  // 256 is decimal form of 0400
-                secretName: sshSecretName,
-              },
-            },
           ],
           initContainers: [
             {
@@ -113,10 +105,6 @@ function(
                 {
                   name: 'site',
                   mountPath: '/output',
-                },
-                {
-                  name: 'hugo-ssh',
-                  mountPath: '/root/.ssh',
                 },
               ],
               command: [
