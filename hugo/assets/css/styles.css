@@ -544,6 +544,13 @@ body {
   line-height: 1.7rem;
 }
 
+/* extra space before and after headlines */
+.scilife-subsection h3,
+.scilife-subsection h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .scilife-subsection .btn {
   background-color: var(--scilife-teal);
   border-color: var(--scilife-teal);
