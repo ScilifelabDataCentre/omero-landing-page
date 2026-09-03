@@ -291,6 +291,16 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.scilife-image-credit {
+  color: var(--scilife-contrast-okay-grey);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+.scilife-image-credit a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .scilife-breadcrumbs {
   font-size: 1.125rem;
   font-weight: 500;
@@ -990,6 +1000,7 @@ p + .clipboard {
   .scilife-search-icon,
   .scilife-species-card h3,
   .scilife-footer-titles,
+  .scilife-image-credit,
   .last-updated_text {
     color: var(--scilife-light-grey);
   }
