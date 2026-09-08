@@ -88,14 +88,14 @@ count and research context are normally enough for a first review.
 
 #### Research project
 
-{{< flow direction="vertical" steps="Prepare a short project description|Email us and we guide you to SUPR|Submit your proposal in SUPR|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
+{{< flow direction="horizontal" steps="Prepare a short project description|Email us and we guide you to SUPR|Submit your proposal in SUPR|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
 
 </div>
 <div class="col-md-6">
 
 #### Facility
 
-{{< flow direction="vertical" steps="Email the OMERO team|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
+{{< flow direction="horizontal" steps="Email the OMERO team|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
 
 </div>
 </div>
