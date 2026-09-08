@@ -584,6 +584,98 @@ body {
   color: var(--scilife-grape);
 }
 
+
+/* Step flow diagrams, see the "flow" shortcode */
+.scilife-flow {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0 2rem 0;
+}
+.scilife-flow .scilife-flow-step {
+  position: relative;
+  flex: 1 1 0;
+  background-color: var(--scilife-teal-light);
+  border: 1px solid var(--scilife-teal-025);
+  border-left: 0.35rem solid var(--scilife-teal);
+  border-radius: 0.4rem;
+  padding: 0.8rem 1.1rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--scilife-dark-grey);
+}
+/* Chevron connector drawn from two borders on a rotated square */
+.scilife-flow .scilife-flow-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-right: 0.18rem solid var(--scilife-teal);
+  border-bottom: 0.18rem solid var(--scilife-teal);
+}
+
+.scilife-flow--vertical {
+  flex-direction: column;
+}
+.scilife-flow--vertical .scilife-flow-step:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.scilife-flow--vertical .scilife-flow-step:not(:last-child)::after {
+  left: 50%;
+  bottom: -1.45rem;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.scilife-flow--horizontal {
+  flex-direction: row;
+  align-items: stretch;
+}
+.scilife-flow--horizontal .scilife-flow-step:not(:last-child) {
+  margin-right: 2rem;
+}
+.scilife-flow--horizontal .scilife-flow-step:not(:last-child)::after {
+  top: 50%;
+  right: -1.35rem;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Horizontal flows get too cramped on narrow screens, so stack them instead */
+@media (max-width: 767px) {
+  .scilife-flow--horizontal {
+    flex-direction: column;
+  }
+  .scilife-flow--horizontal .scilife-flow-step:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .scilife-flow--horizontal .scilife-flow-step:not(:last-child)::after {
+    top: auto;
+    right: auto;
+    left: 50%;
+    bottom: -1.45rem;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}
+
+
+/* Bordered content panel, used for side-by-side option cards */
+.scilife-panel {
+  height: 100%;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--scilife-medium-grey);
+  border-top: 0.35rem solid var(--scilife-teal);
+  border-radius: 0.4rem;
+}
+.scilife-subsection .scilife-panel h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+.scilife-panel > :last-child {
+  margin-bottom: 0;
+}
+
 .scilife-sort-dropdown,
 .scilife-search-box,
 .scilife-search-icon {
@@ -1029,6 +1121,22 @@ p + .clipboard {
   .citation-block a {
     color: var(--scilife-grape);
   }
+
+  .scilife-flow .scilife-flow-step {
+    background-color: #2b2b2b;
+    border-color: #495057;
+    border-left-color: var(--scilife-aqua);
+    color: var(--scilife-light-grey);
+  }
+  .scilife-flow .scilife-flow-step:not(:last-child)::after {
+    border-color: var(--scilife-aqua);
+  }
+
+  .scilife-panel {
+    border-color: #495057;
+    border-top-color: var(--scilife-aqua);
+  }
+
   .scilife-no-results-alert {
     color: #f8f9fa;
     background-color: var(--scilife-dark-grey);

@@ -27,4 +27,24 @@ menus:
     pageRef: /contact
     weight: 3
 
+  sub:
+  - name: Log in to OMERO
+    url: https://omero.scilifelab.se/webclient/
+    weight: 1
+
+  # Shown instead of main + sub when the navbar collapses below the lg breakpoint
+  mobile:
+  - name: About
+    pageRef: /
+    weight: 1
+  - name: Get access
+    pageRef: /get-access
+    weight: 2
+  - name: Contact us
+    pageRef: /contact
+    weight: 3
+  - name: Log in to OMERO
+    url: https://omero.scilifelab.se/webclient/
+    weight: 4
+
 
