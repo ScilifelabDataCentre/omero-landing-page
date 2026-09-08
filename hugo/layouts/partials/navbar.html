@@ -1,8 +1,7 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" aria-label="Main navigation">
     <div class="container my-2">
 
-        <!-- aria-hidden set to prevent 2 homepage links in a row for screen readers -->
-        <a class="navbar-brand" href="/" aria-hidden="true">
+        <a class="navbar-brand" href="/">
             <img class="scilife-navbar-logo" src="{{ relURL "img/logos/scilifelab_omero_logo.svg" }}"
                 alt="The SciLifeLab OMERO logo">
         </a>
@@ -12,39 +11,43 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- First 2 navbars show up on lg screens, mobile navbar shows up for smaller screens -->
-        <div class="d-flex align-items-start align-items-lg-end flex-column collapse navbar-collapse borders">
+        <!-- First 2 navbars show up on lg screens, mobile navbar shows up for smaller screens.
+             The flex utilities sit on an inner wrapper: d-flex is display:flex !important and
+             would override the collapse plugin's hiding if placed on the collapse element. -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex flex-column align-items-start align-items-lg-end w-100">
 
-            <div class="collapse navbar-collapse scilife-navbar-main" id="navbarSupportedContent">
-                <ul class="navbar-nav d-none d-lg-flex">
-                    {{ range .Site.Menus.main }}
+                <div class="scilife-navbar-main">
+                    <ul class="navbar-nav d-none d-lg-flex">
+                        {{ range .Site.Menus.main }}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <div class="scilife-navbar-sub mb-0">
+                    <ul class="navbar-nav d-none d-lg-flex">
+                        {{ range .Site.Menus.sub }}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+
+                <div class="scilife-navbar-main">
+                    <ul class="navbar-nav d-lg-none">
+                        {{ range .Site.Menus.mobile }}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
                         </li>
-                    {{ end }}
-                </ul>
-            </div>
+                        {{ end }}
+                    </ul>
+                </div>
 
-            <div class="collapse navbar-collapse scilife-navbar-sub mb-0" id="navbarSupportedContent">
-                <ul class="navbar-nav d-none d-lg-flex">
-                    {{ range .Site.Menus.sub }}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
             </div>
-
-            <div class="collapse navbar-collapse scilife-navbar-main" id="navbarSupportedContent">
-                <ul class="navbar-nav d-lg-none">
-                    {{ range .Site.Menus.mobile }}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
-
         </div>
     </div>
 </nav>

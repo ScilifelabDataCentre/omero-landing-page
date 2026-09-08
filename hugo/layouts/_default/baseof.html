@@ -22,6 +22,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
             integrity="sha384-XGjxtQfXaH2tnPFa9x+ruJTuLE3Aa6LhHSWRr1XeTyhezb4abCG4ccI5AkVDxqC+" crossorigin="anonymous">
 
+        <!-- Brand typeface, preloaded so it is fetched alongside the stylesheet rather than after it -->
+        {{ with resources.Get "fonts/roboto-latin-wght-normal.woff2" }}
+          <link rel="preload" as="font" type="font/woff2" crossorigin href="{{ (. | resources.Fingerprint).RelPermalink }}">
+        {{ end }}
+
         <!-- Local CSS -->
         {{ with resources.Get "css/styles.css" }}
           {{ with resources.ExecuteAsTemplate "css/styles.css" $ . }}

@@ -12,8 +12,8 @@
 {{ else }}
     <div class="container">
         <header class="header scilife-banner">
-            <img fetchpriority="high" src="{{ relURL "img/logos/banner_bg.webp" }}" alt="Banner background">
-            <div class="px-4 py-2 my-1">
+            <img fetchpriority="high" src="{{ relURL "img/logos/banner_bg.webp" }}" alt="">
+            <div class="scilife-banner-content px-4 py-2 my-1">
                 {{ if .Params.banner_title }}
                     <h1>{{ .Params.banner_title | markdownify}}</h1>
                 {{ else }}
