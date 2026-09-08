@@ -4,15 +4,118 @@ date: 2026-08-19
 draft: false
 ---
 
-SciLifeLab OMERO is accessible both directly to the Swedish life science research community and to SciLifeLab image data producing units to support user projects. 
+SciLifeLab OMERO is open both to the Swedish life science research community and
+to SciLifeLab image data producing units supporting user projects. Access is
+arranged through a short, guided process, so that each project is set up to fit
+its data flow and the support available.
 
+There are two routes into the service, and they start in different places. Find
+the one that matches your situation before you write to us.
 
-#### For collaborative research projects (review-based track)
-SciLifeLab OMERO is a prototype service offering bioimage data management and visualization software for use in collaborative research projects. Any life science researcher associated with a Swedish university may submit a proposal for a time-limited project allocation via a review-based access track. Proposals are reviewed by SciLifeLab Data Centre according resource availability continuously. 
+### Which route applies to you
 
-Within the scope of an active project, image data can be uploaded, collaboratively organized and annotated in an associated OMERO group. Data access within this group is shared only with project members as managed by the proposal submitter/project lead. Data organized in SciLifeLab's OMERO instance can be accessed through a web interface in a browser, via API or directly from many common image analysis tools, both locally or on national compute infrastructures. Analysis results can be re-uploaded to SciLifeLab's OMERO instance to be related to the raw data for good image data management practices. SciLifeLab's OMERO instance supports metadata collection required for data publication in public end repositories. 
+<div class="row g-4">
+<div class="col-md-6">
+<div class="scilife-panel">
 
-Throughout the duration of project, the user is required to keep a back up of the raw data outside of SciLifeLab's OMERO instance. When the project ends the user is required to export their data and associated results. 
+#### Collaborative research project
+
+For any life science researcher associated with a Swedish university, working alone
+or in a collaboration, who needs managed image data support.
+
+Access is granted as a time-limited project allocation through a review-based
+track. You apply by submitting a proposal in the
+[Swedish User and Project Repository (SUPR)](https://supr.naiss.se), and proposals
+are reviewed continuously by SciLifeLab Data Centre according to resource
+availability.
+
+**The OMERO round in SUPR is still being set up.** For now, email us and we will
+guide you through the proposal.
+
+</div>
+</div>
+<div class="col-md-6">
+<div class="scilife-panel">
+
+#### SciLifeLab data producing unit
+
+For SciLifeLab image data producing infrastructure units that want to handle user
+projects through OMERO, for example by collaborating with users and delivering
+captured image data through the system.
+
+There is no proposal to submit. Onboarding is aligned with your existing
+operational support and project flow.
+
+**Email the OMERO team first** to discuss how your unit would use the service.
+
+</div>
+</div>
+</div>
+
+### How to request access
+
+#### Researchers: apply for a project via SUPR
+
+1. Write a short description of your project, your imaging workflow, and how you expect to use OMERO.
+2. Describe the type of data you want to manage, roughly how much of it there is, and who needs access.
+3. Email it to [omero@scilifelab.se](mailto:omero@scilifelab.se). During the current prototype stage, please contact us first and we will guide you through the steps of creating a proposal at SUPR.
+4. Submit your proposal in [SUPR](https://supr.naiss.se) once the OMERO round is open.
+5. SciLifeLab Data Centre reviews the proposal and, if it is granted, sets up your time-limited allocation and OMERO group.
+
+#### Facilities: get in touch by email
+
+1. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) describing your unit, the imaging workflows you support, and the data you expect to deliver.
+2. We discuss together how OMERO would fit your operations, including user projects, data volumes and delivery to users.
+3. Onboarding is arranged around your existing operational support, with no proposal step.
+
+### What to include in your request
+
+- Project or research group name
+- Institution and department
+- Type of imaging data
+- Estimated data size and expected growth
+- Number of users who need access
+- Whether the work is connected to a facility, platform or funded initiative
+- Any timing constraints for onboarding
+
+A short, concrete request usually speeds things up. Expected data volume, user
+count and research context are normally enough for a first review.
+
+### The request journey
+
+<div class="row g-4">
+<div class="col-md-6">
+
+#### Research project
+
+{{< flow direction="vertical" steps="Prepare a short project description|Email us and we guide you to SUPR|Submit your proposal in SUPR|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
+
+</div>
+<div class="col-md-6">
+
+#### Facility
+
+{{< flow direction="vertical" steps="Email the OMERO team|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
+
+</div>
+</div>
+
+### What happens next
+
+After your first email we review the request and follow up on the practical
+details: scope, storage expectations, who needs access, and when you want to
+start. If the allocation is granted, we guide you through setup and help 
+you organize your workspace.
+
+Within an active project, image data can be uploaded, organized and annotated
+collaboratively in an associated OMERO group. Data in that group is shared only
+with project members, as managed by the proposal submitter or project lead. You
+can reach it through the web interface, via the API, or directly from many common
+image analysis tools, locally or on national compute infrastructures. Analysis
+results can be uploaded back and linked to the raw data, and the metadata you
+collect supports later publication in public end repositories.
+
+### Before you upload
 
 {{< info_block >}} Important:
 
@@ -25,10 +128,9 @@ Throughout the duration of project, the user is required to keep a back up of th
 - SciLifeLab's OMERO instance should be able to handle any image data type supported by recent bioformats versions.
 
 - The user is required to export their data and associated results from the SciLifeLab OMERO instance when the project ends.
-{{< /info_block >}} 
+{{< /info_block >}}
 
-Interested users can submit a proposal for a collaborative project using the Swedish User and Project Repository (SUPR). During the current stage of the prototype service, please contact us at omero@scilifelab.se if interested and we will guide you through the steps of creating a proposal at SUPR. 
+Not sure whether OMERO fits your project? Ask us at
+[omero@scilifelab.se](mailto:omero@scilifelab.se) before you write a full request.
 
-#### As a SciLifeLab data producing infrastructure unit (facility track)
-
-SciLifeLab OMERO can be used by SciLifeLab image data producing units to handle user projects, e.g. by collaborating with users and delivering captured image data through the system. If interested in interacting with SciLifeLab OMERO as an infrastructure unit in any way, please contact us at omero@scilifelab.se. 
+<a class="btn" href="mailto:omero@scilifelab.se" role="button">Email the OMERO team</a>
