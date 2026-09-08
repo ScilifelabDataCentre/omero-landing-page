@@ -26,6 +26,8 @@
   --scilife-medium-grey: #A6A6A6;
   --scilife-contrast-okay-grey: #727272;
   --scilife-dark-grey: #3F3F3F;
+
+  --scilife-measure: 37rem;
 }
 
 a {
@@ -497,36 +499,65 @@ body {
   z-index: 1000;
 }
 
-.scilife-subsection h2 {
-  color: var(--scilife-teal);
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: -0.04rem;
-}
-.scilife-subsection h3 {
-  color: var(--scilife-teal);
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.04rem;
-}
+.scilife-subsection h2,
+.scilife-subsection h3,
 .scilife-subsection h4 {
   color: var(--scilife-teal);
-  font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.04rem;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.scilife-subsection h2 {
+  font-size: 2rem;
+}
+.scilife-subsection h3 {
+  font-size: 1.625rem;
+}
+.scilife-subsection h4 {
+  font-size: 1.25rem;
 }
 .scilife-subsection p,
 .scilife-subsection li {
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7rem;
+  line-height: 1.6;
+}
+.scilife-subsection li + li {
+  margin-top: 0.35rem;
 }
 
-/* extra space before and after headlines */
-.scilife-subsection h3,
+/* Keep running text at a readable line length. Scoped to direct children so
+   that text inside cards is left alone, and .scilife-flow is excluded so the
+   diagrams keep spanning the full container. */
+.scilife-subsection > p,
+.scilife-subsection > ul,
+.scilife-subsection > ol:not(.scilife-flow) {
+  max-width: var(--scilife-measure);
+}
+/* Callouts align edge to edge with the text column */
+.scilife-subsection > .scilife-alert {
+  max-width: var(--scilife-measure);
+}
+
+/* Headings sit closer to the content they introduce than to the section above */
+.scilife-subsection h3 {
+  margin-top: 3rem;
+  margin-bottom: 0.75rem;
+}
 .scilife-subsection h4 {
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.scilife-subsection > :first-child {
+  margin-top: 0;
+}
+
+/* Hairline between top-level sections. Runs the full container width rather
+   than the narrower text column, to line up with the cards and diagrams. */
+.scilife-subsection > h3 {
+  padding-top: 2rem;
+  border-top: 1px solid var(--scilife-light-grey);
 }
 
 .scilife-subsection .btn {
@@ -670,7 +701,6 @@ body {
 .scilife-subsection .scilife-panel h4 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  font-size: 1.3rem;
 }
 .scilife-panel > :last-child {
   margin-bottom: 0;
@@ -1135,6 +1165,10 @@ p + .clipboard {
   .scilife-panel {
     border-color: #495057;
     border-top-color: var(--scilife-aqua);
+  }
+
+  .scilife-subsection > h3 {
+    border-top-color: #495057;
   }
 
   .scilife-no-results-alert {
