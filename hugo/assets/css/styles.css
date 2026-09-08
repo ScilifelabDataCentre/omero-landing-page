@@ -26,8 +26,6 @@
   --scilife-medium-grey: #A6A6A6;
   --scilife-contrast-okay-grey: #727272;
   --scilife-dark-grey: #3F3F3F;
-
-  --scilife-measure: 37rem;
 }
 
 a {
@@ -525,19 +523,6 @@ body {
 }
 .scilife-subsection li + li {
   margin-top: 0.35rem;
-}
-
-/* Keep running text at a readable line length. Scoped to direct children so
-   that text inside cards is left alone, and .scilife-flow is excluded so the
-   diagrams keep spanning the full container. */
-.scilife-subsection > p,
-.scilife-subsection > ul,
-.scilife-subsection > ol:not(.scilife-flow) {
-  max-width: var(--scilife-measure);
-}
-/* Callouts align edge to edge with the text column */
-.scilife-subsection > .scilife-alert {
-  max-width: var(--scilife-measure);
 }
 
 /* Headings sit closer to the content they introduce than to the section above */
