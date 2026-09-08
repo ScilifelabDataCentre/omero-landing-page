@@ -18,7 +18,7 @@ long-term archive — you keep your own copy of the raw data throughout.
 
 ### How it works
 
-{{< flow direction="vertical" steps="Your group or facility generates image data|Upload and organize it in your OMERO project group|View, annotate and share it with your project members|Analyse, collaborate and prepare for publication" >}}
+{{< flow direction="horizontal" steps="Your group or facility generates image data|Upload and organize it in your OMERO project group|View, annotate and share it with your project members|Analyse, collaborate and prepare for publication" >}}
 
 ### What you can do
 

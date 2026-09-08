@@ -23,4 +23,4 @@ Write to us at [omero@scilifelab.se](mailto:omero@scilifelab.se).
 
 ### What happens after you write
 
-{{< flow direction="vertical" steps="You send us your question|We clarify your use case together|You get guidance, onboarding or next steps" >}}
+{{< flow direction="horizontal" steps="You send us your question|We clarify your use case together|You get guidance, onboarding or next steps" >}}
