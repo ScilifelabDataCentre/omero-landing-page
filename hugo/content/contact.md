@@ -21,6 +21,9 @@ Write to us at [omero@scilifelab.se](mailto:omero@scilifelab.se).
 - You need help understanding how users, projects and datasets can be organized
 - You are already using the service and something is not working as expected
 
+Applying for access is a separate process, described on
+[How to get access]({{< relref "get-access" >}}).
+
 ### What happens after you write
 
 {{< flow direction="horizontal" steps="You send us your question|We clarify your use case together|You get guidance, onboarding or next steps" >}}

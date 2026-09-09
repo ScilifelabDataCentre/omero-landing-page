@@ -14,7 +14,8 @@ established open-source platform for image data, and hosted by
 
 The service gives you access-controlled storage for the active stages of a
 research project. It is a place to work with your image data, not a backup or a
-long-term archive — you keep your own copy of the raw data throughout.
+long-term archive — you keep your own copy of the raw data throughout, and
+export your data and results when the project ends.
 
 ### How it works
 

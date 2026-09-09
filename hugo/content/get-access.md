@@ -23,11 +23,8 @@ the one that matches your situation before you write to us.
 For any life science researcher associated with a Swedish university, working alone
 or in a collaboration, who needs managed image data support.
 
-Access is granted as a time-limited project allocation through a review-based
-track. You apply by submitting a proposal in the
-[Swedish User and Project Repository (SUPR)](https://supr.naiss.se), and proposals
-are reviewed continuously by SciLifeLab Data Centre according to resource
-availability.
+Access is granted as a time-limited project allocation, applied for through the
+[Swedish User and Project Repository (SUPR)](https://supr.naiss.se).
 
 **The OMERO round in SUPR is still being set up.** For now, email us and we will
 guide you through the proposal.
@@ -43,10 +40,7 @@ For SciLifeLab image data producing infrastructure units that want to handle use
 projects through OMERO, for example by collaborating with users and delivering
 captured image data through the system.
 
-There is no proposal to submit. Onboarding is aligned with your existing
-operational support and project flow.
-
-**Email the OMERO team first** to discuss how your unit would use the service.
+There is no proposal to submit.
 
 </div>
 </div>
@@ -56,17 +50,11 @@ operational support and project flow.
 
 #### Researchers: apply for a project via SUPR
 
-1. Write a short description of your project, your imaging workflow, and how you expect to use OMERO.
-2. Describe the type of data you want to manage, roughly how much of it there is, and who needs access.
-3. Email it to [omero@scilifelab.se](mailto:omero@scilifelab.se). During the current prototype stage, please contact us first and we will guide you through the steps of creating a proposal at SUPR.
-4. Submit your proposal in [SUPR](https://supr.naiss.se) once the OMERO round is open.
-5. SciLifeLab Data Centre reviews the proposal and, if it is granted, sets up your time-limited allocation and OMERO group.
+{{< flow direction="horizontal" steps="Prepare a short project description|[Email us](mailto:omero@scilifelab.se) and we guide you to SUPR|Submit your proposal in [SUPR](https://supr.naiss.se)|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
 
 #### Facilities: get in touch by email
 
-1. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) describing your unit, the imaging workflows you support, and the data you expect to deliver.
-2. We discuss together how OMERO would fit your operations, including user projects, data volumes and delivery to users.
-3. Onboarding is arranged around your existing operational support, with no proposal step.
+{{< flow direction="horizontal" steps="[Email the OMERO team](mailto:omero@scilifelab.se)|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
 
 ### What to include in your request
 
@@ -78,34 +66,14 @@ operational support and project flow.
 - Whether the work is connected to a facility, platform or funded initiative
 - Any timing constraints for onboarding
 
-A short, concrete request usually speeds things up. Expected data volume, user
-count and research context are normally enough for a first review.
-
-### The request journey
-
-#### Research project
-
-{{< flow direction="horizontal" steps="Prepare a short project description|Email us and we guide you to SUPR|Submit your proposal in SUPR|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
-
-#### Facility
-
-{{< flow direction="horizontal" steps="Email the OMERO team|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
-
+A short, concrete request usually speeds things up.
 
 ### What happens next
 
-After your first email we review the request and follow up on the practical
-details: scope, storage expectations, who needs access, and when you want to
-start. If the allocation is granted, we guide you through setup and help 
-you organize your workspace.
-
-Within an active project, image data can be uploaded, organized and annotated
-collaboratively in an associated OMERO group. Data in that group is shared only
-with project members, as managed by the proposal submitter or project lead. You
-can reach it through the web interface, via the API, or directly from many common
-image analysis tools, locally or on national compute infrastructures. Analysis
-results can be uploaded back and linked to the raw data, and the metadata you
-collect supports later publication in public end repositories.
+After your first email we follow up on the practical details: scope, storage
+expectations, who needs access, and when you want to start. Your OMERO group is
+shared only with your project members, and is managed by the proposal submitter
+or project lead.
 
 ### Before you upload
 

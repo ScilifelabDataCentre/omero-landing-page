@@ -733,8 +733,10 @@ body {
   transform: translateY(-50%) rotate(-45deg);
 }
 
-/* Horizontal flows get too cramped on narrow screens, so stack them instead */
-@media (max-width: 767px) {
+/* Horizontal flows get too cramped on narrow screens, so stack them instead. Stacks
+   below lg rather than md: at 768-991px the container is 720px, which leaves a
+   five-step flow about 74px of text per step. */
+@media (max-width: 991px) {
   .scilife-flow--horizontal {
     flex-direction: column;
   }
