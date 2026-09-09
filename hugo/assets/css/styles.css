@@ -770,6 +770,33 @@ body {
   margin-bottom: 0;
 }
 
+/* Icon-led capability card, see the "cards" and "card" shortcodes. Shares the
+   border and radius of .scilife-panel, but leads with a teal icon instead of the
+   panel's heavy teal top border, which is too much repeated six times. */
+.scilife-feature-card {
+  height: 100%;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--scilife-medium-grey);
+  border-radius: 0.4rem;
+}
+.scilife-feature-icon {
+  display: block;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--scilife-teal);
+  margin-bottom: 0.75rem;
+}
+.scilife-subsection .scilife-feature-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+}
+/* Scoped to p rather than :last-child, because markdownify drops the wrapping
+   <p> on a single-line body and the rule would then flatten the heading gap. */
+.scilife-feature-card p:last-child {
+  margin-bottom: 0;
+}
+
 .scilife-sort-dropdown,
 .scilife-search-box,
 .scilife-search-icon {
@@ -1231,6 +1258,13 @@ p + .clipboard {
   .scilife-panel {
     border-color: #495057;
     border-top-color: var(--scilife-aqua);
+  }
+
+  .scilife-feature-card {
+    border-color: #495057;
+  }
+  .scilife-feature-icon {
+    color: var(--scilife-aqua);
   }
 
   .scilife-subsection > h3 {

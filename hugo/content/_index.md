@@ -17,18 +17,28 @@ research project. It is a place to work with your image data, not a backup or a
 long-term archive — you keep your own copy of the raw data throughout, and
 export your data and results when the project ends.
 
-### How it works
-
-{{< flow direction="horizontal" steps="Your group or facility generates image data|Upload and organize it in your OMERO project group|View, annotate and share it with your project members|Analyse, collaborate and prepare for publication" >}}
-
 ### What you can do
 
-- Organize, visualize and annotate image data together with your project members
-- Reach your data from a web browser, through the OMERO API, or from common image analysis tools
-- Work on the same data locally and on national HPC resources
-- Add metadata as you go, so datasets stay traceable when you return to them later
-- Share data with collaborators under access control you manage yourself
-- Collect the metadata you need to publish in public image data repositories later on
+{{< cards >}}
+{{< card icon="bi-cloud-upload" title="Upload and organize" >}}
+Bring microscopy and other image data into your OMERO project group and keep it structured.
+{{< /card >}}
+{{< card icon="bi-eye" title="View and annotate" >}}
+Visualize and annotate image data together with your project members.
+{{< /card >}}
+{{< card icon="bi-diagram-3" title="Reach it from your tools" >}}
+Work through a web browser, the OMERO API, or common image analysis tools.
+{{< /card >}}
+{{< card icon="bi-cpu" title="Work locally or on HPC" >}}
+Use the same data on your own machine and on national HPC resources.
+{{< /card >}}
+{{< card icon="bi-people" title="Share under your control" >}}
+Share with collaborators under access control you manage yourself.
+{{< /card >}}
+{{< card icon="bi-journal-text" title="Ready for publication" >}}
+Add metadata as you go, so datasets stay traceable and ready to publish in public image data repositories later.
+{{< /card >}}
+{{< /cards >}}
 
 ### Who it is for
 
