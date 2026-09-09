@@ -50,11 +50,22 @@ There is no proposal to submit.
 
 #### Researchers: apply for a project via SUPR
 
-{{< flow direction="horizontal" steps="Prepare a short project description|[Email us](mailto:omero@scilifelab.se) and we guide you to SUPR|Submit your proposal in [SUPR](https://supr.naiss.se)|Proposal reviewed by SciLifeLab Data Centre|Allocation granted and OMERO group set up" >}}
+{{< flow direction="horizontal" >}}
+{{< step icon="bi-pencil-square" >}}Prepare a short project description{{< /step >}}
+{{< step icon="bi-envelope" >}}[Email us](mailto:omero@scilifelab.se) and we guide you to SUPR{{< /step >}}
+{{< step icon="bi-send" >}}Submit your proposal in [SUPR](https://supr.naiss.se){{< /step >}}
+{{< step icon="bi-clipboard-check" >}}Proposal reviewed by SciLifeLab Data Centre{{< /step >}}
+{{< step icon="bi-check-circle" >}}Allocation granted and OMERO group set up{{< /step >}}
+{{< /flow >}}
 
 #### Facilities: get in touch by email
 
-{{< flow direction="horizontal" steps="[Email the OMERO team](mailto:omero@scilifelab.se)|We discuss workflow and data flow together|Onboarding aligned with your operations|Your unit starts delivering data through OMERO" >}}
+{{< flow direction="horizontal" >}}
+{{< step icon="bi-envelope" >}}[Email the OMERO team](mailto:omero@scilifelab.se){{< /step >}}
+{{< step icon="bi-chat-dots" >}}We discuss workflow and data flow together{{< /step >}}
+{{< step icon="bi-gear" >}}Onboarding aligned with your operations{{< /step >}}
+{{< step icon="bi-cloud-upload" >}}Your unit starts delivering data through OMERO{{< /step >}}
+{{< /flow >}}
 
 ### What to include in your request
 

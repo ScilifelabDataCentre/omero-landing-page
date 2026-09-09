@@ -1,8 +1,6 @@
-{{- /* Step flow diagram. Steps are given as a single pipe-separated string.
-       direction: "vertical" (default) or "horizontal" (collapses to vertical below md). */ -}}
+{{- /* Step flow diagram. Wraps "step" shortcodes.
+       direction: "vertical" (default) or "horizontal" (stacks below lg). */ -}}
 {{- $direction := default "vertical" (.Get "direction") -}}
 <ol class="scilife-flow scilife-flow--{{ $direction }}">
-    {{- range (split (.Get "steps") "|") }}
-    <li class="scilife-flow-step">{{ trim . " " | markdownify }}</li>
-    {{- end }}
+    {{ .Inner }}
 </ol>

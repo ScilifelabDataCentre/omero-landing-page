@@ -678,25 +678,55 @@ body {
 }
 
 
-/* Step flow diagrams, see the "flow" shortcode */
+/* Step flow diagrams, see the "flow" and "step" shortcodes */
 .scilife-flow {
   display: flex;
   list-style: none;
   padding-left: 0;
   margin: 1.5rem 0 2rem 0;
+  /* Reset per flow, so a second flow on the same page starts again at Step 1 */
+  counter-reset: scilife-step;
 }
 .scilife-flow .scilife-flow-step {
   position: relative;
   flex: 1 1 0;
-  background-color: var(--scilife-teal-light);
-  border: 1px solid var(--scilife-teal-025);
-  border-left: 0.35rem solid var(--scilife-teal);
+  counter-increment: scilife-step;
+  /* Same border and radius as .scilife-feature-card, so a process and a
+     capability grid read as one family. The teal accent that used to be the
+     left border now sits on the badge. */
+  border: 1px solid var(--scilife-medium-grey);
   border-radius: 0.4rem;
-  padding: 0.8rem 1.1rem;
-  font-size: 1.0625rem;
-  font-weight: 500;
+  padding: 1.1rem 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--scilife-dark-grey);
+}
+.scilife-step-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: var(--scilife-teal-light);
+  color: var(--scilife-teal);
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+.scilife-step-number {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--scilife-teal);
+  margin-bottom: 0.15rem;
+}
+.scilife-step-number::before {
+  content: "Step " counter(scilife-step);
+}
+.scilife-flow-step p:last-child {
+  margin-bottom: 0;
 }
 /* Chevron connector drawn from two borders on a rotated square */
 .scilife-flow .scilife-flow-step:not(:last-child)::after {
@@ -1246,13 +1276,18 @@ p + .clipboard {
   }
 
   .scilife-flow .scilife-flow-step {
-    background-color: #2b2b2b;
     border-color: #495057;
-    border-left-color: var(--scilife-aqua);
     color: var(--scilife-light-grey);
   }
   .scilife-flow .scilife-flow-step:not(:last-child)::after {
     border-color: var(--scilife-aqua);
+  }
+  .scilife-step-badge {
+    background-color: #2b2b2b;
+    color: var(--scilife-aqua);
+  }
+  .scilife-step-number {
+    color: var(--scilife-aqua);
   }
 
   .scilife-panel {

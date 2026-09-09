@@ -26,4 +26,8 @@ Applying for access is a separate process, described on
 
 ### What happens after you write
 
-{{< flow direction="horizontal" steps="You send us your question|We clarify your use case together|You get guidance, onboarding or next steps" >}}
+{{< flow direction="horizontal" >}}
+{{< step icon="bi-envelope" >}}You send us your question{{< /step >}}
+{{< step icon="bi-chat-dots" >}}We clarify your use case together{{< /step >}}
+{{< step icon="bi-signpost-split" >}}You get guidance, onboarding or next steps{{< /step >}}
+{{< /flow >}}
