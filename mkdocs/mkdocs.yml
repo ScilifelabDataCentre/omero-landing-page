@@ -12,7 +12,7 @@ site_description: How to use the SciLifeLab OMERO prototype service, from first 
 # it needs a real hostname. deploy.jsonnet passes DOCS_SITE_URL from its own
 # hostname parameter, so a staging deployment gets its own canonicals without
 # anyone editing this file.
-site_url: !ENV [DOCS_SITE_URL, "https://omero.scilifelab.se/docs/"]
+site_url: !ENV [DOCS_SITE_URL, "https://omero-staging.c3se.chalmers.se/docs/"] 
 use_directory_urls: true
 
 # Not strict. The docs share a pod with the landing page, so both init
@@ -85,18 +85,10 @@ validation:
 # until they have real content. Remove a line here and add the page to nav below
 # when it is written.
 not_in_nav: |
-  getting-started/groups-and-membership.md
-  using-omero/viewing-and-annotating.md
-  using-omero/searching.md
-  clients-and-apis/*.md
-  workflows/*.md
-  data-management/metadata-for-publication.md
-  data-management/exporting.md
-  data-management/publishing.md
+  workflows/hpc.md
   data-management/sensitive-data.md
   reference/quotas-and-limits.md
   reference/service-status.md
-  reference/glossary.md
   reference/troubleshooting.md
 
 nav:
@@ -104,14 +96,32 @@ nav:
   - Getting started:
       - Accounts and login: getting-started/accounts-and-login.md
       - First steps: getting-started/first-steps.md
+      - Groups and membership: getting-started/groups-and-membership.md
   - Using OMERO:
       - Organising your data: using-omero/organising-data.md
       - Uploading data: using-omero/uploading.md
       - Supported formats: using-omero/supported-formats.md
+      - Viewing and annotating: using-omero/viewing-and-annotating.md
+      - Searching: using-omero/searching.md
       - Sharing with collaborators: using-omero/sharing.md
+  - Clients and APIs:
+      - OMERO.web: clients-and-apis/web-client.md
+      - OMERO.insight: clients-and-apis/omero-insight.md
+      - Fiji and ImageJ: clients-and-apis/fiji-imagej.md
+      - napari: clients-and-apis/napari.md
+      - Python API: clients-and-apis/python-api.md
+      - Command line: clients-and-apis/command-line.md
+  - Workflows:
+      - Analysing data on your own machine: workflows/local-analysis.md
+      - Batch operations: workflows/batch-operations.md
+      - Delivering data as a facility: workflows/facility-delivery.md
   - Data management:
+      - Exporting your data: data-management/exporting.md
+      - Metadata for publication: data-management/metadata-for-publication.md
+      - Publishing to a public repository: data-management/publishing.md
       - When your project ends: data-management/end-of-project.md
   - Reference:
       - Frequently asked questions: reference/faq.md
+      - Glossary: reference/glossary.md
   - Getting help: support.md
   - SciLifeLab OMERO service site: /landing/
