@@ -64,4 +64,4 @@ principal investigator is affiliated with a Swedish university.
 
 <a class="btn" href="{{< relref "get-access" >}}" role="button">Get access</a>
 <a class="btn" href="/docs/" role="button">Read the documentation</a>
-<a class="btn scilife-external-btn" href="https://omero.scilifelab.se/webclient/" role="button">Log in to SciLifeLab OMERO</a>
+<a class="btn scilife-external-btn" href="/webclient/" role="button">Log in to SciLifeLab OMERO</a>

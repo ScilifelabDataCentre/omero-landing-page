@@ -145,6 +145,15 @@ function(
                   mountPath: '/output',
                 },
               ],
+              // mkdocs.yml reads this for site_url, which drives the canonical
+              // tags and the sitemap. Derived from the deployment hostname so a
+              // staging deployment does not advertise production URLs.
+              env: [
+                {
+                  name: 'DOCS_SITE_URL',
+                  value: 'https://%s/%s/' % [hostname, docsSubPath],
+                },
+              ],
               // The image entrypoint is mkdocs itself, so it has to be replaced
               // to get a shell for the clone step.
               command: ['/bin/sh'],

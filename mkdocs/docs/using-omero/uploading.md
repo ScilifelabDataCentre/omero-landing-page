@@ -18,4 +18,4 @@ The routes for getting image data into your group, and which to use when.
 
 ## Before you upload
 
-Uploaded data must contain no personal data. See the [access page](https://omero-staging.c3se.chalmers.se/landing/get-access/) for the full set of rules that apply to your data.
+Uploaded data must contain no personal data. See the [access page](/landing/get-access/) for the full set of rules that apply to your data.

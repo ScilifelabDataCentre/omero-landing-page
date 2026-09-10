@@ -25,9 +25,15 @@ menus:
     weight: 3
 
   sub:
+  # The web client lives at the root of the same host, while this site sits under
+  # the /landing prefix. Hugo prefixes a relative menu "url" with the baseURL
+  # path, which would produce /landing/webclient/, so the path is carried in
+  # params.href instead and the navbar renders that verbatim. Keeping it
+  # host-relative means a staging deployment does not link to production.
   - name: Log in to OMERO
-    url: https://omero.scilifelab.se/webclient/
     weight: 1
+    params:
+      href: /webclient/
 
   # Shown instead of main + sub when the navbar collapses below the lg breakpoint
   mobile:
@@ -41,7 +47,8 @@ menus:
     pageRef: /contact
     weight: 3
   - name: Log in to OMERO
-    url: https://omero.scilifelab.se/webclient/
     weight: 4
+    params:
+      href: /webclient/
 
 
