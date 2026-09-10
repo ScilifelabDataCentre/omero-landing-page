@@ -7,7 +7,9 @@ function(
   gatewaySection='https',
   hostname='omero.scilifelab.se',
   subPath='landing',
-  hugoImage='ghcr.io/gohugoio/hugo:v0.160.1'
+  docsSubPath='docs',
+  hugoImage='ghcr.io/gohugoio/hugo:v0.160.1',
+  mkdocsImage='squidfunk/mkdocs-material:9.7.7'
 ) [
   {
     apiVersion: 'v1',
@@ -54,6 +56,12 @@ function(
                 value: '/%s' % subPath,
               },
             },
+            {
+              path: {
+                type: 'PathPrefix',
+                value: '/%s' % docsSubPath,
+              },
+            },
           ],
           backendRefs: [
             {
@@ -92,6 +100,10 @@ function(
               name: 'site',
               emptyDir: {},
             },
+            {
+              name: 'docs',
+              emptyDir: {},
+            },
           ],
           initContainers: [
             {
@@ -120,6 +132,34 @@ function(
                 ||| % { url: url, commit: commit, hostname: hostname, subPath: subPath },
               ],
             },
+            {
+              name: 'build-docs',
+              image: mkdocsImage,
+              securityContext: {
+                runAsGroup: 0,
+                runAsUser: 0,
+              },
+              volumeMounts: [
+                {
+                  name: 'docs',
+                  mountPath: '/output',
+                },
+              ],
+              // The image entrypoint is mkdocs itself, so it has to be replaced
+              // to get a shell for the clone step.
+              command: ['/bin/sh'],
+              args: [
+                '-c',
+                |||
+                  set -e
+                  echo "Checking out repo"
+                  git clone %(url)s ./repo
+                  cd ./repo && git checkout %(commit)s
+                  echo "Building MkDocs site..."
+                  cd mkdocs && mkdocs build --site-dir /output
+                ||| % { url: url, commit: commit },
+              ],
+            },
           ],
           containers: [
             {
@@ -129,6 +169,10 @@ function(
                 {
                   name: 'site',
                   mountPath: '/usr/share/nginx/html/%s' % subPath,
+                },
+                {
+                  name: 'docs',
+                  mountPath: '/usr/share/nginx/html/%s' % docsSubPath,
                 },
               ],
               ports: [

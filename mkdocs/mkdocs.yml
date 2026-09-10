@@ -1,0 +1,108 @@
+# User documentation for the SciLifeLab OMERO prototype service.
+# Built into its own volume by an init container and served by the same nginx
+# that serves the landing page, under the /docs path prefix. See deploy.jsonnet
+# and docs/architecture/002_technical-documentation.md.
+
+# The header shows the SciLifeLab OMERO wordmark next to this, so the site name
+# only needs to supply the second half. The full browser title is assembled in
+# overrides/main.html.
+site_name: Documentation
+site_description: How to use the SciLifeLab OMERO prototype service, from first login to exporting your data at the end of a project.
+site_url: https://omero.scilifelab.se/docs/
+use_directory_urls: true
+
+# Not strict. The docs share a pod with the landing page, so both init
+# containers have to succeed for either site to come up. Failing the docs build
+# on a warning would take the landing page down with it.
+strict: false
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/scilifelab_omero_logo.svg
+  favicon: assets/favicon-32x32.png
+  # Google Fonts disabled. Roboto is the SciLifeLab brand typeface and is
+  # self-hosted in assets/stylesheets/extra.css, so that no visitor data leaves
+  # our infrastructure. Same reasoning as the landing page stylesheet.
+  font: false
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+validation:
+  unrecognized_links: warn
+  anchors: warn
+
+# Pages that exist as skeletons but are deliberately kept out of the navigation
+# until they have real content. Remove a line here and add the page to nav below
+# when it is written.
+not_in_nav: |
+  getting-started/groups-and-membership.md
+  using-omero/viewing-and-annotating.md
+  using-omero/searching.md
+  clients-and-apis/*.md
+  workflows/*.md
+  data-management/metadata-for-publication.md
+  data-management/exporting.md
+  data-management/publishing.md
+  data-management/sensitive-data.md
+  reference/quotas-and-limits.md
+  reference/service-status.md
+  reference/glossary.md
+  reference/troubleshooting.md
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Accounts and login: getting-started/accounts-and-login.md
+      - First steps: getting-started/first-steps.md
+  - Using OMERO:
+      - Organising your data: using-omero/organising-data.md
+      - Uploading data: using-omero/uploading.md
+      - Supported formats: using-omero/supported-formats.md
+      - Sharing with collaborators: using-omero/sharing.md
+  - Data management:
+      - When your project ends: data-management/end-of-project.md
+  - Reference:
+      - Frequently asked questions: reference/faq.md
+  - Getting help: support.md
+  - SciLifeLab OMERO service site: https://omero.scilifelab.se/landing/

@@ -1,10 +1,7 @@
 baseURL: "https://omero.scilifelab.se/"
 languageCode: "en-us"
-title: "Swedish National OMERO resource, hosted by SciLifeLab"
+title: "SciLifeLab OMERO, a prototype service for bioimage data management"
 buildFuture: true
-
-params:
-  maxSpeciesPerPage: 8
 
 markup:
   goldmark:
