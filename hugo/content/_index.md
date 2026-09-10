@@ -46,7 +46,7 @@ There is no direct route from the service into those repositories yet.
 
 ### Who it is for
 
-- **Research groups at Swedish universities** producing microscopy and other image
+- **Research groups at Swedish universities** producing or using microscopy and other image
   data who need something more robust than local drives and file-by-file sharing
 - **SciLifeLab facilities**, to run user projects and deliver captured data
 
