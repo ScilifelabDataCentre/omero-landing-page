@@ -1,15 +1,16 @@
 ---
 title: "About"
 description: "SciLifeLab OMERO is a prototype service for collaborative bioimage data management, built on the open-source OMERO platform and hosted by SciLifeLab Data Centre."
-date: 2026-08-19
+date: 2026-09-10
 draft: false
 ---
 
-SciLifeLab OMERO is a prototype bioimage data management service for the Swedish
-life science community. It is a shared place to store, organize, view, annotate
-and share microscopy and other image data together with the people you work
-with. It is built on [OMERO](https://www.openmicroscopy.org/omero/), the
-established open-source platform for image data, and hosted by
+SciLifeLab OMERO is a prototype bioimage data management service for researchers
+at Swedish universities and for SciLifeLab facilities. It is a shared place to
+store, organize, view, annotate and share microscopy and other image data
+together with the people you work with. It is built on
+[OMERO](https://www.openmicroscopy.org/omero/), the established open-source
+platform for image data, and hosted by
 [SciLifeLab Data Centre](https://www.scilifelab.se/data/).
 
 The service gives you access-controlled storage for the active stages of a
@@ -27,34 +28,40 @@ Bring microscopy and other image data into your OMERO project group and keep it 
 Visualize and annotate image data together with your project members.
 {{< /card >}}
 {{< card icon="bi-diagram-3" title="Reach it from your tools" >}}
-Work through a web browser, the OMERO API, or common image analysis tools.
+Work in a web browser, or connect from OMERO.insight, Fiji, napari, the omero command line or the Python API.
 {{< /card >}}
 {{< card icon="bi-cpu" title="Work locally or on HPC" >}}
-Use the same data on your own machine and on national HPC resources.
+Reach the same data from your own machine or from a compute cluster through the OMERO API.
 {{< /card >}}
 {{< card icon="bi-people" title="Share under your control" >}}
 Share with collaborators under access control you manage yourself.
 {{< /card >}}
 {{< card icon="bi-journal-text" title="Ready for publication" >}}
-Add metadata as you go, so datasets stay traceable and ready to publish in public image data repositories later.
+Add metadata as you go, so a dataset is still traceable and intelligible when you come to publish it.
 {{< /card >}}
 {{< /cards >}}
 
+Submitting a dataset to a public image data repository is a manual step for now.
+There is no direct route from the service into those repositories yet.
+
 ### Who it is for
 
-- **Research groups** producing microscopy and other image data who need something more
-  robust than local drives and file-by-file sharing
-- **SciLifeLab image data producing infrastructure units**, to run user projects and
-  deliver captured data
-- **Collaborators** across the Swedish life science community who need access to a
-  curated image collection
+- **Research groups at Swedish universities** producing microscopy and other image
+  data who need something more robust than local drives and file-by-file sharing
+- **SciLifeLab facilities**, to run user projects and deliver captured data
+
+Collaborators based outside Sweden can be members of a group, as long as the
+principal investigator is affiliated with a Swedish university.
 
 {{< info_block >}} Good to know:
 
-- SciLifeLab OMERO is a prototype service, so access is arranged in a guided way to match your project and the support available.
+- The service is free of charge. It is a prototype, so access is arranged in a guided way to match your project and the support available.
 
-- You keep your own independent copy of the raw data, and export your data and results when the project ends.
+- Your data is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
+
+- Availability is best effort. There is no uptime target, and maintenance can happen without advance notice.
 {{< /info_block >}}
 
 <a class="btn" href="{{< relref "get-access" >}}" role="button">Get access</a>
+<a class="btn" href="/docs/" role="button">Read the documentation</a>
 <a class="btn scilife-external-btn" href="https://omero.scilifelab.se/webclient/" role="button">Log in to SciLifeLab OMERO</a>

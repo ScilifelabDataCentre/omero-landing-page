@@ -1,8 +1,10 @@
 ---
 title: Terms of use
-date: 2026-08-19
-draft: false
+date: 2026-09-10
+draft: true
 ---
 
-
-<Put text here>
+<!--
+  TODO
+  Write the terms of use for the OMERO service.
+-->

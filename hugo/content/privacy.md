@@ -8,9 +8,26 @@ SciLifeLab operates the [https://omero.scilifelab.se](https://omero.scilifelab.s
 
 This page is used to inform website visitors regarding our personal and technical data processing policy. If you choose to use our **Service**, then your personal and technical data will be processed in accordance with this policy.
 
+The policy covers both these public web pages and the SciLifeLab OMERO service itself, which you reach after being granted access to a project.
+
 ### Personal data
 
 The personal information that we collect as part of the **Service** is solely used for providing and improving the **Service**. We will not use or share your information with anyone except as described in this policy. All collected personal information will be processed for research purposes, i.e. using the lawful basis of public interest and in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016, the General Data Protection Regulation.
+
+### Personal data in the SciLifeLab OMERO service
+
+If you are granted access to SciLifeLab OMERO, we hold the account information needed to operate the **Service** and to administer your project allocation. This is typically your name, email address, institutional affiliation, and the groups you are a member of, together with records of your activity in the system, such as when you signed in and what you imported.
+
+No personal data may be uploaded to SciLifeLab OMERO. That rule applies to image content, filenames and metadata alike, so the image data held in the **Service** is not expected to contain personal data. The full set of rules that apply to data you upload is on [How to get access]({{< relref "get-access" >}}).
+
+Data held in the **Service** is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
+
+<!--
+  This section was added alongside the 2026 content review and has not yet been
+  through a DPO or legal review at SciLifeLab. The controller and processor
+  roles for service data are still to be confirmed.
+  See docs/open-service-questions.md.
+-->
 
 ### Log data
 
