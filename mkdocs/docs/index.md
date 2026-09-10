@@ -6,7 +6,7 @@ How to use the SciLifeLab OMERO prototype service, from your first login to expo
 
     The documentation is new and most pages are still empty. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) if you need something that is not covered yet.
 
-For what the service is, who can use it and how to apply for access, see the [service site](https://omero.scilifelab.se/landing/).
+For what the service is, who can use it and how to apply for access, see the [service site](https://omero-staging.c3se.chalmers.se/landing/).
 
 ## Start here
 
