@@ -2,3 +2,4 @@
 hugo/public
 hugo/.hugo_build.lock
 old_docs
+.DS_Store
