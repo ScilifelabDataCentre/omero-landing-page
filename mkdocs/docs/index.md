@@ -10,13 +10,13 @@ For what the service is, who can use it and how to apply for access, see the [se
 
 Much of what follows is a short orientation plus a link into the [OMERO guides](https://omero-guides.readthedocs.io/) and the [OMERO documentation](https://omero.readthedocs.io/en/stable/users/), which are written and maintained by the Open Microscopy Environment. Where a page describes something specific to this service, such as the connection details or what your allocation allows, that part is ours.
 
-## Start here
+## Getting started
 
 - [Accounts and login](getting-started/accounts-and-login.md)
 - [First steps](getting-started/first-steps.md)
 - [Groups and membership](getting-started/groups-and-membership.md)
 
-## Working with your data
+## Using OMERO
 
 - [Organising your data](using-omero/organising-data.md)
 - [Uploading data](using-omero/uploading.md)
@@ -29,8 +29,10 @@ Much of what follows is a short orientation plus a link into the [OMERO guides](
 
 - [OMERO.web](clients-and-apis/web-client.md), the browser client
 - [OMERO.insight](clients-and-apis/omero-insight.md), the desktop client and the way to import
+- [Fiji and ImageJ](clients-and-apis/fiji-imagej.md)
+- [napari](clients-and-apis/napari.md)
+- [Python API](clients-and-apis/python-api.md)
 - [Command line](clients-and-apis/command-line.md), for large or repeated operations
-- [Fiji and ImageJ](clients-and-apis/fiji-imagej.md), [napari](clients-and-apis/napari.md) and the [Python API](clients-and-apis/python-api.md)
 
 ## Workflows
 
@@ -38,14 +40,16 @@ Much of what follows is a short orientation plus a link into the [OMERO guides](
 - [Batch operations](workflows/batch-operations.md)
 - [Delivering data as a facility](workflows/facility-delivery.md)
 
-## Ending a project
+## Data management
 
 - [Exporting your data](data-management/exporting.md)
 - [Metadata for publication](data-management/metadata-for-publication.md)
+- [Publishing to a public repository](data-management/publishing.md)
 - [When your project ends](data-management/end-of-project.md)
 
-## Help
+## Reference
 
 - [Frequently asked questions](reference/faq.md)
 - [Glossary](reference/glossary.md)
-- [Getting help](support.md)
+
+Not finding what you need? [Getting help](support.md) explains where to take a question, depending on whether it is about OMERO itself or about this service.
