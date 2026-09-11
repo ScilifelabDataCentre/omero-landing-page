@@ -1,0 +1,127 @@
+# User documentation for the SciLifeLab OMERO prototype service.
+# Built into its own volume by an init container and served by the same nginx
+# that serves the landing page, under the /docs path prefix. See deploy.jsonnet
+# and docs/architecture/002_technical-documentation.md.
+
+# The header shows the SciLifeLab OMERO wordmark next to this, so the site name
+# only needs to supply the second half. The full browser title is assembled in
+# overrides/main.html.
+site_name: Documentation
+site_description: How to use the SciLifeLab OMERO prototype service, from first login to exporting your data at the end of a project.
+# Drives the canonical tags and the sitemap, so unlike the cross-site links below
+# it needs a real hostname. deploy.jsonnet passes DOCS_SITE_URL from its own
+# hostname parameter, so a staging deployment gets its own canonicals without
+# anyone editing this file.
+site_url: !ENV [DOCS_SITE_URL, "https://omero-staging.c3se.chalmers.se/docs/"] 
+use_directory_urls: true
+
+# Not strict. The docs share a pod with the landing page, so both init
+# containers have to succeed for either site to come up. Failing the docs build
+# on a warning would take the landing page down with it.
+strict: false
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/scilifelab_omero_logo.svg
+  favicon: assets/favicon-32x32.png
+  # Google Fonts disabled. Roboto is the SciLifeLab brand typeface and is
+  # self-hosted in assets/stylesheets/extra.css, so that no visitor data leaves
+  # our infrastructure. Same reasoning as the landing page stylesheet.
+  font: false
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+validation:
+  # Absolute links here point at the Hugo site under the sibling /landing prefix,
+  # or at the OMERO web client at /webclient, so they are deliberate. Never set
+  # this to relative_to_docs: that would try to resolve them inside docs_dir and
+  # report them as broken.
+  absolute_links: ignore
+  unrecognized_links: warn
+  anchors: warn
+
+# Pages that exist as skeletons but are deliberately kept out of the navigation
+# until they have real content. Remove a line here and add the page to nav below
+# when it is written.
+not_in_nav: |
+  workflows/hpc.md
+  data-management/sensitive-data.md
+  reference/quotas-and-limits.md
+  reference/service-status.md
+  reference/troubleshooting.md
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Accounts and login: getting-started/accounts-and-login.md
+      - First steps: getting-started/first-steps.md
+      - Groups and membership: getting-started/groups-and-membership.md
+  - Using OMERO:
+      - Organising your data: using-omero/organising-data.md
+      - Uploading data: using-omero/uploading.md
+      - Supported formats: using-omero/supported-formats.md
+      - Viewing and annotating: using-omero/viewing-and-annotating.md
+      - Searching: using-omero/searching.md
+      - Sharing with collaborators: using-omero/sharing.md
+  - Clients and APIs:
+      - OMERO.web: clients-and-apis/web-client.md
+      - OMERO.insight: clients-and-apis/omero-insight.md
+      - Fiji and ImageJ: clients-and-apis/fiji-imagej.md
+      - napari: clients-and-apis/napari.md
+      - Python API: clients-and-apis/python-api.md
+      - Command line: clients-and-apis/command-line.md
+  - Workflows:
+      - Analysing data on your own machine: workflows/local-analysis.md
+      - Batch operations: workflows/batch-operations.md
+      - Delivering data as a facility: workflows/facility-delivery.md
+  - Data management:
+      - Exporting your data: data-management/exporting.md
+      - Metadata for publication: data-management/metadata-for-publication.md
+      - Publishing to a public repository: data-management/publishing.md
+      - When your project ends: data-management/end-of-project.md
+  - Reference:
+      - Frequently asked questions: reference/faq.md
+      - Glossary: reference/glossary.md
+  - Getting help: support.md
+  - SciLifeLab OMERO service site: /landing/

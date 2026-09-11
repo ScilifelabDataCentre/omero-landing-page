@@ -10,7 +10,10 @@
                     <li><a href="{{ relURL "" }}">About</a></li>
                     <li><a href="{{ relURL "get-access" }}">Get access</a></li>
                     <li><a href="{{ relURL "contact" }}">Contact us</a></li>
-                    <li><a href="{{ relURL "terms" }}">Terms of use</a></li>
+                    <li><a href="/docs/">Documentation</a></li>
+                    {{/* Terms of use is a draft and unpublished, so it is
+                         deliberately absent here. Add it back alongside the
+                         page itself. */}}
                     <li><a href="{{ relURL "privacy" }}">Privacy policy</a></li>
                 </ul>
             </div>
@@ -20,10 +23,8 @@
             <div class="col-xl-5">
                 <h2 class="scilife-footer-titles">About SciLifeLab OMERO</h2>
                 <p>
-                    The SciLifeLab OMERO service is developed and maintained by the DDLS Data Science Node in 
-                    Cell and Molecular Biology (DSN-CMB) team as part of the 
-                    <a href="https://data.scilifelab.se/" target="_blank">SciLifeLab Data Platform</a>, 
-                    operated by the SciLifeLab Data Centre. Members of the DSN-CMB team are affiliated with 
+                    The SciLifeLab OMERO prototype service is developed and operated by the SciLifeLab Data Centre. 
+                    Members of the team are affiliated with 
                     <a href="https://www.scilifelab.se/data/" target="_blank">SciLifeLab Data Centre</a> and 
                     <a href="https://www.chalmers.se/en/infrastructure/ecommons/" target="_blank">Chalmers e-Commons</a>, 
                     based at Chalmers University and Uppsala University. This service is supported by SciLifeLab 
@@ -55,6 +56,10 @@
 
             </div>
         </div>
+
+        <p class="scilife-image-credit mt-3 mb-0">
+            Background imagery is AI-generated and does not depict real experimental data.
+        </p>
 
     </div>
 </footer>

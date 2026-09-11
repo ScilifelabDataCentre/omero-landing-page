@@ -1,0 +1,11 @@
+{{- /* A single capability card, used inside the "cards" shortcode.
+       icon: a bootstrap-icons class name, for example "bi-cloud-upload".
+       title: the card heading.
+       The icon repeats the title visually, so it is hidden from screen readers. */ -}}
+<div class="col">
+    <div class="scilife-feature-card">
+        <i class="bi {{ .Get "icon" }} scilife-feature-icon" aria-hidden="true"></i>
+        <h4>{{ .Get "title" }}</h4>
+        {{ .Inner | markdownify }}
+    </div>
+</div>

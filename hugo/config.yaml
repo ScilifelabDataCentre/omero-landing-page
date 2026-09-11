@@ -1,10 +1,7 @@
 baseURL: "https://omero.scilifelab.se/"
 languageCode: "en-us"
-title: "Swedish National OMERO resource, hosted by SciLifeLab"
+title: "SciLifeLab OMERO, a prototype service for bioimage data management"
 buildFuture: true
-
-params:
-  maxSpeciesPerPage: 8
 
 markup:
   goldmark:
@@ -26,5 +23,32 @@ menus:
   - name: Contact us
     pageRef: /contact
     weight: 3
+
+  sub:
+  # The web client lives at the root of the same host, while this site sits under
+  # the /landing prefix. Hugo prefixes a relative menu "url" with the baseURL
+  # path, which would produce /landing/webclient/, so the path is carried in
+  # params.href instead and the navbar renders that verbatim. Keeping it
+  # host-relative means a staging deployment does not link to production.
+  - name: Log in to OMERO
+    weight: 1
+    params:
+      href: /webclient/
+
+  # Shown instead of main + sub when the navbar collapses below the lg breakpoint
+  mobile:
+  - name: About
+    pageRef: /
+    weight: 1
+  - name: Get access
+    pageRef: /get-access
+    weight: 2
+  - name: Contact us
+    pageRef: /contact
+    weight: 3
+  - name: Log in to OMERO
+    weight: 4
+    params:
+      href: /webclient/
 
 
