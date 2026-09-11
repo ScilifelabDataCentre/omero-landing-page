@@ -58,9 +58,11 @@ which route to pick when you want a whole project rather than single images.
 - [`omero obj` and the annotation commands](https://omero.readthedocs.io/en/stable/users/cli/containers-annotations.html)
   for creating projects and datasets and attaching tags and key-value pairs
 - [`omero chgrp`](https://omero.readthedocs.io/en/stable/users/cli/chgrp.html)
-  for moving data into another group
+  for moving your own data into another group you belong to
 - [`omero chown`](https://omero.readthedocs.io/en/stable/users/cli/chown.html)
-  for handing data to another user, for instance when someone leaves the project
+  for handing data to another user, for instance when someone leaves the
+  project. This needs administrator rights that no ordinary user here has, so it
+  will fail; email [omero@scilifelab.se](mailto:omero@scilifelab.se) instead.
 - [`omero delete`](https://omero.readthedocs.io/en/stable/users/cli/delete.html)
   for removing data
 

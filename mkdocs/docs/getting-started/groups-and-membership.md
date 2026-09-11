@@ -19,26 +19,37 @@ individual, and there is no sharing across servers.
 On SciLifeLab OMERO a group normally corresponds to one project and its
 allocation, so the people in your group are the people on your project.
 
-## Group owners and members
+## Roles in your group
 
-OMERO recognises three roles:
+OMERO recognises three roles, but this service uses only two of them:
 
-- a **group member** is the standard user
-- a **group owner** can additionally see and manage who is in the group, and can
-  add existing users to it. This is usually the person who submitted the
-  proposal, or the principal investigator.
+- a **group member** is the standard user, and on SciLifeLab OMERO everyone in
+  your group is one
 - a **server administrator** controls everything, including creating users and
   groups. On this service that is the SciLifeLab Data Centre, not anyone in your
   group.
+
+OMERO also defines a **group owner**, a member who can manage the group's
+membership from inside OMERO. SciLifeLab OMERO does not use it. Nobody in your
+group holds it, not even the person who submitted the proposal, so no one can
+administer the group from within OMERO itself. Membership is administered in
+SUPR instead, and everything else that needs elevated rights goes through us.
+
+You will still meet the term in OME's documentation, where group owners are
+assumed to exist.
 
 ## What members can do to each other's data
 
 !!! warning "Groups here are read-write"
 
     Every member can view, annotate, edit and **delete** all data in the group,
-    including data someone else imported. The only thing a member cannot do to
-    another member's data is move it into a different group. There are no
-    backups, so a deletion is permanent.
+    including data someone else imported. There are no backups, so a deletion is
+    permanent.
+
+    Two things no member can do, because both need rights nobody in the group
+    has: move another member's data into a different group, and change who owns
+    any data, their own included. Ask
+    [omero@scilifelab.se](mailto:omero@scilifelab.se) for either.
 
     [Sharing with collaborators](../using-omero/sharing.md) explains the four
     permission levels OMERO offers and what to do if read-write is not the right
@@ -46,8 +57,16 @@ OMERO recognises three roles:
 
 ## Requesting a change to membership
 
-You can always delete a member from the project in SUPR, our synchronization will 
-take care of the rest and that member will be removed from your group in OMERO.
+Where the allocation is administered through SUPR, which covers every research
+project and any facility that has opted into it, membership is managed in SUPR
+and synchronised to OMERO. Add or remove someone from the project in SUPR and
+the change reaches your OMERO group on its own, usually within an hour. Do not
+add or remove people directly in OMERO.
+
+If your facility is not administered through SUPR, email
+[omero@scilifelab.se](mailto:omero@scilifelab.se) instead. Creating a new user
+account always goes through us either way. See
+[Sharing with collaborators](../using-omero/sharing.md).
 
 ## Belonging to more than one group
 

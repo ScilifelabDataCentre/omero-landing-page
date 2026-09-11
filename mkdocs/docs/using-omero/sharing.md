@@ -18,8 +18,11 @@ private, read-only, read-annotate and read-write.
 
     Every member of your group can view, annotate, **edit and delete** all data
     in it, including data you imported. OME's own wording for read-write is that
-    members "behave as if they co-own all the data". The only thing a member
-    cannot do to someone else's data is move it into another group.
+    members "behave as if they co-own all the data".
+
+    Two things no member can do: move another member's data into a different
+    group, and change who owns any data. Both need administrator rights, and no
+    one in your group has them.
 
     This is a good fit for a project team that trusts each other. It is a poor
     fit for a group of people who happen to share an allocation but work
@@ -31,25 +34,43 @@ permanent. Keep your own independent copy of the raw data.
 
 ## Adding a collaborator to your group
 
-Group owners can add existing users to their projects in SUPR; after adding 
-a new member to a project in SUPR it will automatically apppear in your corresponding group in OMERO. 
+If your allocation is administered through SUPR, membership is managed there and
+not in OMERO. Whoever administers your project in SUPR, normally the principal
+investigator, adds the person to the project there, and they then appear in the
+corresponding OMERO group automatically.
+
+Nobody can do this from inside OMERO. Everyone on this service is a plain group
+member, so the group has no owner who could add people to it directly. See
+[Groups and membership](../getting-started/groups-and-membership.md).
+
+!!! warning "Add people in SUPR, not in OMERO"
+
+    Do not add anyone directly to your group in OMERO. Add them to your project
+    in SUPR instead, or the two will drift apart.
+
+    The synchronisation is not instant, so it may take an hour or so for a new
+    member to appear in your OMERO group.
+
+This covers every research project, and those facilities that have chosen to be
+administered through SUPR. If your facility is not in SUPR, email
+[omero@scilifelab.se](mailto:omero@scilifelab.se) to change who is in your group.
+
 OME's [group and user management guide](https://omero-guides.readthedocs.io/en/latest/introduction/docs/group-user-management.html)
-shows how the web interface and the command line versions of this work.
+describes how group administration works in OMERO itself, which is useful
+background even though membership here comes from SUPR.
 
-For SciLifeLab OMERO, please do not add anyone directly to your group in OMERO, but instead add them to your project in SUPR.
-
-__Note: The synchronization between SUPR and OMERO is not instant, so it may take an hour or so for a new member to appear in your group in OMERO.__
-
-## Collaborators outside Sweden
+## Collaborators without a university login
 
 Being outside Sweden is not in itself a barrier to being in your group, but
 getting an account is a separate question from being added to a group.
 
 !!! info "Not yet documented"
 
-    How a collaborator without a Swedish university login signs in has not been
-    settled. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) before
-    promising access to an international collaborator.
+    Signing in relies on a university or institution login, and how someone
+    without one signs in has not been settled. This affects collaborators
+    abroad, and also researchers in Sweden at hospitals, regions, institutes and
+    companies. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) before
+    promising access to anyone in that position.
 
 ## Sharing a link to an image
 

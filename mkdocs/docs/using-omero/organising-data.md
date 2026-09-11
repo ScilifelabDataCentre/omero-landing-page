@@ -58,6 +58,11 @@ script.
 
 !!! info "Group members can reorganise each other's data"
 
-    SciLifeLab OMERO groups are read-write, so anyone in your group can move,
-    edit and delete data belonging to anyone else in it. See
-    [Sharing with collaborators](sharing.md).
+    SciLifeLab OMERO groups are read-write, so anyone in your group can move
+    anyone else's data between projects and datasets, and can edit and delete
+    it. See [Sharing with collaborators](sharing.md).
+
+    Moving data out of the group is different. You can `chgrp` your own data
+    into another group you belong to, but only an administrator can move someone
+    else's, and nobody here can change who owns data. Email
+    [omero@scilifelab.se](mailto:omero@scilifelab.se) for either.

@@ -21,12 +21,16 @@ Blitz gateway
 
 `chgrp`
 :   The operation that moves data from one group to another, which changes who
-    can see it. A member cannot `chgrp` another member's data.
+    can see it. You can move your own data if you are a member of the
+    destination group; moving another member's data needs an administrator.
     [OME documentation](https://omero.readthedocs.io/en/stable/users/cli/chgrp.html).
 
 `chown`
 :   The operation that changes who owns data, used for instance when someone
-    leaves a project.
+    leaves a project. It needs a full administrator, a restricted administrator
+    with the Chown privilege, or a group owner, so **no ordinary user on this
+    service can run it**. Ask
+    [omero@scilifelab.se](mailto:omero@scilifelab.se).
     [OME documentation](https://omero.readthedocs.io/en/stable/users/cli/chown.html).
 
 Dataset
@@ -46,8 +50,10 @@ Group
     members. See [Groups and membership](../getting-started/groups-and-membership.md).
 
 Group owner
-:   A member with the additional right to see and manage the group's membership,
-    usually the person who submitted the proposal.
+:   An OMERO role: a member who can manage the group's membership and change the
+    ownership of data in it. **Not used on SciLifeLab OMERO**, where everyone is
+    a plain group member. You will meet the term in OME's documentation. See
+    [Groups and membership](../getting-started/groups-and-membership.md).
 
 Image
 :   One Bio-Formats image, which may itself have many channels, Z planes and
@@ -142,8 +148,9 @@ Allocation
     [FAQ](faq.md).
 
 Facility
-:   A SciLifeLab facility, eligible for the service alongside university
-    researchers but onboarded outside the SUPR proposal route. See
+:   A SciLifeLab facility, eligible for the service alongside life science
+    researchers in Sweden. A facility submits no reviewed proposal, but may
+    choose to have its allocation administered through SUPR. See
     [Delivering data as a facility](../workflows/facility-delivery.md).
 
 Prototype service

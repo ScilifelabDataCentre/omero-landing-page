@@ -15,9 +15,31 @@ has been written into the site or the documentation.
   identity has no such login. SUPR supports email and password accounts, but this
   needs confirming before `mkdocs/docs/getting-started/accounts-and-login.md`
   describes it.
-- **How do SciLifeLab facility users get accounts at all?** The facility route
-  never goes through a SUPR proposal, so the account creation path described for
-  researchers does not apply. This is currently unstated on the site.
+- **How does a researcher in Sweden without a university login sign in?**
+  Eligibility now covers any life science researcher in Sweden, not only those at
+  universities. Researchers at hospitals, regions, institutes and companies may
+  have no SWAMID identity, which widens the question above from a collaborator
+  edge case to a mainstream one.
+- **How do SciLifeLab facility users get accounts?** A facility submits no
+  reviewed proposal, so the account creation path described for researchers does
+  not apply directly. A facility that opts into SUPR administration presumably
+  follows the same path; one that does not has no documented route. Since there
+  are no group owners either, such a facility cannot change its own membership
+  at all and has to email us for every change.
+- **Which OMERO group permission level do facility groups get?** Every group is
+  read-write today, so a user added to a facility group so they can view and
+  download data can also delete the facility's data.
+  `mkdocs/docs/workflows/facility-delivery.md` carries this as a warning. Whether
+  read-only or read-annotate groups can be provisioned is unresolved.
+- **How does a facility hand data over to a researcher?** There are no group
+  owners on this service, and OME documents `chown` as requiring a full
+  administrator, a restricted administrator with the Chown privilege, or a group
+  owner. A facility therefore cannot transfer ownership at all, and can only
+  `chgrp` data it imported itself once its account is in the destination group.
+  Either the Data Centre runs both operations on request, or facilities are
+  granted the Chgrp and Chown restricted privileges. Until this is decided there
+  is no complete self-service handover, and
+  `mkdocs/docs/workflows/facility-delivery.md` says so.
 
 ## Legal
 
@@ -31,6 +53,11 @@ has been written into the site or the documentation.
   describes the account data the service holds, but the roles have not been
   assessed. A DPO or legal review at SciLifeLab is required before either the
   privacy policy addition or the terms are considered final.
+- **How is the facility storage cost obligation established?** The site now says
+  a facility covers its storage costs after the pilot phase. That is a financial
+  commitment, so it belongs in `content/terms.md` or in a separate facility
+  agreement, and neither exists yet. When the pilot ends, how the cost is
+  calculated and who signs also need answering.
 
 ## Technical
 
@@ -43,7 +70,9 @@ has been written into the site or the documentation.
 
 ## Content that depends on the above
 
-The documentation pages listed in `mkdocs/mkdocs.yml` under `nav` are the Phase 1
-set and are currently skeletons. They need real content before the documentation
-is worth linking prominently. The rest of the pages are kept out of the
-navigation by the `not_in_nav` list until they are written.
+Most documentation pages are now written.
+`mkdocs/docs/getting-started/accounts-and-login.md` is the only page in the
+navigation that is still a skeleton, because it depends entirely on the account
+and login questions above. The pages held back by `not_in_nav` in
+`mkdocs/mkdocs.yml` are waiting on service facts rather than on OMERO
+documentation.

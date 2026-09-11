@@ -4,10 +4,10 @@ date: 2026-09-10
 draft: false
 ---
 
-SciLifeLab OMERO is available to researchers at Swedish universities and to
-SciLifeLab facilities supporting user projects. It is free of charge. Access is
-arranged through a short, guided process, so that each project is set up to fit
-its data flow and the support available.
+SciLifeLab OMERO is available to life science researchers in Sweden and to
+SciLifeLab facilities supporting user projects. For research projects it is free
+at the point of use. Access is arranged through a short, guided process, so that
+each project is set up to fit its data flow and the support available.
 
 There are two routes into the service, and they start in different places. Find
 the one that matches your situation before you write to us.
@@ -20,13 +20,14 @@ the one that matches your situation before you write to us.
 
 #### Collaborative research project
 
-For life science researchers at a Swedish university, working alone or in a
-collaboration, who need managed image data support. The principal investigator
-must be affiliated with a Swedish university, but collaborators based abroad can
-be members of the group.
+For life science researchers in Sweden, working alone or in a collaboration, who
+need managed image data support. The principal investigator must be based in
+Sweden, but collaborators based abroad can be members of the group.
 
-Access is granted as a time-limited project allocation, applied for through the
-[Swedish User and Project Repository (SUPR)](https://supr.naiss.se).
+Access is granted as a time-limited project allocation with limited resources,
+applied for through the
+[Swedish User and Project Repository (SUPR)](https://supr.naiss.se). Your
+proposal is reviewed, and a data management plan is required.
 
 You can apply now through an existing round in SUPR.
 
@@ -37,12 +38,16 @@ You can apply now through an existing round in SUPR.
 
 #### SciLifeLab facility
 
-For SciLifeLab facilities that want to handle user projects through OMERO, for
-example by collaborating with users and delivering captured image data through
-the system.
+For SciLifeLab facilities that want to handle user projects through OMERO. An
+allocation lets a facility upload image data to collaborate with its users, let
+those users view and download their data, and transfer data into a user's own
+project.
 
-There is no proposal to submit and nothing to sign, and the allocation is not
-time-limited. The group is owned and administered by the facility itself.
+There is no proposal to submit and nothing to sign. The allocation, and who is
+in the group, can be administered through SUPR if the facility prefers, and
+otherwise through us.
+
+After the pilot phase, the facility covers the associated storage costs.
 
 </div>
 </div>
@@ -53,7 +58,7 @@ time-limited. The group is owned and administered by the facility itself.
 #### Collaborative research project: apply through SUPR
 
 {{< flow direction="horizontal" >}}
-{{< step icon="bi-pencil-square" >}}Prepare a short project description{{< /step >}}
+{{< step icon="bi-pencil-square" >}}Prepare a short project description and a data management plan{{< /step >}}
 {{< step icon="bi-envelope" >}}[Email us](mailto:omero@scilifelab.se) and we guide you to the right round{{< /step >}}
 {{< step icon="bi-send" >}}Submit your proposal in [SUPR](https://supr.naiss.se){{< /step >}}
 {{< step icon="bi-clipboard-check" >}}Proposal reviewed by SciLifeLab Data Centre{{< /step >}}
@@ -76,7 +81,8 @@ first login in more detail.
 
 ### What an allocation includes
 
-- The service is free of charge
+- Free at the point of use for research projects. Facilities cover their own
+  storage costs after the pilot phase.
 - 100 GB of storage by default, with larger allocations decided case by case
 - A duration set case by case, which you can ask to renew or extend
 - No limit on the number of people in your group
@@ -95,15 +101,17 @@ expect a decision within a week of a complete request.
 - Whether the work is connected to a facility, platform or funded initiative
 - Any timing constraints for onboarding
 
-A short, concrete request usually speeds things up.
+A short, concrete request usually speeds things up. A data management plan is
+also required for a research project, and goes into the proposal you submit in
+SUPR rather than into this first email.
 
 ### What happens next
 
 After your first email we follow up on the practical details: scope, storage
 expectations, who needs access, and when you want to start. Your OMERO group is
-shared only with your project members. For a research project it is managed by
-the person who submitted the proposal, or by the project lead; for a facility it
-is owned and administered by the facility.
+shared only with your project members, and who those are is administered through
+your project in SUPR rather than inside OMERO. Adding someone to the project in
+SUPR adds them to the OMERO group.
 
 ### When your project ends
 

@@ -5,8 +5,8 @@ date: 2026-09-10
 draft: false
 ---
 
-SciLifeLab OMERO is a prototype bioimage data management service for researchers
-at Swedish universities and for SciLifeLab facilities. It is a shared place to
+SciLifeLab OMERO is a prototype bioimage data management service for life science
+researchers in Sweden and for SciLifeLab facilities. It is a shared place to
 store, organize, view, annotate and share microscopy and other image data
 together with the people you work with. It is built on
 [OMERO](https://www.openmicroscopy.org/omero/), the established open-source
@@ -34,7 +34,7 @@ Work in a web browser, or connect from OMERO.insight, Fiji, napari, the omero co
 Reach the same data from your own machine or from a compute cluster through the OMERO API.
 {{< /card >}}
 {{< card icon="bi-people" title="Share under your control" >}}
-Share with collaborators under access control you manage yourself.
+Share with your project members, and control who they are through your project in SUPR.
 {{< /card >}}
 {{< card icon="bi-journal-text" title="Ready for publication" >}}
 Add metadata as you go, so a dataset is still traceable and intelligible when you come to publish it.
@@ -46,16 +46,16 @@ There is no direct route from the service into those repositories yet.
 
 ### Who it is for
 
-- **Research groups at Swedish universities** producing or using microscopy and other image
+- **Life science research groups in Sweden** producing or using microscopy and other image
   data who need something more robust than local drives and file-by-file sharing
 - **SciLifeLab facilities**, to run user projects and deliver captured data
 
 Collaborators based outside Sweden can be members of a group, as long as the
-principal investigator is affiliated with a Swedish university.
+principal investigator is based in Sweden.
 
 {{< info_block >}} Good to know:
 
-- The service is free of charge. It is a prototype, so access is arranged in a guided way to match your project and the support available.
+- For research projects the service is free at the point of use. Facilities cover their own storage costs after the pilot phase. It is a prototype, so access is arranged in a guided way to match your project and the support available.
 
 - Your data is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
 

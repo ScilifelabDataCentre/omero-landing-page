@@ -6,23 +6,31 @@ Short answers, with links to the longer version where there is one.
 
 ### Who can use SciLifeLab OMERO?
 
-Researchers at Swedish universities, and SciLifeLab facilities running user
+Life science researchers in Sweden, and SciLifeLab facilities running user
 projects.
 
 ### Does it cost anything?
 
-No. The service is free of charge.
+For a research project, no: it is free at the point of use.
+
+For a SciLifeLab facility, not during the pilot phase. After that the facility
+covers the storage costs associated with its allocation.
 
 ### Can collaborators outside Sweden take part?
 
 Yes, they can be members of your group. The principal investigator has to be
-affiliated with a Swedish university.
+based in Sweden.
 
 ### How do I apply?
 
 Through a round in the Swedish User and Project Repository (SUPR). Email us and we
 will point you at the right one. The full process is on
 [How to get access](/landing/get-access/).
+
+### Do I need a data management plan?
+
+Yes, for a research project. The plan goes into the proposal you submit in SUPR.
+Facilities are not asked for one.
 
 ### How long does a decision take?
 
