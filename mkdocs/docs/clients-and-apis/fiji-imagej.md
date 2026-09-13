@@ -20,8 +20,10 @@ The plugin asks for the same connection settings as the desktop client:
 
 - Server address: `omero.scilifelab.se`
 - Port: `4064`
-- Username and password: the same ones you use for the
-  [web client](/webclient/)
+- Username: your SUPR username
+- Password: a session token fetched from [/webclient/](/webclient/) after you
+  sign in, since there is no OMERO password on this service. See
+  [Accounts and login](../getting-started/accounts-and-login.md)
 
 ## Opening images and saving results
 

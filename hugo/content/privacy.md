@@ -22,6 +22,8 @@ No personal data may be uploaded to SciLifeLab OMERO. That rule applies to image
 
 Data held in the **Service** is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
 
+When a project allocation ends, the image data and its annotations are deleted and the account is disabled. Operational records outlast the data: logs, operational metadata and audit records are retained after deletion, so that we can account for what happened to an allocation and to the **Service**.
+
 <!--
   This section was added alongside the 2026 content review and has not yet been
   through a DPO or legal review at SciLifeLab. The controller and processor

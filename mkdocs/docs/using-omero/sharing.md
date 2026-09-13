@@ -34,10 +34,10 @@ permanent. Keep your own independent copy of the raw data.
 
 ## Adding a collaborator to your group
 
-If your allocation is administered through SUPR, membership is managed there and
-not in OMERO. Whoever administers your project in SUPR, normally the principal
-investigator, adds the person to the project there, and they then appear in the
-corresponding OMERO group automatically.
+Membership is managed in SUPR, not in OMERO. Whoever administers your project in
+SUPR, normally the principal investigator, or the facility if this is a facility
+delivery project, adds the person to the project there, and they then appear in
+the corresponding OMERO group automatically.
 
 Nobody can do this from inside OMERO. Everyone on this service is a plain group
 member, so the group has no owner who could add people to it directly. See
@@ -51,26 +51,28 @@ member, so the group has no owner who could add people to it directly. See
     The synchronisation is not instant, so it may take an hour or so for a new
     member to appear in your OMERO group.
 
-This covers every research project, and those facilities that have chosen to be
-administered through SUPR. If your facility is not in SUPR, email
-[omero@scilifelab.se](mailto:omero@scilifelab.se) to change who is in your group.
-
 OME's [group and user management guide](https://omero-guides.readthedocs.io/en/latest/introduction/docs/group-user-management.html)
 describes how group administration works in OMERO itself, which is useful
 background even though membership here comes from SUPR.
 
-## Collaborators without a university login
+## Collaborators based abroad
 
 Being outside Sweden is not in itself a barrier to being in your group, but
 getting an account is a separate question from being added to a group.
 
-!!! info "Not yet documented"
+Sign-in goes through SWAMID, the Swedish identity federation, which is part of
+the international eduGAIN federation that SUPR also accepts. A collaborator with
+an account at a European university can therefore normally sign in with it
+directly. See
+[Accounts and login](../getting-started/accounts-and-login.md).
 
-    Signing in relies on a university or institution login, and how someone
-    without one signs in has not been settled. This affects collaborators
-    abroad, and also researchers in Sweden at hospitals, regions, institutes and
-    companies. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) before
-    promising access to anyone in that position.
+!!! info "Institutions outside the federation"
+
+    eduGAIN covers academic institutions. Someone at a hospital, region, company
+    or research institute, or at a university outside the federation, may have no
+    federated login to use, and we have not documented a route for that case.
+    Email [omero@scilifelab.se](mailto:omero@scilifelab.se) before promising
+    access to anyone in that position.
 
 ## Sharing a link to an image
 

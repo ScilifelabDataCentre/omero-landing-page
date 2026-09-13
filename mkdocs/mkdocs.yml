@@ -81,15 +81,10 @@ validation:
   unrecognized_links: warn
   anchors: warn
 
-# Pages that exist as skeletons but are deliberately kept out of the navigation
-# until they have real content. Remove a line here and add the page to nav below
-# when it is written.
-not_in_nav: |
-  workflows/hpc.md
-  data-management/sensitive-data.md
-  reference/quotas-and-limits.md
-  reference/service-status.md
-  reference/troubleshooting.md
+# Every page is now written and in the navigation. If a new skeleton is added,
+# list it here so it stays out of the sidebar until it has real content, and
+# move it into nav below once it does.
+not_in_nav: ""
 
 nav:
   - Home: index.md
@@ -114,14 +109,19 @@ nav:
   - Workflows:
       - Analysing data on your own machine: workflows/local-analysis.md
       - Batch operations: workflows/batch-operations.md
+      - Working from an HPC system: workflows/hpc.md
       - Delivering data as a facility: workflows/facility-delivery.md
   - Data management:
+      - Data you may not upload: data-management/sensitive-data.md
       - Exporting your data: data-management/exporting.md
       - Metadata for publication: data-management/metadata-for-publication.md
       - Publishing to a public repository: data-management/publishing.md
       - When your project ends: data-management/end-of-project.md
   - Reference:
       - Frequently asked questions: reference/faq.md
+      - Quotas and limits: reference/quotas-and-limits.md
+      - Service status and availability: reference/service-status.md
+      - Troubleshooting: reference/troubleshooting.md
       - Glossary: reference/glossary.md
   - Getting help: support.md
   - SciLifeLab OMERO service site: /landing/

@@ -1,78 +1,69 @@
 # Open service questions
 
 Questions raised by the September 2026 content review that are still unanswered.
-None of them blocked the landing page rewrite, but each one leaves a soft spot in
-the copy or a page that cannot be written yet. Delete an entry once the answer
-has been written into the site or the documentation.
+None of them blocks a page any more, but each one leaves a soft spot in the copy.
+Delete an entry once the answer has been written into the site or the
+documentation.
+
+Most of the original register was answered in September 2026 and written into the
+site. What follows is what was left over.
 
 ## Access and accounts
 
-- **Which SUPR round should researchers apply to today?** The dedicated OMERO round
-  under Local and Special Rounds is open now.
-- **How do collaborators based outside Sweden sign in?** The access page states
-  that a SUPR account is created on approval and that you then use your own
-  university or institution login. A collaborator without a Swedish federated
-  identity has no such login. SUPR supports email and password accounts, but this
-  needs confirming before `mkdocs/docs/getting-started/accounts-and-login.md`
-  describes it.
-- **How does a researcher in Sweden without a university login sign in?**
-  Eligibility now covers any life science researcher in Sweden, not only those at
-  universities. Researchers at hospitals, regions, institutes and companies may
-  have no SWAMID identity, which widens the question above from a collaborator
-  edge case to a mainstream one.
-- **How do SciLifeLab facility users get accounts?** A facility submits no
-  reviewed proposal, so the account creation path described for researchers does
-  not apply directly. A facility that opts into SUPR administration presumably
-  follows the same path; one that does not has no documented route. Since there
-  are no group owners either, such a facility cannot change its own membership
-  at all and has to email us for every change.
-- **Which OMERO group permission level do facility groups get?** Every group is
-  read-write today, so a user added to a facility group so they can view and
-  download data can also delete the facility's data.
-  `mkdocs/docs/workflows/facility-delivery.md` carries this as a warning. Whether
-  read-only or read-annotate groups can be provisioned is unresolved.
-- **How does a facility hand data over to a researcher?** There are no group
-  owners on this service, and OME documents `chown` as requiring a full
-  administrator, a restricted administrator with the Chown privilege, or a group
-  owner. A facility therefore cannot transfer ownership at all, and can only
-  `chgrp` data it imported itself once its account is in the destination group.
-  Either the Data Centre runs both operations on request, or facilities are
-  granted the Chgrp and Chown restricted privileges. Until this is decided there
-  is no complete self-service handover, and
-  `mkdocs/docs/workflows/facility-delivery.md` says so.
+- **How does someone with no federated login sign in?** Sign-in goes through
+  SWAMID, and SUPR accepts eduGAIN, so academic identities in Europe are covered.
+  What is not covered is a researcher or collaborator at a hospital, region,
+  company or research institute, or at a university outside the federation.
+  Eligibility explicitly includes non-university researchers in Sweden, so this
+  is a mainstream case rather than an edge one.
+  `mkdocs/docs/getting-started/accounts-and-login.md` and
+  `mkdocs/docs/using-omero/sharing.md` both tell such a person to email us,
+  which is a holding position rather than an answer.
 
 ## Legal
 
-- **Which legal entity operates the service and is named in the terms?**
-  SciLifeLab, or a host university such as KTH, Uppsala or Chalmers. Needed
-  before `content/terms.md` can be drafted.
-- **Where do users actively accept the terms?** The answer given was "in the SUPR
-  proposal", which covers neither the facility route nor anyone onboarded before
-  the dedicated round opens.
-- **Controller and processor roles for service data.** The privacy policy now
-  describes the account data the service holds, but the roles have not been
-  assessed. A DPO or legal review at SciLifeLab is required before either the
-  privacy policy addition or the terms are considered final.
-- **How is the facility storage cost obligation established?** The site now says
-  a facility covers its storage costs after the pilot phase. That is a financial
-  commitment, so it belongs in `content/terms.md` or in a separate facility
-  agreement, and neither exists yet. When the pilot ends, how the cost is
-  calculated and who signs also need answering.
+- **Controller and processor roles for service data.** The privacy policy
+  describes the account data the service holds and now also the operational
+  records retained after deletion, but the roles have not been assessed. A DPO or
+  legal review at SciLifeLab is required before either the privacy policy
+  addition or `content/terms.md` is considered final. This is the one item that
+  still blocks the terms of use.
+- **Where do users onboarded outside a SUPR proposal accept the terms?** The
+  answer given was "in the SUPR proposal". SciLifeLab Data Centre is the legal
+  entity named in the terms. Neither covers a facility, which submits no
+  reviewed proposal, nor a researcher added by a facility to one of its
+  projects, nor anyone onboarded before the round opened.
+- **How is the facility storage cost obligation established?** The site says a
+  facility covers its storage costs after the pilot phase, and that the cost is
+  calculated from storage usage. Three things are still missing before that can
+  go into `content/terms.md` or a facility agreement: when the pilot phase ends,
+  the actual rate or formula, and who signs on the facility's behalf. It is a
+  financial commitment, so it cannot rest on a sentence in the access page.
 
 ## Technical
 
-- **Can network-isolated HPC systems reach the OMERO API?** Access from a cluster
-  goes over the API, so compute nodes need outbound network access. Systems
-  without it cannot use the service at all, and
-  `mkdocs/docs/workflows/hpc.md` should say which ones those are.
-- **Is 100 GB the intended default quota?** It is modest for microscopy and will
-  shape what people expect before they apply.
+- **Which OMERO server version is running, and which OMERO.insight release
+  should people install?** Unspecified, so
+  `mkdocs/docs/clients-and-apis/omero-insight.md` keeps an admonition telling
+  people to email us if the login window reports a version mismatch. Publishing
+  the server version, and updating it at each upgrade, would remove that round
+  trip.
+- **How long does a session token last?** The documentation says tokens expire
+  and to fetch a new one, because we do not have the figure. It matters most for
+  HPC batch jobs, where a job can sit in a queue for days before it runs;
+  `mkdocs/docs/workflows/hpc.md` currently advises fetching the key close to
+  submission and failing loudly.
+- **Can network-isolated HPC systems be supported?** Compute nodes need
+  outbound access to port `4064`, and a cluster that denies it cannot use the
+  service at all. `mkdocs/docs/workflows/hpc.md` says so and describes the
+  manual staging workaround. Supporting those systems is a future feature with
+  nothing behind it yet, and no Swedish system has been tested either way.
+- **When will publishing to a public repository be supported?** Planned, with
+  no date. `mkdocs/docs/data-management/publishing.md` says exactly that, which
+  is accurate but not useful to someone planning a submission.
 
-## Content that depends on the above
+## State of the documentation
 
-Most documentation pages are now written.
-`mkdocs/docs/getting-started/accounts-and-login.md` is the only page in the
-navigation that is still a skeleton, because it depends entirely on the account
-and login questions above. The pages held back by `not_in_nav` in
-`mkdocs/mkdocs.yml` are waiting on service facts rather than on OMERO
-documentation.
+Every page in `mkdocs/docs/` is now written and in the navigation, and
+`not_in_nav` in `mkdocs/mkdocs.yml` is empty. `content/terms.md` is the only
+page left unpublished, held by the controller and processor question above.

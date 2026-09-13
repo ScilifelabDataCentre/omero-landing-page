@@ -24,14 +24,21 @@ has the connection code. The values to give it for this service are:
 
 - host: `omero.scilifelab.se`
 - port: `4064`
-- username and password: the same ones you use for the
-  [web client](/webclient/)
+- username: your SUPR username
+- password: a session token obtained from the web client
+
+There is no OMERO password on this service. Sign in to
+[/webclient/](/webclient/) and fetch a session token from the page that appears
+after authentication, then pass it where the connection code expects a password.
+[Accounts and login](../getting-started/accounts-and-login.md) shows where the
+link is.
 
 As with the desktop client, port `4064` is not a web port and may be blocked by
 an institutional firewall even when the web client works.
 
-Do not put your password in a script that you commit to a repository. Read it
-from the environment or prompt for it.
+Read the token from the environment or prompt for it rather than writing it into
+a script you commit to a repository. It expires, so a script that hard-codes one
+will break anyway.
 
 ## Reading and writing data
 

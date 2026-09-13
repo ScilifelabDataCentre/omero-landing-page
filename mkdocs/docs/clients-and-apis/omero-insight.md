@@ -21,8 +21,14 @@ Add a server in the login window with these settings:
 
 - Server address: `omero.scilifelab.se`
 - Port: `4064`
-- Username and password: the same ones you use for the
-  [web client](/webclient/)
+- Username: your SUPR username
+- Password: a session token, not a password
+
+The desktop client cannot do browser-based single sign-on, so you sign in to
+[/webclient/](/webclient/) first, fetch a session token from the page that
+appears after authentication, and paste it into the password field. See
+[Accounts and login](../getting-started/accounts-and-login.md). Tokens expire,
+so when a login that worked last week is refused, fetch a new one.
 
 If you belong to more than one group, OMERO.insight lets you switch between them
 after login rather than at login.

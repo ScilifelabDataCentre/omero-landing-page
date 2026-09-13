@@ -19,7 +19,10 @@ covers the storage costs associated with its allocation.
 ### Can collaborators outside Sweden take part?
 
 Yes, they can be members of your group. The principal investigator has to be
-based in Sweden.
+based in Sweden. Sign-in goes through SWAMID, which belongs to the international
+eduGAIN federation, so an account at a European university normally works
+directly. Ask us first if your collaborator is somewhere outside that
+federation.
 
 ### How do I apply?
 
@@ -41,8 +44,11 @@ conditions of the service.
 ### How do I log in?
 
 A SUPR account is created for you when your proposal is approved. You then sign in
-at the [OMERO web client](/webclient/) using your own university or institution
-login.
+at the [OMERO web client](/webclient/) with your university or institution account
+through SWAMID. There is no OMERO password. The desktop and API clients cannot do
+single sign-on, so they use your SUPR username and a session token you fetch from
+the web client; see
+[Accounts and login](../getting-started/accounts-and-login.md).
 
 ### How many people can be in my group?
 
@@ -52,12 +58,24 @@ There is no limit.
 
 ### How much storage do I get?
 
-100 GB by default. Larger allocations are decided case by case.
+100 GB by default. The quota belongs to the project, so everyone in the group
+draws on the same 100 GB. See [Quotas and limits](quotas-and-limits.md).
+
+### How do I see how much I have used?
+
+You cannot, yet. OMERO.web does not show the group's consumption, so email
+[omero@scilifelab.se](mailto:omero@scilifelab.se) and we will tell you.
+
+### What happens if I run out of space?
+
+Imports fail with an error and there is no margin, so a bulk import can stop
+partway. You are emailed when the limit is reached. More space is requested as a
+new proposal in SUPR explaining why the project needs it.
 
 ### How long does an allocation last?
 
-The duration is set case by case when your proposal is reviewed, and you can ask
-to renew or extend it.
+The duration is set case by case when your proposal is reviewed, and you can
+request a renewal or extension in SUPR.
 
 ### Where is my data stored?
 
@@ -79,7 +97,9 @@ Those supported by recent Bio-Formats releases. See
 ### Can I upload data from human subjects?
 
 No personal data of any kind may be uploaded, and that applies to image content,
-filenames and metadata alike.
+filenames and metadata alike. Pseudonymised data counts as personal data under
+the GDPR, so it is excluded too. See
+[data you may not upload](../data-management/sensitive-data.md).
 
 ### Can I publish straight to a public image data repository?
 
@@ -97,24 +117,43 @@ command line interface.
 
 Through the OMERO API, yes. The service is not mounted on any HPC system and there
 is no dedicated transfer route, so the compute nodes need outbound network access
-to reach the server.
+to reach the server, and a cluster that isolates them cannot use the service. We
+have not tested a specific Swedish system. See
+[working from an HPC system](../workflows/hpc.md).
 
 ## Ending a project
 
 ### What happens when my allocation ends?
 
-You get one month of notice, after which the data is deleted automatically. There
-is no grace period, so export everything you need before the deadline. See
+You get one month of notice by email, after which your account is disabled and
+the data is deleted automatically. There is no grace period, so export
+everything you need before the deadline. Logs and audit records are retained
+after the data goes. See
 [when your project ends](../data-management/end-of-project.md).
 
 ### Can I get more time?
 
-Ask us about a renewal or an extension while the notice period is still running.
+Request a renewal or an extension in SUPR while the notice period is still
+running. The cut-off is the end of those thirty days.
 
 ## The service itself
 
 ### Is there an uptime guarantee?
 
-No. SciLifeLab OMERO is a prototype. Availability is best effort, there is no
-uptime target and no status page, and maintenance can happen without advance
-notice.
+No. SciLifeLab OMERO is a prototype. Availability is best effort and there is no
+uptime target or status page. See
+[service status and availability](service-status.md).
+
+### How will I hear about maintenance and outages?
+
+By email. Planned maintenance windows, outages and server upgrades are all
+announced that way, since there is no status page. Upgrade announcements matter
+even if the downtime does not, because OMERO.insight has to be compatible with
+the server version.
+
+### Something is not working. What should I check first?
+
+Whether your network allows outbound port `4064`. A local firewall blocking it
+is the most common problem reported to us, and it is what makes the desktop and
+API clients time out on a machine where the web client works.
+[Troubleshooting](troubleshooting.md) goes through the rest.

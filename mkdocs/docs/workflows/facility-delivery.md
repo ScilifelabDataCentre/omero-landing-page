@@ -8,14 +8,23 @@ which threads together importing on behalf of others, administering groups and
 users, and getting new users started. Read that first; this page records what is
 different on SciLifeLab OMERO.
 
-## How a facility group is set up
+## How a facility is set up
 
 Facilities are eligible for the service alongside life science researchers in
-Sweden, and there is no reviewed proposal to submit. Your allocation and its
-membership can still be administered through SUPR if you prefer, the same way a
-research project's is; that is the facility's choice rather than a requirement.
-Email [omero@scilifelab.se](mailto:omero@scilifelab.se) to discuss how your
-facility should be set up, and see the [access page](/landing/get-access/).
+Sweden, and there is no reviewed proposal to submit. Instead we open a SUPR
+round for your facility. Email
+[omero@scilifelab.se](mailto:omero@scilifelab.se) to ask for one, and see the
+[access page](/landing/get-access/).
+
+Inside your own round you administer yourself, without coming back to us for
+each change. You create a project for each of your user projects, and you add
+and remove its members. Each SUPR project becomes one OMERO group, read-write,
+containing your staff and that project's researchers.
+
+Build your delivery workflow around that one-to-one mapping. It is what lets you
+import straight into the group the researcher will work in, which skips
+transferring anything afterwards and is the difference between a workflow you
+can run yourself and one that needs us in the middle of it.
 
 An allocation covers three things: uploading image data so you can collaborate
 with your users, letting those users view and download their data, and
@@ -25,16 +34,36 @@ the reviewed research track.
 After the pilot phase, your facility covers the storage costs associated with
 the allocation.
 
-Groups on this service are read-write, which means every member can edit and
-delete every other member's data. That matters more for a facility than for a
-single project team, so think about whether you want one group per client
-project rather than one group holding several. See
-[Sharing with collaborators](../using-omero/sharing.md).
+!!! tip "One project per user project, not one for everything"
+
+    Every group on this service is read-write, so every member can edit and
+    delete every other member's data. Since you can create as many SUPR
+    projects as you need in your own round, there is no reason to put several
+    unrelated user projects in one group: a mistake by one researcher would
+    then reach another's data. See
+    [Sharing with collaborators](../using-omero/sharing.md).
+
+## How the researchers you serve get accounts
+
+The same way your own staff do. Add the person to the relevant SUPR project in
+your round, and SUPR creates the account if they do not already have one and
+adds them to the matching OMERO group. There is nothing for them to apply for
+and nothing for us to do.
+
+They sign in with their own university or institution account through SWAMID,
+and a collaborator at a European university can use theirs through eduGAIN. A
+researcher with no federated login at all is the one case that still needs a
+conversation with us; see
+[Accounts and login](../getting-started/accounts-and-login.md).
+
+Membership changes reach OMERO within about an hour, so do not add anyone
+directly in OMERO or the two will drift apart.
 
 ## Importing captured data
 
-Importing data *for yourself* and then handing it over needs no special rights.
-Importing data *directly as another user* does: OMERO calls this restricted
+Importing data *as yourself* into a group the researcher is already in needs no
+special rights, and is the arrangement described below.
+Importing data *directly as another user* does need them: OMERO calls this restricted
 administrator privilege, documented under
 [administrators with restricted privileges](https://omero.readthedocs.io/en/stable/sysadmins/restricted-admins.html).
 OME's walkthrough covers both the desktop and command line versions.
@@ -43,10 +72,10 @@ OME's walkthrough covers both the desktop and command line versions.
 
     Only a server administrator can grant them, so tell
     [omero@scilifelab.se](mailto:omero@scilifelab.se) if importing as another
-    user is part of your delivery workflow. Without it you import as yourself,
-    and you stay the owner: transferring ownership afterwards is not something a
-    facility can do on its own either. See
-    [Handing data to a user group](#handing-data-to-a-user-group).
+    user is part of your delivery workflow. Without it you import as yourself
+    and you stay the owner of the data, which is usually fine: in a read-write
+    group the researcher can work with it regardless of who owns it. See
+    [Delivering into the user's own group](#delivering-into-the-users-own-group).
 
 For volume, use bulk import rather than the wizard; see
 [Batch operations](batch-operations.md).
@@ -60,63 +89,58 @@ For volume, use bulk import rather than the wizard; see
     OMERO has no shared filesystem with any other system. Imports here always
     copy the data in. See [Working from an HPC system](hpc.md).
 
-## Letting users view and download without handing over
+## Delivering into the user's own group
 
-The other delivery pattern is to keep the data in the facility's group and add
-the researcher to that group, so they can view and download it while the
-facility stays the owner. It avoids the transfer entirely, and it is the right
-shape when the facility needs to keep the data for its own reference.
+The normal pattern, and the one to aim for: create the SUPR project for that
+user project, add the researcher to it, and import the captured data straight
+into the resulting OMERO group. Delivery is then finished the moment the import
+is, with nothing to transfer.
 
-!!! warning "Users you add can also delete"
+Because the group is read-write, the researcher can view, download, annotate and
+analyse the data whether or not the facility owns it. Ownership stays with
+whoever imported, and for most delivery workflows that does not matter.
 
-    Every group on this service is read-write, so a user added so they can view
-    and download data can also edit and delete it, including data belonging to
-    the facility. OMERO's read-only and read-annotate levels would express this
-    properly, but whether a group can be provisioned at one of those levels here
-    is not settled. Ask [omero@scilifelab.se](mailto:omero@scilifelab.se) before
-    adding users for read access alone.
+!!! warning "Everyone in the group can also delete"
 
-Until that is resolved, the one-group-per-client-project arrangement described
-above matters more than it otherwise would, because it limits a mistake to a
-single client's data.
+    Read-write is the permission level every group on this service gets, so a
+    researcher added to see their data can also edit and delete it, including
+    data belonging to the facility. OMERO's read-only and read-annotate levels
+    would express view-only access properly, but they are not available here.
 
-## Handing data to a user group
+    The mitigation is the one-project-per-user-project structure: it confines a
+    mistake to a single user project's data. Do not use one group for several
+    user projects. Keep your own copy of anything you cannot recapture, since
+    the service holds no backups.
 
-Two operations do the work, and both are covered in OME's
+## Moving data between groups afterwards
+
+Sometimes the data is already in the wrong place, for instance because it was
+imported into the facility's own group before the user project existed, or
+because the researcher has been granted their own allocation through the
+reviewed track and wants it there. Two operations exist, both covered in OME's
 [data management guide](https://omero-guides.readthedocs.io/en/latest/introduction/docs/data-management.html):
 
-- `chgrp` moves data into the client's group, which changes who can see it
+- `chgrp` moves data into another group, which changes who can see it
 - `chown` changes the owner, so the researcher rather than the facility owns it
 
-On this service you can do the first and not the second. OME documents who may
-run each, and the deciding factor is the group-owner role, which
-[nobody here holds](../getting-started/groups-and-membership.md):
+On this service you can do the first and not the second:
 
 - [`omero chgrp`](https://omero.readthedocs.io/en/stable/users/cli/chgrp.html)
   is available to the owner of the data if they are a member of the target
   group. A facility can therefore move data it imported itself, but only once
   its own account has been added to the destination group.
 - [`omero chown`](https://omero.readthedocs.io/en/stable/users/cli/chown.html)
-  needs a full administrator, a restricted administrator with the Chown
-  privilege, or a group owner. A facility has none of these, so it cannot make
-  the researcher the owner.
+  needs a full administrator or a restricted administrator with the Chown
+  privilege. A facility has neither, so it cannot make the researcher the
+  owner.
 
-!!! warning "Agree a handover route with us first"
+In practice the second rarely matters, because read-write access does not depend
+on ownership. Where it genuinely does, email
+[omero@scilifelab.se](mailto:omero@scilifelab.se) and we will either run the
+operation or discuss granting your facility the Chown restricted privilege.
 
-    Because ownership cannot be transferred by a facility, there is no complete
-    self-service handover today. Email
-    [omero@scilifelab.se](mailto:omero@scilifelab.se) before you plan a delivery
-    workflow around it. We can either run the operations for you or grant your
-    facility the Chgrp and Chown restricted privileges described above; which of
-    those we offer is not settled yet.
-
-    Moving data without transferring ownership is a workable interim step: the
-    researcher sees the data in their group, and the facility remains its owner.
-
-Group membership itself is administered as described in OME's
-[group and user management guide](https://omero-guides.readthedocs.io/en/latest/introduction/docs/group-user-management.html),
-but on this service it happens in SUPR, and creating users and groups goes
-through [omero@scilifelab.se](mailto:omero@scilifelab.se).
+Importing into the right group in the first place avoids all of this, which is
+why it is worth creating the SUPR project before the session rather than after.
 
 ## Metadata a facility should attach
 

@@ -51,7 +51,9 @@ There is no direct route from the service into those repositories yet.
 - **SciLifeLab facilities**, to run user projects and deliver captured data
 
 Collaborators based outside Sweden can be members of a group, as long as the
-principal investigator is based in Sweden.
+principal investigator is based in Sweden. Sign-in uses your own university or
+institution account through SWAMID, which is part of the international eduGAIN
+federation via SUPR.
 
 {{< info_block >}} Good to know:
 
@@ -59,7 +61,7 @@ principal investigator is based in Sweden.
 
 - Your data is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
 
-- Availability is best effort. There is no uptime target, and maintenance can happen without advance notice.
+- Availability is best effort and there is no uptime target. Planned maintenance, outages and server upgrades are announced by email.
 {{< /info_block >}}
 
 <a class="btn" href="{{< relref "get-access" >}}" role="button">Get access</a>

@@ -22,8 +22,13 @@ Log in once and the CLI keeps a local session, so subsequent commands do not ask
 again:
 
 ```bash
-omero login your-username@omero.scilifelab.se:4064
+omero login your-supr-username@omero.scilifelab.se:4064
 ```
+
+At the password prompt, paste a session token rather than a password. There is
+no OMERO password on this service: sign in to [/webclient/](/webclient/) and
+fetch a token from the page that appears after authentication, as described in
+[Accounts and login](../getting-started/accounts-and-login.md).
 
 `omero sessions list` shows what you have open and `omero logout` ends the
 current one. OME's

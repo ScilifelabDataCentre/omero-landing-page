@@ -25,13 +25,18 @@ to this deployment:
 
 - access, allocations, renewals and extensions
 - your group, its members and its permissions
-- storage quota
+- how much of your storage quota you have used, which the web client does not
+  show you
 - something that is not working as expected
 
 ## Reporting an outage
 
-The same address. There is no separate incident channel and no status page.
-SciLifeLab OMERO is a prototype, so maintenance can happen without advance notice.
+The same address. There is no separate incident channel and no status page:
+outages, planned maintenance and server upgrades are all announced by email
+instead. [Service status and availability](reference/service-status.md) covers
+what to expect, and [Troubleshooting](reference/troubleshooting.md) is worth
+checking first, because a local firewall blocking port `4064` is the most common
+report we get.
 
 ## What to include in a request
 

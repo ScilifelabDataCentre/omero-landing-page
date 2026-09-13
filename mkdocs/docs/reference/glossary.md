@@ -149,21 +149,38 @@ Allocation
 
 Facility
 :   A SciLifeLab facility, eligible for the service alongside life science
-    researchers in Sweden. A facility submits no reviewed proposal, but may
-    choose to have its allocation administered through SUPR. See
-    [Delivering data as a facility](../workflows/facility-delivery.md).
+    researchers in Sweden. A facility submits no reviewed proposal. Instead it
+    gets its own SUPR round and creates one project per user project inside it.
+    See [Delivering data as a facility](../workflows/facility-delivery.md).
 
 Prototype service
 :   What SciLifeLab OMERO is. Support is best effort, availability is not
-    guaranteed, maintenance can happen without notice, and there are no backups.
+    guaranteed, and there are no backups. Maintenance happens in planned windows
+    announced by email. See
+    [Service status and availability](service-status.md).
 
 Quota
-:   The storage limit on your allocation.
+:   The storage limit on your allocation, shared by everyone in the group rather
+    than allotted per person. See [Quotas and limits](quotas-and-limits.md).
 
 SciLifeLab Data Centre
 :   The team that operates the service and holds server administrator rights.
     Reachable at [omero@scilifelab.se](mailto:omero@scilifelab.se).
 
+Session token
+:   What the desktop and API clients use in place of a password, because port
+    `4064` cannot carry a browser-based single sign-on. You fetch one from the
+    web client after signing in, and it expires. Also called a session key when
+    a batch job uses it. See
+    [Accounts and login](../getting-started/accounts-and-login.md).
+
 SUPR
 :   The Swedish national resource application system, through which researchers
-    apply for access. See the [access page](/landing/get-access/).
+    apply for access and through which every group's membership is
+    administered. See the [access page](/landing/get-access/).
+
+SWAMID
+:   The Swedish identity federation that the web client authenticates against,
+    so you sign in with your own university or institution account. It belongs
+    to eduGAIN, the international federation, which is how a collaborator at a
+    European university signs in.

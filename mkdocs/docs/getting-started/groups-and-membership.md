@@ -57,15 +57,17 @@ assumed to exist.
 
 ## Requesting a change to membership
 
-Where the allocation is administered through SUPR, which covers every research
-project and any facility that has opted into it, membership is managed in SUPR
-and synchronised to OMERO. Add or remove someone from the project in SUPR and
-the change reaches your OMERO group on its own, usually within an hour. Do not
-add or remove people directly in OMERO.
+Membership is managed in SUPR and synchronised to OMERO. This is true for every
+allocation, research project and facility delivery project alike. Add or remove
+someone from the project in SUPR and the change reaches your OMERO group on its
+own, usually within an hour. Do not add or remove people directly in OMERO.
 
-If your facility is not administered through SUPR, email
-[omero@scilifelab.se](mailto:omero@scilifelab.se) instead. Creating a new user
-account always goes through us either way. See
+Who does that depends on the route. For a research project it is whoever
+administers the project in SUPR, normally the principal investigator. For a
+facility delivery project it is the facility, which administers its own projects
+inside its own SUPR round. Either way the account itself is created by SUPR, so
+there is nothing to ask us for. See
+[Accounts and login](accounts-and-login.md) and
 [Sharing with collaborators](../using-omero/sharing.md).
 
 ## Belonging to more than one group

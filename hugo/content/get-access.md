@@ -43,9 +43,10 @@ allocation lets a facility upload image data to collaborate with its users, let
 those users view and download their data, and transfer data into a user's own
 project.
 
-There is no proposal to submit and nothing to sign. The allocation, and who is
-in the group, can be administered through SUPR if the facility prefers, and
-otherwise through us.
+There is no reviewed proposal to submit. Instead we open a SUPR round for your
+facility, and you then create a project in it for each of your user projects.
+Every project becomes an OMERO group whose membership you administer yourself in
+SUPR.
 
 After the pilot phase, the facility covers the associated storage costs.
 
@@ -66,16 +67,21 @@ After the pilot phase, the facility covers the associated storage costs.
 {{< /flow >}}
 
 A SUPR account is created for you when the proposal is approved. You then sign
-in to OMERO using your own university or institution login. The
+in to the OMERO web client with your university or institution account through
+SWAMID, so there is no OMERO password to set. Collaborators at European
+universities can use their own institution login, since SWAMID is part of the
+eduGAIN federation. The
 [documentation](/docs/getting-started/accounts-and-login/) walks through the
-first login in more detail.
+first login, and through the session token that the desktop and API clients need
+instead of a password.
 
 #### SciLifeLab facility: get in touch by email
 
 {{< flow direction="horizontal" >}}
 {{< step icon="bi-envelope" >}}[Email the OMERO team](mailto:omero@scilifelab.se){{< /step >}}
 {{< step icon="bi-chat-dots" >}}We discuss workflow and data flow together{{< /step >}}
-{{< step icon="bi-gear" >}}Onboarding aligned with your operations{{< /step >}}
+{{< step icon="bi-box-arrow-in-right" >}}We open a SUPR round for your facility{{< /step >}}
+{{< step icon="bi-diagram-3" >}}You create a project per user project and add its members{{< /step >}}
 {{< step icon="bi-cloud-upload" >}}Your facility starts delivering data through OMERO{{< /step >}}
 {{< /flow >}}
 
@@ -83,8 +89,10 @@ first login in more detail.
 
 - Free at the point of use for research projects. Facilities cover their own
   storage costs after the pilot phase.
-- 100 GB of storage by default, with larger allocations decided case by case
-- A duration set case by case, which you can ask to renew or extend
+- 100 GB of storage by default, shared by everyone in the group rather than
+  allotted per person. More space is requested as a new proposal in SUPR,
+  explaining why the project needs it.
+- A duration set case by case, which you can ask in SUPR to renew or extend
 - No limit on the number of people in your group
 
 SciLifeLab Data Centre reviews proposals on scientific merit, expected impact,
@@ -115,10 +123,11 @@ SUPR adds them to the OMERO group.
 
 ### When your project ends
 
-You get one month of notice before an allocation ends. After that the data is
-deleted automatically and there is no grace period, so export everything you
-need before the deadline. If you need more time, ask us about a renewal or an
-extension while the notice period is still running.
+You get one month of notice by email before an allocation ends. After that your
+account is disabled and the data is deleted automatically, with no grace period,
+so export everything you need before the deadline. If you need more time,
+request a renewal or an extension in SUPR while the notice period is still
+running.
 
 ### Before you upload
 

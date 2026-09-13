@@ -25,20 +25,25 @@ instead. [Uploading data](../using-omero/uploading.md) covers both.
 
 ## Web extensions
 
-OME maintains optional add-ons that appear inside the web client, among them
-[OMERO.figure](https://github.com/ome/omero-figure) for assembling publication
-figures, [OMERO.iviewer](https://github.com/ome/omero-iviewer) for a richer
-viewer with region-of-interest drawing, and
-[OMERO.parade](https://github.com/ome/omero-parade) for filtering datasets by
-annotation. The
+OME maintains optional add-ons that appear inside the web client, and three of
+them are installed on SciLifeLab OMERO:
+
+- [OMERO.figure](https://github.com/ome/omero-figure) for assembling
+  publication figures from images in the server
+- [OMERO.iviewer](https://github.com/ome/omero-iviewer) for a richer viewer
+  with region-of-interest drawing
+- [OMERO.parade](https://github.com/ome/omero-parade) for filtering datasets by
+  their annotations
+
+OME's
 [OMERO.web extensions guide](https://omero-guides.readthedocs.io/en/latest/web_addons.html)
-describes the full set.
+documents these and the rest of the set. Anything else described there is not
+installed here; ask [omero@scilifelab.se](mailto:omero@scilifelab.se) if you
+need one of them.
 
-!!! info "Which extensions are enabled here"
-
-    We have not documented which of these are installed on SciLifeLab OMERO.
-    Log in and look at the menus, or ask
-    [omero@scilifelab.se](mailto:omero@scilifelab.se).
+A figure built in OMERO.figure lives in the server, so it is deleted with
+everything else when your allocation ends. Export it while you still can; see
+[When your project ends](../data-management/end-of-project.md).
 
 ## Browser requirements
 

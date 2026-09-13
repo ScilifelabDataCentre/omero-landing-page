@@ -36,10 +36,13 @@ The login dialog takes the usual settings:
 
 - Server address: `omero.scilifelab.se`
 - Port: `4064`
-- Username and password: the same ones you use for the
-  [web client](/webclient/)
+- Username: your SUPR username
+- Password: a session token fetched from [/webclient/](/webclient/) after you
+  sign in, since there is no OMERO password on this service. See
+  [Accounts and login](../getting-started/accounts-and-login.md)
 
-The plugin remembers the session, so you are not asked again every time.
+The plugin remembers the session, so you are not asked again every time. When it
+eventually stops connecting, the token has expired and you need a new one.
 
 ## What you can move in each direction
 

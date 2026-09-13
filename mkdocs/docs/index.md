@@ -2,9 +2,9 @@
 
 How to use the SciLifeLab OMERO prototype service, from your first login to exporting your data when a project ends.
 
-!!! info "Still being written"
+!!! info "A prototype service, and documentation to match"
 
-    A few pages are not finished, and where a page depends on something we have not settled it says so rather than guessing. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) if you need something that is not covered yet.
+    Where a page depends on something we have not settled it says so rather than guessing. Email [omero@scilifelab.se](mailto:omero@scilifelab.se) if you need something that is not covered yet.
 
 For what the service is, who can use it and how to apply for access, see the [service site](/landing/).
 
@@ -38,10 +38,12 @@ Much of what follows is a short orientation plus a link into the [OMERO guides](
 
 - [Analysing data on your own machine](workflows/local-analysis.md)
 - [Batch operations](workflows/batch-operations.md)
+- [Working from an HPC system](workflows/hpc.md)
 - [Delivering data as a facility](workflows/facility-delivery.md)
 
 ## Data management
 
+- [Data you may not upload](data-management/sensitive-data.md), the one hard rule
 - [Exporting your data](data-management/exporting.md)
 - [Metadata for publication](data-management/metadata-for-publication.md)
 - [Publishing to a public repository](data-management/publishing.md)
@@ -50,6 +52,9 @@ Much of what follows is a short orientation plus a link into the [OMERO guides](
 ## Reference
 
 - [Frequently asked questions](reference/faq.md)
+- [Quotas and limits](reference/quotas-and-limits.md)
+- [Service status and availability](reference/service-status.md)
+- [Troubleshooting](reference/troubleshooting.md)
 - [Glossary](reference/glossary.md)
 
 Not finding what you need? [Getting help](support.md) explains where to take a question, depending on whether it is about OMERO itself or about this service.
