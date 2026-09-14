@@ -23,12 +23,11 @@ markup:
     ordered: false
 
 # Entries carrying params.href point at sibling paths on the same host rather
-# than at pages of this site: the OMERO web client at /webclient, and the
-# documentation at /docs. This site itself sits under the /landing prefix, and
-# Hugo prefixes a relative menu "url" with the baseURL path, which would produce
-# /landing/docs/, so those entries carry the path in params.href instead and the
-# navbar renders it verbatim. Keeping them host-relative means a staging
-# deployment does not link to production.
+# than at pages of this site: the documentation at /docs. This site itself sits
+# under the /landing prefix, and Hugo prefixes a relative menu "url" with the
+# baseURL path, which would produce /landing/docs/, so those entries carry the
+# path in params.href instead and the navbar renders it verbatim. Keeping them
+# host-relative means a staging deployment does not link to production.
 menus:
   main:
   - name: About
@@ -45,13 +44,7 @@ menus:
     params:
       href: /docs/
 
-  sub:
-  - name: Log in to SciLifeLab OMERO
-    weight: 1
-    params:
-      href: /webclient/
-
-  # Shown instead of main + sub when the navbar collapses below the lg breakpoint
+  # Shown instead of main when the navbar collapses below the lg breakpoint
   mobile:
   - name: About
     pageRef: /
@@ -66,9 +59,5 @@ menus:
     weight: 4
     params:
       href: /docs/
-  - name: Log in to SciLifeLab OMERO
-    weight: 5
-    params:
-      href: /webclient/
 
 
