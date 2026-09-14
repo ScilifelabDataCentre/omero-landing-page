@@ -18,17 +18,24 @@ explains the shared options.
 
 ## Logging in and session handling
 
-Log in once and the CLI keeps a local session, so subsequent commands do not ask
-again:
+There is no OMERO password on this service, so the CLI attaches to a session you
+have already created. Sign in to [/webclient/](/webclient/), copy the session
+token from the page that appears after authentication, and pass it with `-k`:
 
 ```bash
-omero login your-supr-username@omero.scilifelab.se:4064
+omero login -k <session-token> -s omero.scilifelab.se -p 4064
 ```
 
-At the password prompt, paste a session token rather than a password. There is
-no OMERO password on this service: sign in to [/webclient/](/webclient/) and
-fetch a token from the page that appears after authentication, as described in
-[Accounts and login](../getting-started/accounts-and-login.md).
+Log in once and the CLI keeps a local session, so subsequent commands do not ask
+again. [Accounts and login](../getting-started/accounts-and-login.md) shows
+where the token comes from.
+
+!!! tip "If a client asks for a username and password instead"
+
+    Give the token as both. `-k` is the tidier way to say the same thing on the
+    command line, and it keeps the token out of a `user@host` string that is
+    easy to paste somewhere public by accident. Your SUPR username is not used
+    for logging in at all.
 
 `omero sessions list` shows what you have open and `omero logout` ends the
 current one. OME's

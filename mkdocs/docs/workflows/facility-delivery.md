@@ -50,10 +50,10 @@ your round, and SUPR creates the account if they do not already have one and
 adds them to the matching OMERO group. There is nothing for them to apply for
 and nothing for us to do.
 
-They sign in with their own university or institution account through SWAMID,
-and a collaborator at a European university can use theirs through eduGAIN. A
-researcher with no federated login at all is the one case that still needs a
-conversation with us; see
+They sign in with their own university or institution account: OMERO sends them
+to SUPR, which authenticates against SWAMID for Swedish institutions and eduGAIN
+for the rest of Europe. A researcher with no federated login at all is the one
+case that still needs a conversation with us; see
 [Accounts and login](../getting-started/accounts-and-login.md).
 
 Membership changes reach OMERO within about an hour, so do not add anyone

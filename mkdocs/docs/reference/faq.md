@@ -19,10 +19,9 @@ covers the storage costs associated with its allocation.
 ### Can collaborators outside Sweden take part?
 
 Yes, they can be members of your group. The principal investigator has to be
-based in Sweden. Sign-in goes through SWAMID, which belongs to the international
-eduGAIN federation, so an account at a European university normally works
-directly. Ask us first if your collaborator is somewhere outside that
-federation.
+based in Sweden. SUPR handles the authentication and accepts eduGAIN as well as
+SWAMID, so an account at a European university normally works directly. Ask us
+first if your collaborator is somewhere outside those federations.
 
 ### How do I apply?
 
@@ -43,11 +42,12 @@ conditions of the service.
 
 ### How do I log in?
 
-A SUPR account is created for you when your proposal is approved. You then sign in
-at the [OMERO web client](/webclient/) with your university or institution account
-through SWAMID. There is no OMERO password. The desktop and API clients cannot do
-single sign-on, so they use your SUPR username and a session token you fetch from
-the web client; see
+A SUPR account is created for you when your proposal is approved. Go to the
+[OMERO web client](/webclient/) and it sends you to SUPR, which authenticates you
+against your own university or institution account. There is no OMERO password.
+The desktop and API clients cannot do single sign-on, so they reuse that session:
+copy the session token from the web client and give it as both the username and
+the password. See
 [Accounts and login](../getting-started/accounts-and-login.md).
 
 ### How many people can be in my group?

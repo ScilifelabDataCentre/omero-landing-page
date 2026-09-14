@@ -9,8 +9,9 @@ and building a figure. It is the best single introduction to OMERO there is.
 
 ## The web client at a glance
 
-Sign in at [/webclient/](/webclient/) with your university account through
-SWAMID; [Accounts and login](accounts-and-login.md) covers the details. The
+Sign in at [/webclient/](/webclient/). OMERO sends you to SUPR, which
+authenticates you against your own university or institution account and hands
+you back; [Accounts and login](accounts-and-login.md) covers the details. The
 layout is three panes: a tree of your
 projects and datasets on the left, thumbnails in the middle, and details and
 annotations for whatever you have selected on the right. The group selector is
@@ -35,8 +36,8 @@ Not from the browser, which has no import route. Install
 [OMERO.insight](../clients-and-apis/omero-insight.md) and use its import wizard,
 or use `omero import` from the
 [command line](../clients-and-apis/command-line.md). Connect to
-`omero.scilifelab.se` on port `4064` with your SUPR username and a session
-token, which you fetch from the web client after signing in there; see
+`omero.scilifelab.se` on port `4064` using the session token from the web
+client, which goes in both the username and the password field; see
 [Accounts and login](accounts-and-login.md).
 
 Before you import anything real, read

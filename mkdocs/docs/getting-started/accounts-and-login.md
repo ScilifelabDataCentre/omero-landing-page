@@ -2,9 +2,9 @@
 
 How you get an account once your project is approved, and how to sign in.
 
-There are two different ways in, and which one you use depends on the client
-rather than on who you are. The browser uses single sign-on. Everything else
-uses a session token you fetch from the browser first.
+You sign in once, through your own institution, and that single sign-in serves
+both kinds of client. The browser carries it for you. Everything else uses the
+session token that the same sign-in produced.
 
 ## Getting an account
 
@@ -18,36 +18,45 @@ the same way. Either route ends with you being a member of one OMERO group; see
 Your OMERO username is your SUPR username. It is usually the first four
 characters of your first name followed by the first four of your last name,
 sometimes with digits appended to keep it unique, so Jonas Anderson becomes
-`jonaande`. You will need it for every client except the browser, and it is
-shown to you at sign-in, so there is no need to guess.
+`jonaande`. It is how you appear to the rest of your group, and it is shown to
+you at sign-in, so there is no need to guess it. You will not have to type it
+into anything: no client on this service asks for it.
 
 ## Signing in for the first time
 
-Go to [/webclient/](/webclient/) and sign in with your university or
-institution account through SWAMID, the Swedish identity federation. There is no
-OMERO password to set or remember: the web client never asks for one.
+Go to [/webclient/](/webclient/). OMERO sends you to SUPR, which authenticates
+you against your own university or institution account, and then hands you back.
+SUPR accepts both SWAMID, the Swedish identity federation, and eduGAIN, its
+international counterpart. There is no OMERO password to set or remember: you
+are never asked for one.
 
-After you authenticate, an interim page confirms who you are and offers the two
-ways forward.
+Authenticating creates a session, and an interim page confirms who you are and
+offers the two ways of using it.
 
-![The OMERO web client after SWAMID sign-in, showing the signed-in username, a Continue button, and a link to obtain a session token](../assets/ss-login-token.png)
+![The OMERO web client after sign-in, showing the signed-in username, a Continue button, and a link to obtain a session token](../assets/ss-login-token.png)
 
 Press **Continue** to go to the web client. [First steps](first-steps.md) picks
 up from there.
 
-### Getting a session token for the desktop and API clients
+### Using the session token in the desktop and API clients
 
 OMERO.insight, Fiji, napari, the Python API and the command line all connect
 over port `4064`, which is not a web port and cannot carry a browser-based
-single sign-on. They authenticate with your username and a session token
-instead, and the token takes the place of a password in every client's login
-dialog.
+single sign-on. They reuse the session you have already created instead, and the
+token on that interim page is the handle to it. There is nothing extra to
+generate: signing in is what produced it.
+
+!!! tip "The token goes in both fields"
+
+    Enter the token as **the username and the password**, the same string in
+    both boxes. This is not a mistake in the instructions. It is how OMERO lets
+    a client attach to an existing session, and it is why your SUPR username is
+    not needed anywhere.
 
 Follow **obtain a session token here** on the page above, copy the token, and
-paste it into the client. Repeat that whenever a client stops being able to
-connect, because tokens do not last indefinitely. A token grants everything your
-account can do, so treat it like a password: do not commit it to a repository or
-paste it into a shared document.
+paste it into both fields of the client's login dialog. A token grants
+everything your account can do, so treat it like a password: do not commit it to
+a repository or paste it into a shared document.
 
 The client pages cover the dialogs themselves:
 [OMERO.insight](../clients-and-apis/omero-insight.md),
@@ -55,15 +64,27 @@ The client pages cover the dialogs themselves:
 [napari](../clients-and-apis/napari.md),
 [Python API](../clients-and-apis/python-api.md) and
 [command line](../clients-and-apis/command-line.md). For an unattended batch
-job, the same mechanism supplies the session key described in
+job, the same token is the session key described in
 [Working from an HPC system](../workflows/hpc.md).
+
+### How long a token lasts
+
+As long as you keep using it. Activity refreshes the session, so a client you
+work in every day, or a long analysis that is steadily reading from the server,
+keeps its own token alive. What ends a session is a stretch of inactivity, not
+elapsed time since you fetched it, and closing your browser does not by itself
+disconnect a client that is still working.
+
+The practical consequence is that a token you set aside goes stale. When a
+client that worked last week is refused today, sign in again and copy the new
+token. See [Troubleshooting](../reference/troubleshooting.md).
 
 ## Signing in from outside Sweden
 
-A collaborator abroad does not need a Swedish identity. SUPR authenticates
-through eduGAIN, the international federation that SWAMID belongs to, so an
-account at a European university normally works directly at the same sign-in
-page. Everything after that is identical, session token included.
+A collaborator abroad does not need a Swedish identity. SUPR, which handles the
+authentication, accepts eduGAIN as well as SWAMID, so an account at a European
+university normally works directly at the same sign-in page. Everything after
+that is identical, session token included.
 
 !!! info "If your institution is not in the federation"
 

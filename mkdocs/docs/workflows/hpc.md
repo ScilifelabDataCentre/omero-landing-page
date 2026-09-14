@@ -34,18 +34,27 @@ looks like.
 
 ## Authenticating from a batch job
 
-A batch job cannot sign in interactively, so it cannot go through SWAMID. Use a
-session key instead: sign in to [/webclient/](/webclient/), fetch a session
-token as described in
+A batch job cannot sign in interactively, so it cannot be sent to SUPR to
+authenticate. Use a session key instead: sign in to [/webclient/](/webclient/),
+copy the session token as described in
 [Accounts and login](../getting-started/accounts-and-login.md), and give the job
 that. This is the supported approach.
 
+The key goes in both the username and the password field, or with `-k` if the
+job shells out to the `omero` command line:
+
+```bash
+omero login -k "$OMERO_SESSION_TOKEN" -s omero.scilifelab.se -p 4064
+```
+
 Two consequences worth planning around:
 
-- **The key is short-lived.** A job that sits in the queue for two days may
-  find its key has expired by the time it runs. Fetch the key close to
-  submission, or have the job fail loudly and be resubmitted rather than
-  silently produce nothing.
+- **Queue time is the risk, not run time.** A session stays alive as long as it
+  is being used, so a job that reads steadily from the server for three days
+  keeps its own key valid throughout. What kills a key is sitting unused, which
+  is exactly what happens to a job waiting in the queue. Copy the key close to
+  submission, and have the job fail loudly on an authentication error so it can
+  be resubmitted rather than silently producing nothing.
 - **The key is a credential.** Pass it through an environment variable or a
   file readable only by you, not on the command line where it shows up in the
   scheduler's job listing, and never in a script committed to a repository.

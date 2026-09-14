@@ -66,14 +66,14 @@ After the pilot phase, the facility covers the associated storage costs.
 {{< step icon="bi-check-circle" >}}Allocation granted and OMERO group set up{{< /step >}}
 {{< /flow >}}
 
-A SUPR account is created for you when the proposal is approved. You then sign
-in to the OMERO web client with your university or institution account through
-SWAMID, so there is no OMERO password to set. Collaborators at European
-universities can use their own institution login, since SWAMID is part of the
-eduGAIN federation. The
+A SUPR account is created for you when the proposal is approved. Going to the
+OMERO web client then sends you to SUPR, which authenticates you against your own
+university or institution account, so there is no OMERO password to set. SUPR
+accepts both SWAMID and the international eduGAIN federation, which is how
+collaborators at European universities use their own institution login. The
 [documentation](/docs/getting-started/accounts-and-login/) walks through the
-first login, and through the session token that the desktop and API clients need
-instead of a password.
+first login, and through the session token that the desktop and API clients use
+in place of a username and password.
 
 #### SciLifeLab facility: get in touch by email
 

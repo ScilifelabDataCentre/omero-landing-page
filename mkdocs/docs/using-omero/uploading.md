@@ -21,9 +21,13 @@ connection settings.
 unattended, or needs to be repeated the same way each time:
 
 ```bash
-omero login your-username@omero.scilifelab.se:4064
+omero login -k <session-token> -s omero.scilifelab.se -p 4064
 omero import /path/to/your/images
 ```
+
+The session token is copied from the web client after you sign in; see
+[Accounts and login](../getting-started/accounts-and-login.md) and the
+[command line](../clients-and-apis/command-line.md) page.
 
 OME documents the
 [command line importer](https://omero.readthedocs.io/en/stable/users/cli/import.html)

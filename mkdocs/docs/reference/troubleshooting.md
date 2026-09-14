@@ -42,21 +42,28 @@ The web client and the other clients fail for different reasons, because they
 authenticate differently. See
 [Accounts and login](../getting-started/accounts-and-login.md).
 
-For the web client, sign-in goes through SWAMID with your university or
-institution account. There is no OMERO password, so there is nothing to reset
-here. If your institution's login page rejects you, that is an issue with that
-account rather than with OMERO. If you get through SWAMID but OMERO says you
-have no account, the SUPR synchronisation may not have reached us yet; give it
-an hour, then email us.
+For the web client, OMERO sends you to SUPR, which authenticates you against
+your own university or institution account. There is no OMERO password, so there
+is nothing to reset here. If your institution's login page rejects you, that is
+an issue with that account rather than with OMERO. If you get through SUPR but
+OMERO says you have no account, the synchronisation may not have reached us yet;
+give it an hour, then email us.
 
 For a desktop or API client, the two usual causes are:
 
-- **The token has expired.** Tokens do not last indefinitely. Fetch a fresh one
-  from the web client and paste it in again. This is the answer when a client
-  that worked last week suddenly does not.
-- **The username is wrong.** It is your SUPR username, typically four
-  characters of your first name plus four of your last name, and not your email
-  address. It is shown to you on the page you fetch the token from.
+- **Your SUPR username is in the username field.** It does not belong there.
+  The session token goes in *both* the username and the password field, the
+  same string twice. Putting your username in one of them is the most common
+  way to be refused, because it looks like the obvious thing to do. See
+  [Accounts and login](../getting-started/accounts-and-login.md).
+- **The token has gone stale.** A session stays alive while it is being used
+  and lapses after a stretch of inactivity, so a token you copied and set aside
+  stops working even though you never logged out. Sign in to the web client
+  again and copy the new one. This is the answer when a client that worked last
+  week suddenly does not.
+
+Closing your browser is not a cause. The token outlives the browser tab, so a
+client that is connected and working stays that way.
 
 A newly added group member can also simply be too early: membership comes from
 SUPR and takes up to about an hour to appear.

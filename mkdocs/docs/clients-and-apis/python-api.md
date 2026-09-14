@@ -24,21 +24,32 @@ has the connection code. The values to give it for this service are:
 
 - host: `omero.scilifelab.se`
 - port: `4064`
-- username: your SUPR username
-- password: a session token obtained from the web client
+- username: your session token
+- password: the same session token again
 
 There is no OMERO password on this service. Sign in to
-[/webclient/](/webclient/) and fetch a session token from the page that appears
-after authentication, then pass it where the connection code expects a password.
+[/webclient/](/webclient/) and copy the session token from the page that appears
+after authentication, then pass it as both the username and the password.
 [Accounts and login](../getting-started/accounts-and-login.md) shows where the
 link is.
+
+Passing one value twice looks wrong, so it is worth naming the variable for what
+it is:
+
+```python
+token = os.environ["OMERO_SESSION_TOKEN"]
+conn = BlitzGateway(token, token, host="omero.scilifelab.se", port=4064)
+```
+
+This is OMERO's mechanism for attaching to an existing session, and it is why
+your SUPR username does not appear anywhere in the connection code.
 
 As with the desktop client, port `4064` is not a web port and may be blocked by
 an institutional firewall even when the web client works.
 
 Read the token from the environment or prompt for it rather than writing it into
-a script you commit to a repository. It expires, so a script that hard-codes one
-will break anyway.
+a script you commit to a repository. It goes stale after a period of disuse, so
+a script that hard-codes one will break anyway.
 
 ## Reading and writing data
 

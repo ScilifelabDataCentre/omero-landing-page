@@ -48,11 +48,13 @@ site. What follows is what was left over.
   people to email us if the login window reports a version mismatch. Publishing
   the server version, and updating it at each upgrade, would remove that round
   trip.
-- **How long does a session token last?** The documentation says tokens expire
-  and to fetch a new one, because we do not have the figure. It matters most for
-  HPC batch jobs, where a job can sit in a queue for days before it runs;
-  `mkdocs/docs/workflows/hpc.md` currently advises fetching the key close to
-  submission and failing loudly.
+- **What is the session inactivity timeout?** The mechanism is settled: a
+  session is kept alive by use and lapses after a period of inactivity, which is
+  what the documentation now says. The number is not. It matters most for HPC
+  batch jobs, because queue time counts as inactivity, so knowing whether the
+  window is an hour or a day decides whether copying the key at submission is
+  good enough. `mkdocs/docs/workflows/hpc.md` currently advises copying it close
+  to submission and failing loudly on an authentication error.
 - **Can network-isolated HPC systems be supported?** Compute nodes need
   outbound access to port `4064`, and a cluster that denies it cannot use the
   service at all. `mkdocs/docs/workflows/hpc.md` says so and describes the
@@ -67,3 +69,4 @@ site. What follows is what was left over.
 Every page in `mkdocs/docs/` is now written and in the navigation, and
 `not_in_nav` in `mkdocs/mkdocs.yml` is empty. `content/terms.md` is the only
 page left unpublished, held by the controller and processor question above.
+

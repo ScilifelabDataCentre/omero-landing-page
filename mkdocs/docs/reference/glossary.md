@@ -168,19 +168,22 @@ SciLifeLab Data Centre
     Reachable at [omero@scilifelab.se](mailto:omero@scilifelab.se).
 
 Session token
-:   What the desktop and API clients use in place of a password, because port
-    `4064` cannot carry a browser-based single sign-on. You fetch one from the
-    web client after signing in, and it expires. Also called a session key when
-    a batch job uses it. See
+:   The handle to the session that signing in creates, and the only credential
+    the desktop and API clients use, because port `4064` cannot carry a
+    browser-based single sign-on. Copy it from the web client and give it as
+    both the username and the password. Using it keeps it alive; it goes stale
+    after a stretch of inactivity. Also called a session key when a batch job
+    uses it. See
     [Accounts and login](../getting-started/accounts-and-login.md).
 
 SUPR
-:   The Swedish national resource application system, through which researchers
-    apply for access and through which every group's membership is
-    administered. See the [access page](/landing/get-access/).
+:   The Swedish national resource application system. Researchers apply for
+    access through it, every group's membership is administered in it, and it
+    also brokers the login: OMERO sends you to SUPR, which authenticates you
+    against your own institution. See the [access page](/landing/get-access/).
 
 SWAMID
-:   The Swedish identity federation that the web client authenticates against,
-    so you sign in with your own university or institution account. It belongs
-    to eduGAIN, the international federation, which is how a collaborator at a
-    European university signs in.
+:   The Swedish identity federation, one of the two that SUPR authenticates
+    against, so you sign in with your own university or institution account.
+    The other is eduGAIN, its international counterpart, which is how a
+    collaborator at a European university signs in.

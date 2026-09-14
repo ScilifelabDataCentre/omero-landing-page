@@ -52,8 +52,8 @@ There is no direct route from the service into those repositories yet.
 
 Collaborators based outside Sweden can be members of a group, as long as the
 principal investigator is based in Sweden. Sign-in uses your own university or
-institution account through SWAMID, which is part of the international eduGAIN
-federation via SUPR.
+institution account: SUPR handles the authentication and accepts both SWAMID and
+the international eduGAIN federation.
 
 {{< info_block >}} Good to know:
 
