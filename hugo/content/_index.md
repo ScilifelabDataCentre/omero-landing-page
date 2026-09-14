@@ -21,22 +21,22 @@ export your data and results when the project ends.
 ### What you can do
 
 {{< cards >}}
-{{< card icon="bi-cloud-upload" title="Upload and organize" >}}
+{{< card icon="bi-cloud-upload" title="Upload and organize" docs="using-omero/uploading/" >}}
 Bring microscopy and other image data into your OMERO project group and keep it structured.
 {{< /card >}}
-{{< card icon="bi-eye" title="View and annotate" >}}
+{{< card icon="bi-eye" title="View and annotate" docs="using-omero/viewing-and-annotating/" >}}
 Visualize and annotate image data together with your project members.
 {{< /card >}}
-{{< card icon="bi-diagram-3" title="Reach it from your tools" >}}
+{{< card icon="bi-diagram-3" title="Reach it from your tools" docs="clients-and-apis/web-client/" >}}
 Work in a web browser, or connect from OMERO.insight, Fiji, napari, the omero command line or the Python API.
 {{< /card >}}
-{{< card icon="bi-cpu" title="Work locally or on HPC" >}}
+{{< card icon="bi-cpu" title="Work locally or on HPC" docs="workflows/hpc/" >}}
 Reach the same data from your own machine or from a compute cluster through the OMERO API.
 {{< /card >}}
-{{< card icon="bi-people" title="Share under your control" >}}
+{{< card icon="bi-people" title="Share under your control" docs="using-omero/sharing/" >}}
 Share with your project members, and control who they are through your project in SUPR.
 {{< /card >}}
-{{< card icon="bi-journal-text" title="Ready for publication" >}}
+{{< card icon="bi-journal-text" title="Ready for publication" docs="data-management/metadata-for-publication/" >}}
 Add metadata as you go, so a dataset is still traceable and intelligible when you come to publish it.
 {{< /card >}}
 {{< /cards >}}
@@ -65,5 +65,5 @@ the international eduGAIN federation.
 {{< /info_block >}}
 
 <a class="btn" href="{{< relref "get-access" >}}" role="button">Get access</a>
-<a class="btn" href="/docs/" role="button">Read the documentation</a>
+<a class="btn" href="{{< docs >}}" role="button">Read the documentation</a>
 <a class="btn scilife-external-btn" href="/webclient/" role="button">Log in to SciLifeLab OMERO</a>

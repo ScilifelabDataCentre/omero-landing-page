@@ -3,6 +3,16 @@ languageCode: "en-us"
 title: "SciLifeLab OMERO, a prototype service for bioimage data management"
 buildFuture: true
 
+params:
+  # Root of the MkDocs documentation build. It is a sibling path prefix on the
+  # same host, not part of this Hugo site, and deploy.jsonnet takes it as the
+  # docsSubPath parameter, so it is kept here rather than repeated across pages.
+  # Templates read site.Params.docsURL; content files go through the "docs"
+  # shortcode, since they cannot evaluate site.Params themselves. The navbar
+  # entries in menus below are the one exception, as menu definitions in this
+  # file cannot reference a param either.
+  docsURL: /docs/
+
 markup:
   goldmark:
     renderer:
@@ -12,6 +22,13 @@ markup:
     endLevel: 4
     ordered: false
 
+# Entries carrying params.href point at sibling paths on the same host rather
+# than at pages of this site: the OMERO web client at /webclient, and the
+# documentation at /docs. This site itself sits under the /landing prefix, and
+# Hugo prefixes a relative menu "url" with the baseURL path, which would produce
+# /landing/docs/, so those entries carry the path in params.href instead and the
+# navbar renders it verbatim. Keeping them host-relative means a staging
+# deployment does not link to production.
 menus:
   main:
   - name: About
@@ -23,13 +40,12 @@ menus:
   - name: Contact us
     pageRef: /contact
     weight: 3
+  - name: Documentation
+    weight: 4
+    params:
+      href: /docs/
 
   sub:
-  # The web client lives at the root of the same host, while this site sits under
-  # the /landing prefix. Hugo prefixes a relative menu "url" with the baseURL
-  # path, which would produce /landing/webclient/, so the path is carried in
-  # params.href instead and the navbar renders that verbatim. Keeping it
-  # host-relative means a staging deployment does not link to production.
   - name: Log in to OMERO
     weight: 1
     params:
@@ -46,8 +62,12 @@ menus:
   - name: Contact us
     pageRef: /contact
     weight: 3
-  - name: Log in to OMERO
+  - name: Documentation
     weight: 4
+    params:
+      href: /docs/
+  - name: Log in to OMERO
+    weight: 5
     params:
       href: /webclient/
 

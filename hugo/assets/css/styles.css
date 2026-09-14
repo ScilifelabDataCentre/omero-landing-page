@@ -157,6 +157,12 @@ body {
   max-width: 26rem;
   text-wrap: balance;
 }
+/* The site wide focus ring is teal, which is close to both the darkened hero
+   image behind it and the teal fill of the buttons themselves. White is the only
+   colour here that reads against all three. */
+.scilife-hero-actions .btn:focus-visible {
+  outline-color: white;
+}
 
 @media (max-width: 575px) {
   .scilife-hero {
@@ -596,7 +602,10 @@ body {
   border-top: 1px solid var(--scilife-light-grey);
 }
 
-.scilife-subsection .btn {
+/* The hero sits outside .scilife-subsection, which wraps only the page content,
+   so it is named alongside it here and on the external button below. */
+.scilife-subsection .btn,
+.scilife-hero .btn {
   background-color: var(--scilife-teal);
   border-color: var(--scilife-teal);
   color: white;
@@ -605,14 +614,18 @@ body {
   letter-spacing: 0.045rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
-.scilife-subsection .btn:focus {
+.scilife-subsection .btn:focus,
+.scilife-hero .btn:focus {
   background-color: var(--scilife-teal);
   color: white;
   border-color: var(--scilife-teal);
 }
 .scilife-subsection .btn:hover,
 .scilife-subsection .btn:active,
-.scilife-subsection .btn:active:focus {
+.scilife-subsection .btn:active:focus,
+.scilife-hero .btn:hover,
+.scilife-hero .btn:active,
+.scilife-hero .btn:active:focus {
   background-color: var(--scilife-teal-hover);
   border-color: var(--scilife-teal-hover);
   color: white;
@@ -642,7 +655,8 @@ body {
 }
 
 /* Overrides default button */
-.scilife-subsection .scilife-external-btn {
+.scilife-subsection .scilife-external-btn,
+.scilife-hero .scilife-external-btn {
   background-color: var(--scilife-aqua-025);
   border-color: var(--scilife-medium-grey);
   border-radius: 0.5rem;
@@ -652,7 +666,8 @@ body {
   letter-spacing: 0.045rem;
 }
 
-.scilife-subsection .scilife-external-btn:focus {
+.scilife-subsection .scilife-external-btn:focus,
+.scilife-hero .scilife-external-btn:focus {
   background-color: var(--scilife-lime-025);
   color: black;
   border-color: var(--scilife-medium-grey);
@@ -662,7 +677,10 @@ body {
    button carries black text. */
 .scilife-subsection .scilife-external-btn:hover,
 .scilife-subsection .scilife-external-btn:active,
-.scilife-subsection .scilife-external-btn:active:focus {
+.scilife-subsection .scilife-external-btn:active:focus,
+.scilife-hero .scilife-external-btn:hover,
+.scilife-hero .scilife-external-btn:active,
+.scilife-hero .scilife-external-btn:active:focus {
   background-color: var(--scilife-aqua-050);
   border-color: var(--scilife-dark-grey);
   color: black;
@@ -825,6 +843,40 @@ body {
    <p> on a single-line body and the rule would then flatten the heading gap. */
 .scilife-feature-card p:last-child {
   margin-bottom: 0;
+}
+
+/* A card given a "url". The overlay on the title link stretches the click target
+   across the whole card, while the accessible name stays the title text. */
+.scilife-feature-card-linked {
+  position: relative;
+}
+.scilife-feature-card-linked h4 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.scilife-feature-card-linked:hover {
+  border-color: var(--scilife-teal);
+}
+/* Undecorated at rest, since the border and the pointer already mark the card as
+   clickable, but underlined on hover to confirm what is being clicked. */
+.scilife-subsection .scilife-feature-card-linked h4 a {
+  text-decoration: none;
+}
+.scilife-feature-card-linked:hover h4 a {
+  text-decoration: underline;
+}
+/* Moves the focus ring from the title text out to the card edge, to match the
+   click target. Guarded by @supports so that a browser without :has keeps the
+   ring the site wide rule near the top of this file puts on the link itself. */
+@supports selector(:has(*)) {
+  .scilife-feature-card-linked:has(h4 a:focus-visible) {
+    outline: 0.15rem solid var(--scilife-teal);
+    outline-offset: 0.15rem;
+  }
+  .scilife-feature-card-linked h4 a:focus-visible {
+    outline: 0;
+  }
 }
 
 .scilife-sort-dropdown,
@@ -1300,6 +1352,14 @@ p + .clipboard {
   }
   .scilife-feature-icon {
     color: var(--scilife-aqua);
+  }
+  /* Teal is too close to the dark background to register as a hover or focus
+     accent, so both follow the aqua used elsewhere in this block. */
+  .scilife-feature-card-linked:hover {
+    border-color: var(--scilife-aqua);
+  }
+  .scilife-feature-card-linked:has(h4 a:focus-visible) {
+    outline-color: var(--scilife-aqua);
   }
 
   .scilife-subsection > h3 {

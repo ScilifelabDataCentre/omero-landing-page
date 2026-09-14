@@ -14,7 +14,7 @@ and include a short description of your project and your data.
 ### Where to take your question
 
 - **How to use OMERO itself** — start with our
-  [documentation](/docs/). For questions about the OMERO software in general,
+  [documentation]({{< docs >}}). For questions about the OMERO software in general,
   the [OME documentation](https://omero.readthedocs.io/) and the
   [image.sc forum](https://forum.image.sc/tag/omero) will usually get you a
   faster and better answer than we can.
