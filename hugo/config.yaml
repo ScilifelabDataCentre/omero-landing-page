@@ -46,7 +46,7 @@ menus:
       href: /docs/
 
   sub:
-  - name: Log in to OMERO
+  - name: Log in to SciLifeLab OMERO
     weight: 1
     params:
       href: /webclient/
@@ -66,7 +66,7 @@ menus:
     weight: 4
     params:
       href: /docs/
-  - name: Log in to OMERO
+  - name: Log in to SciLifeLab OMERO
     weight: 5
     params:
       href: /webclient/
