@@ -151,4 +151,3 @@ Not sure whether OMERO fits your project?
 [Get in touch]({{< relref "contact" >}}) before you write a full request.
 
 <a class="btn" href="mailto:omero@scilifelab.se" role="button">Email the OMERO team</a>
-<a class="btn" href="{{< docs >}}" role="button">Read the documentation</a>

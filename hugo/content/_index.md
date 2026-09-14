@@ -63,7 +63,3 @@ the international eduGAIN federation.
 
 - Availability is best effort and there is no uptime target. Planned maintenance, outages and server upgrades are announced by email.
 {{< /info_block >}}
-
-<a class="btn" href="{{< relref "get-access" >}}" role="button">Get access</a>
-<a class="btn" href="{{< docs >}}" role="button">Read the documentation</a>
-<a class="btn scilife-external-btn" href="/webclient/" role="button">Log in to SciLifeLab OMERO</a>
