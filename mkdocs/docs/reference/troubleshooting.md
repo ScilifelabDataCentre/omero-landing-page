@@ -6,15 +6,23 @@ Common failures and what to try before writing to us.
 
     A local firewall blocking outbound port `4064` is the single most common
     problem reported to us. It is what makes OMERO.insight, Fiji, napari, the
-    Python API and the command line time out on a machine where
-    [/webclient/](/webclient/) works perfectly, because the web client uses
+    Python API and the command line time out on a machine where the
+    [web client](/webclient/) works perfectly, because the web client uses
     ordinary HTTPS and everything else does not.
 
     Test it before assuming anything else is wrong:
 
-    ```bash
-    nc -vz omero.scilifelab.se 4064
-    ```
+    === "macOS and Linux"
+
+        ```bash
+        nc -vz omero.scilifelab.se 4064
+        ```
+
+    === "Windows"
+
+        ```powershell
+        Test-NetConnection omero.scilifelab.se -Port 4064
+        ```
 
     If that hangs or is refused while the web client loads in your browser, the
     block is between you and the server, and your institution's IT department
@@ -74,9 +82,11 @@ SUPR and takes up to about an hour to appear.
   everyone in the project and enforced with no margin. See
   [Quotas and limits](quotas-and-limits.md).
 - **An unreadable or partly read file.** Bio-Formats may not support that exact
-  variant of the format, or the file may depend on a companion file that was not
-  included. Check [Supported formats](../using-omero/supported-formats.md) and
-  import the whole original folder rather than a single file pulled out of it.
+  variant of the format, or the file may depend on companion files it could not
+  find. For a multi-file format, point the importer at the master file with the
+  companion files still beside it in their original folder, rather than at a
+  master file you have copied out on its own. See
+  [Supported formats](../using-omero/supported-formats.md).
 - **A stall on a large batch.** Use a bulk import from the command line rather
   than the desktop wizard; it is more robust over long runs and easier to
   restart. See [Batch operations](../workflows/batch-operations.md).
@@ -87,8 +97,11 @@ SUPR and takes up to about an hour to appear.
 
 Usually the rendering settings rather than the data. Channel colours, contrast
 limits and which channels are active are stored per user, so what you see is not
-necessarily what a colleague sees. Reset them in the viewer, and use "save to
-all" or copy settings across images when you want a consistent look. See
+necessarily what a colleague sees: their default is the settings of whoever owns
+the image, not yours. Reset them in the viewer, and use `Save to All` or copy
+settings across images when you want a consistent look. A colleague who wants to
+see the image the way you do can pick your settings from the thumbnails under
+`User Settings` in the preview pane. See
 [Viewing and annotating](../using-omero/viewing-and-annotating.md).
 
 If the dimensions themselves are wrong, so a z-stack appears as timepoints or

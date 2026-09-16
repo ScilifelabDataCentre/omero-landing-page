@@ -1,7 +1,7 @@
 # User documentation for the SciLifeLab OMERO prototype service.
 # Built into its own volume by an init container and served by the same nginx
 # that serves the landing page, under the /docs path prefix. See deploy.jsonnet
-# and docs/architecture/002_technical-documentation.md.
+# and docs/architecture/001_technical-setup.md.
 
 # The header shows the SciLifeLab OMERO wordmark next to this, so the site name
 # only needs to supply the second half. The full browser title is assembled in
@@ -59,6 +59,17 @@ extra_css:
 
 plugins:
   - search
+  # Puts a "Last update" date at the foot of each page, read from the file's own
+  # git history. These pages describe a prototype whose facts are still moving,
+  # so a reader needs to see how old one is. Not part of the mkdocs-material
+  # image, so deploy.jsonnet installs it before building.
+  - git-revision-date-localized:
+      type: date
+      # The deployment clones the repo, so the history is normally present.
+      # Falling back to the build date rather than failing is deliberate: a
+      # failed docs build takes the landing page down with it, and a missing
+      # date is not worth that.
+      fallback_to_build_date: true
 
 markdown_extensions:
   - admonition

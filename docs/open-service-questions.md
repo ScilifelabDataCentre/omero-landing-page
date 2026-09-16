@@ -1,12 +1,15 @@
 # Open service questions
 
-Questions raised by the September 2026 content review that are still unanswered.
-None of them blocks a page any more, but each one leaves a soft spot in the copy.
-Delete an entry once the answer has been written into the site or the
-documentation.
+Questions raised by the content reviews that are still unanswered. Each one
+leaves a soft spot in the copy, and the session timeout below actively
+compromises a page. Delete an entry once the answer has been written into the
+site or the documentation.
 
 Most of the original register was answered in September 2026 and written into the
-site. What follows is what was left over.
+site. A second review in September 2026 answered the SUPR account sequence, the
+facility allocation duration, the absence of a maximum quota, the maintenance
+schedule and the OME-TIFF round trip, all of which are now in the documentation.
+What follows is what was left over.
 
 ## Access and accounts
 
@@ -32,7 +35,8 @@ site. What follows is what was left over.
   answer given was "in the SUPR proposal". SciLifeLab Data Centre is the legal
   entity named in the terms. Neither covers a facility, which submits no
   reviewed proposal, nor a researcher added by a facility to one of its
-  projects, nor anyone onboarded before the round opened.
+  projects, nor anyone onboarded before the round opened. The documentation
+  deliberately says nothing about the terms of use until this is settled.
 - **How is the facility storage cost obligation established?** The site says a
   facility covers its storage costs after the pilot phase, and that the cost is
   calculated from storage usage. Three things are still missing before that can
@@ -42,19 +46,27 @@ site. What follows is what was left over.
 
 ## Technical
 
+- **What is the session inactivity timeout?** The most consequential item left,
+  and the only one that makes a page give advice we cannot stand behind. The
+  mechanism is settled and documented: a session is kept alive by use and lapses
+  after a period of inactivity. The number is not, and OMERO's shipped defaults
+  make it decision-critical rather than cosmetic. `omero.sessions.timeout`
+  defaults to 600000 ms, ten minutes, and `omero.sessions.max_user_time_to_idle`
+  defaults to 6000000 ms, about a hundred minutes, which caps what a client can
+  even request. Queue time on an HPC system counts as inactivity, so if the
+  server runs near those defaults then the advice in
+  `mkdocs/docs/workflows/hpc.md` to copy the key close to submission does not
+  work for any realistic queue, and that section needs rewriting rather than a
+  number dropped into it. Needed: the configured value of both properties, and
+  whether any absolute session lifetime cap applies, since
+  `mkdocs/docs/getting-started/accounts-and-login.md` currently states that
+  inactivity is the only thing that ends a session.
 - **Which OMERO server version is running, and which OMERO.insight release
   should people install?** Unspecified, so
   `mkdocs/docs/clients-and-apis/omero-insight.md` keeps an admonition telling
   people to email us if the login window reports a version mismatch. Publishing
   the server version, and updating it at each upgrade, would remove that round
   trip.
-- **What is the session inactivity timeout?** The mechanism is settled: a
-  session is kept alive by use and lapses after a period of inactivity, which is
-  what the documentation now says. The number is not. It matters most for HPC
-  batch jobs, because queue time counts as inactivity, so knowing whether the
-  window is an hour or a day decides whether copying the key at submission is
-  good enough. `mkdocs/docs/workflows/hpc.md` currently advises copying it close
-  to submission and failing loudly on an authentication error.
 - **Can network-isolated HPC systems be supported?** Compute nodes need
   outbound access to port `4064`, and a cluster that denies it cannot use the
   service at all. `mkdocs/docs/workflows/hpc.md` says so and describes the
@@ -66,7 +78,12 @@ site. What follows is what was left over.
 
 ## State of the documentation
 
-Every page in `mkdocs/docs/` is now written and in the navigation, and
-`not_in_nav` in `mkdocs/mkdocs.yml` is empty. `content/terms.md` is the only
-page left unpublished, held by the controller and processor question above.
+Every page in `mkdocs/docs/` is written and in the navigation, and `not_in_nav`
+in `mkdocs/mkdocs.yml` is empty. `content/terms.md` is the only page left
+unpublished, held by the controller and processor question above.
 
+The deployment still builds the docs with `strict: false`, because the docs and
+the landing page share a pod and a failed docs build would take the landing page
+down. Broken links and dead anchors are caught by the strict build in
+`.github/workflows/docs.yml` instead, which is the place to keep that check
+rather than the deployment.

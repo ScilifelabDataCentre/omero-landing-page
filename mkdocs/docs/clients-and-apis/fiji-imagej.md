@@ -23,8 +23,8 @@ The plugin asks for the same connection settings as the desktop client:
 - Username: your session token
 - Password: the same session token again
 
-There is no OMERO password on this service. Sign in to
-[/webclient/](/webclient/), copy the session token from the page that appears
+There is no OMERO password on this service. Sign in to the
+[web client](/webclient/), copy the session token from the page that appears
 after authentication, and paste it into both fields; the same string goes in
 each, which is how OMERO attaches a client to a session you already have. Your
 SUPR username is not used here. See

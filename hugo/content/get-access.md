@@ -61,12 +61,16 @@ After the pilot phase, the facility covers the associated storage costs.
 {{< flow direction="horizontal" >}}
 {{< step icon="bi-pencil-square" >}}Prepare a short project description and a data management plan{{< /step >}}
 {{< step icon="bi-envelope" >}}[Email us](mailto:omero@scilifelab.se) and we guide you to the right round{{< /step >}}
-{{< step icon="bi-send" >}}Submit your proposal in [SUPR](https://supr.naiss.se){{< /step >}}
+{{< step icon="bi-send" >}}Register in [SUPR](https://supr.naiss.se) if you have not already, and submit your proposal{{< /step >}}
 {{< step icon="bi-clipboard-check" >}}Proposal reviewed by SciLifeLab Data Centre{{< /step >}}
 {{< step icon="bi-check-circle" >}}Allocation granted and OMERO group set up{{< /step >}}
 {{< /flow >}}
 
-A SUPR account is created for you when the proposal is approved. Going to the
+To submit the proposal you need a SUPR account, which you register yourself at
+[SUPR](https://supr.naiss.se) using your own university or institution login.
+Anyone you add to the project once it is approved gets a SUPR account created for
+them if they need one, and an OMERO account and group membership to match. Going
+to the
 OMERO web client then sends you to SUPR, which authenticates you against your own
 university or institution account, so there is no OMERO password to set. SUPR
 accepts both SWAMID and the international eduGAIN federation, which is how

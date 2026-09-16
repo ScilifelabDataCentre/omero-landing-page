@@ -9,7 +9,7 @@ and building a figure. It is the best single introduction to OMERO there is.
 
 ## The web client at a glance
 
-Sign in at [/webclient/](/webclient/). OMERO sends you to SUPR, which
+Sign in at the [web client](/webclient/). OMERO sends you to SUPR, which
 authenticates you against your own university or institution account and hands
 you back; [Accounts and login](accounts-and-login.md) covers the details. The
 layout is three panes: a tree of your
@@ -48,8 +48,11 @@ thousand images later. Then [Uploading data](../using-omero/uploading.md).
 !!! warning "No personal data"
 
     Nothing you upload may contain personal data, and that includes filenames
-    and metadata as well as image content. See the
-    [access page](/landing/get-access/).
+    and metadata as well as image content.
+    [Data you may not upload](../data-management/sensitive-data.md) is the page
+    to read before your first import, and the
+    [access page](/landing/get-access/) has the other rules that apply to your
+    data.
 
 ## Choosing between the web client and a desktop client
 

@@ -32,6 +32,18 @@ Search runs across the groups you belong to, and you can narrow it to the
 current group or to a chosen project or dataset. You will never see data from a
 group you are not a member of, whatever you search for.
 
+!!! warning "The owner filter starts set to you"
+
+    The search form's **Data owned by** field defaults to your own username, so
+    your first search returns only images you imported. In a read-write group,
+    where the point is that everyone works on the same data, that is rarely
+    what you want: set the field to all users to search your group-mates' data
+    as well.
+
+    The scope field works the other way round and starts at all groups, so the
+    two defaults pull in opposite directions. If a search comes back emptier
+    than you expected, check the owner filter first.
+
 ## Why annotation habits make search work
 
 Search cannot find a fact nobody recorded. A group that reuses a small set of

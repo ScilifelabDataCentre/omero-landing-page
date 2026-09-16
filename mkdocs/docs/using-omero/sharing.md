@@ -20,9 +20,11 @@ private, read-only, read-annotate and read-write.
     in it, including data you imported. OME's own wording for read-write is that
     members "behave as if they co-own all the data".
 
-    Two things no member can do: move another member's data into a different
-    group, and change who owns any data. Both need administrator rights, and no
-    one in your group has them.
+    Two things an ordinary member cannot do: move another member's data into a
+    different group, and change who owns any data. Both need administrator
+    rights, which a plain group member does not have. The exception is a
+    facility we have granted a restricted administrator privilege; see
+    [Delivering data as a facility](../workflows/facility-delivery.md).
 
     This is a good fit for a project team that trusts each other. It is a poor
     fit for a group of people who happen to share an allocation but work

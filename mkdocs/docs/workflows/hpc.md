@@ -35,7 +35,7 @@ looks like.
 ## Authenticating from a batch job
 
 A batch job cannot sign in interactively, so it cannot be sent to SUPR to
-authenticate. Use a session key instead: sign in to [/webclient/](/webclient/),
+authenticate. Use a session key instead: sign in to the [web client](/webclient/),
 copy the session token as described in
 [Accounts and login](../getting-started/accounts-and-login.md), and give the job
 that. This is the supported approach.
@@ -68,6 +68,13 @@ not just from the login node, because the two are often filtered differently:
 
 ```bash
 nc -vz omero.scilifelab.se 4064
+```
+
+Compute nodes often carry a minimal set of tools, so if `nc` is not installed,
+this does the same job and exits non-zero on failure:
+
+```bash
+python -c 'import socket; socket.create_connection(("omero.scilifelab.se", 4064), 10)'
 ```
 
 [Troubleshooting](../reference/troubleshooting.md) covers the same test and what

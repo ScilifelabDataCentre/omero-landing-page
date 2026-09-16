@@ -35,8 +35,10 @@ Where you do need a conversion, or an archival format, prefer OME's own:
 ## Known caveats
 
 Multi-file formats are the usual source of confusion. Many vendor formats are a
-directory of files with one master file, and you should select the master file
-and leave the rest in place, not import the directory contents individually.
+directory of files with one master file. Point the importer at the master file
+and leave the companion files in place beside it: do not import the companion
+files individually, and do not copy the master file out of its folder on its
+own, because Bio-Formats reads the others from the same directory.
 OME's
 [dataset structure table](https://bio-formats.readthedocs.io/en/stable/formats/dataset-table.html)
 lists, format by format, which file to point the importer at.

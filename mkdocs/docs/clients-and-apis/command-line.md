@@ -19,7 +19,7 @@ explains the shared options.
 ## Logging in and session handling
 
 There is no OMERO password on this service, so the CLI attaches to a session you
-have already created. Sign in to [/webclient/](/webclient/), copy the session
+have already created. Sign in to the [web client](/webclient/), copy the session
 token from the page that appears after authentication, and pass it with `-k`:
 
 ```bash

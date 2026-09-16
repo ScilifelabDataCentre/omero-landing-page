@@ -91,8 +91,8 @@ OMERO.insight
     [OMERO.insight](../clients-and-apis/omero-insight.md).
 
 OMERO.web
-:   The browser client, at [/webclient/](/webclient/) on this service. It cannot
-    import. See [OMERO.web](../clients-and-apis/web-client.md).
+:   The browser client, at [`/webclient/`](/webclient/) on this service. It
+    cannot import. See [OMERO.web](../clients-and-apis/web-client.md).
 
 OMERO table
 :   Tabular data attached to images or wells, typically analysis results or bulk
@@ -115,7 +115,9 @@ Region of interest
 
 Rendering settings
 :   The contrast limits, channel colours and channel names stored on an image.
-    They are server-side, so your group sees what you see.
+    Server-side, but held per user: saving yours does not overwrite another
+    member's, and what they see by default is the image owner's. See
+    [Viewing and annotating](../using-omero/viewing-and-annotating.md).
 
 Restricted administrator
 :   A user granted a defined subset of administrator privileges, for instance to
@@ -143,14 +145,17 @@ Tag
 ## SciLifeLab and allocation terms
 
 Allocation
-:   The storage and time granted to your project, 100 GB by default, with a
-    duration set when the proposal is reviewed. See the
-    [FAQ](faq.md).
+:   The storage and time granted to a project, 100 GB by default. For a research
+    project the duration is set when the proposal is reviewed. A facility's round
+    is not time-limited, but every project inside it carries its own
+    time-limited allocation. See
+    [Quotas and limits](quotas-and-limits.md) and the [FAQ](faq.md).
 
 Facility
 :   A SciLifeLab facility, eligible for the service alongside life science
     researchers in Sweden. A facility submits no reviewed proposal. Instead it
-    gets its own SUPR round and creates one project per user project inside it.
+    gets its own SUPR round, which is not time-limited, and creates one project
+    per user project inside it. Those projects are time-limited.
     See [Delivering data as a facility](../workflows/facility-delivery.md).
 
 Prototype service

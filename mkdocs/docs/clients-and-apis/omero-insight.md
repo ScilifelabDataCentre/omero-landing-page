@@ -25,7 +25,7 @@ Add a server in the login window with these settings:
 - Password: the same session token again
 
 The desktop client cannot do browser-based single sign-on, so it attaches to the
-session you already have. Sign in to [/webclient/](/webclient/) first, copy the
+session you already have. Sign in to the [web client](/webclient/) first, copy the
 session token from the page that appears after authentication, and paste it into
 both fields.
 
@@ -47,13 +47,15 @@ after login rather than at login.
 The import wizard is described in OME's
 [import guide](https://omero-guides.readthedocs.io/en/latest/upload/docs/import.html).
 [Uploading data](../using-omero/uploading.md) adds what is specific to this
-service, including the rule that uploaded data must contain no personal data.
+service, and
+[Data you may not upload](../data-management/sensitive-data.md) sets out the one
+hard rule: no personal data, in image content, filenames or metadata.
 
 ## Troubleshooting connections
 
 Port `4064` is not a web port, so a university or hospital firewall may block it
 even though the web client works fine from the same machine. If OMERO.insight
-times out at login but [/webclient/](/webclient/) loads, that is the most likely
+times out at login but the [web client](/webclient/) loads, that is the most likely
 cause, and your local IT department is the place to start.
 
 !!! info "Client and server versions"

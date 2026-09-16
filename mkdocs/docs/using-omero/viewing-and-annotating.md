@@ -17,12 +17,24 @@ as a small one.
 
 ## Rendering settings
 
-Contrast limits, per-channel colours and channel names are stored on the image
-in OMERO, not just in your session, so everyone in your group sees the same
-thing and so exported figures match what you saw. OME's
+Contrast limits, per-channel colours and channel names are stored on the server
+rather than in your browser session, so they survive a logout and an exported
+figure matches what you saw.
+
+They are stored per user, though, and that catches people out. Each member of
+your group keeps their own settings for an image, saving yours never overwrites
+anyone else's, and what another member sees by default is the settings of
+whoever owns the image. Settings other people have saved appear as thumbnails
+under `User Settings` in the preview pane, so you can adopt a colleague's rather
+than recreating them. If someone reports that an image looks different to them,
+this is why; see
+[Images render incorrectly](../reference/troubleshooting.md#images-render-incorrectly).
+
+OME's
 [rendering guide](https://omero-guides.readthedocs.io/en/latest/upload/docs/render.html)
 covers copying one image's settings across a whole dataset, which is what you
-want when comparing a series.
+want when comparing a series. `Save to All` does the same from the web client,
+and it applies your settings without disturbing anyone else's.
 
 ## Regions of interest
 
@@ -53,5 +65,7 @@ for adding them in bulk from a spreadsheet rather than one image at a time.
 !!! warning "Annotations are data too"
 
     Tags, comments, key-value pairs and filenames are all covered by the rule
-    that no personal data may go into the service. See the
-    [access page](/landing/get-access/).
+    that no personal data may go into the service. See
+    [Data you may not upload](../data-management/sensitive-data.md), which is
+    specific about free-text notes and about key-value pairs loaded in bulk from
+    a lab spreadsheet, and the [access page](/landing/get-access/).

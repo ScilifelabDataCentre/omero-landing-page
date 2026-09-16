@@ -27,8 +27,8 @@ has the connection code. The values to give it for this service are:
 - username: your session token
 - password: the same session token again
 
-There is no OMERO password on this service. Sign in to
-[/webclient/](/webclient/) and copy the session token from the page that appears
+There is no OMERO password on this service. Sign in to the
+[web client](/webclient/) and copy the session token from the page that appears
 after authentication, then pass it as both the username and the password.
 [Accounts and login](../getting-started/accounts-and-login.md) shows where the
 link is.

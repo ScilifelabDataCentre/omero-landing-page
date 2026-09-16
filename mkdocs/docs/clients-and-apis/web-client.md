@@ -5,7 +5,7 @@ Working with your data in a browser, without installing anything.
 OMERO.web is the browser client that ships with OMERO. It needs no installation
 and no connection settings, which makes it the quickest way to look at data that
 is already in the server. For SciLifeLab OMERO it is at
-[/webclient/](/webclient/).
+[`/webclient/`](/webclient/) on the service host.
 
 ## What the web client can do
 
@@ -41,9 +41,26 @@ documents these and the rest of the set. Anything else described there is not
 installed here; ask [omero@scilifelab.se](mailto:omero@scilifelab.se) if you
 need one of them.
 
-A figure built in OMERO.figure lives in the server, so it is deleted with
-everything else when your allocation ends. Export it while you still can; see
-[When your project ends](../data-management/end-of-project.md).
+## Building a figure with OMERO.figure
+
+OMERO.figure assembles a publication figure from images that are already in the
+server, so the panels stay linked to the data and pick up your rendering
+settings rather than being pasted in as flat pictures. Select images in the web
+client and create a figure from them, then arrange, crop, label and scale the
+panels in the editor. OME's
+[OMERO.figure guide](https://omero-guides.readthedocs.io/en/latest/figure/docs/index.html)
+covers the editor itself, including scripting it and moving figures between
+groups.
+
+Two things are specific to this service:
+
+- a figure is saved in the server, not on your machine, so it is deleted along
+  with everything else when the allocation ends. Export it as PDF or TIFF while
+  you still can; see
+  [When your project ends](../data-management/end-of-project.md)
+- a figure refers to images by ID in your group, so a colleague who opens it has
+  to be a member of that group. It is not a way to show data to someone outside
+  it; see [Sharing with collaborators](../using-omero/sharing.md)
 
 ## Browser requirements
 

@@ -8,11 +8,22 @@ session token that the same sign-in produced.
 
 ## Getting an account
 
-You do not create an account yourself and there is no sign-up form. For a
-research project, a SUPR account is created for you when your proposal is
-approved, and the matching OMERO account follows. For a facility delivery
-project, the facility adds you to its SUPR project and the account is created
-the same way. Either route ends with you being a member of one OMERO group; see
+There is no OMERO sign-up form, and you never create an OMERO account yourself:
+it is created for you once you belong to an approved project. Where the SUPR
+account comes from depends on which side of the proposal you are on.
+
+If you are the one submitting the proposal, you need a SUPR account first,
+because SUPR is where the proposal is submitted. Register yourself at
+[SUPR](https://supr.naiss.se) using your own university or institution login.
+There is nothing to ask us for at that stage.
+
+If you are being added to a project that already exists, whether a research
+project or a facility delivery project, there is nothing for you to do. Whoever
+administers the project adds you to it in SUPR, an account is created for you if
+you do not already have one, and the matching OMERO account and group membership
+follow. The project's allocation becomes visible to you on the SUPR side too.
+
+Either route ends with you being a member of at least one OMERO group; see
 [Groups and membership](groups-and-membership.md).
 
 Your OMERO username is your SUPR username. It is usually the first four
@@ -24,7 +35,7 @@ into anything: no client on this service asks for it.
 
 ## Signing in for the first time
 
-Go to [/webclient/](/webclient/). OMERO sends you to SUPR, which authenticates
+Go to the [web client](/webclient/). OMERO sends you to SUPR, which authenticates
 you against your own university or institution account, and then hands you back.
 SUPR accepts both SWAMID, the Swedish identity federation, and eduGAIN, its
 international counterpart. There is no OMERO password to set or remember: you

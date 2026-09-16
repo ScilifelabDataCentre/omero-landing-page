@@ -39,7 +39,9 @@ Two tools built for volume rather than for single images:
 - [OMERO.downloader](https://github.com/ome/omero-downloader), a standalone
   command line application that downloads or exports whole datasets along with
   their metadata, and remembers what it has already fetched so a re-run does not
-  start over. OME's guide walks through it.
+  start over. OME's
+  [download and export guide](https://omero-guides.readthedocs.io/en/latest/download/docs/download.html)
+  walks through it.
 - [omero-cli-transfer](https://github.com/ome/omero-cli-transfer), which packages
   a project with its metadata so it can be moved to another OMERO server.
 

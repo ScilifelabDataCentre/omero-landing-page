@@ -11,6 +11,14 @@ an archive, it is not backed up, and an allocation is time-limited by design.
 The end of a project is therefore a deadline you have to act on, not a state the
 data can sit in.
 
+!!! info "Which allocations this applies to"
+
+    Every project allocation is time-limited, whether it came through the
+    reviewed research track or was created by a facility inside its own round. A
+    facility's round is not itself time-limited, so a facility has a deadline per
+    user project rather than one of its own. See
+    [Delivering data as a facility](../workflows/facility-delivery.md).
+
 ## The notice you will receive
 
 One month before the allocation ends, an email arrives from

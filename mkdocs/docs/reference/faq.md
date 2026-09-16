@@ -42,9 +42,11 @@ conditions of the service.
 
 ### How do I log in?
 
-A SUPR account is created for you when your proposal is approved. Go to the
-[OMERO web client](/webclient/) and it sends you to SUPR, which authenticates you
-against your own university or institution account. There is no OMERO password.
+If you submitted the proposal you already have a SUPR account, since that is
+where you submitted it. If you were added to an approved project, an account is
+created for you. Either way, go to the [OMERO web client](/webclient/) and it
+sends you to SUPR, which authenticates you against your own university or
+institution account. There is no OMERO password.
 The desktop and API clients cannot do single sign-on, so they reuse that session:
 copy the session token from the web client and give it as both the username and
 the password. See
@@ -59,7 +61,8 @@ There is no limit.
 ### How much storage do I get?
 
 100 GB by default. The quota belongs to the project, so everyone in the group
-draws on the same 100 GB. See [Quotas and limits](quotas-and-limits.md).
+draws on the same 100 GB. There is no fixed maximum; a larger allocation is
+reviewed case by case. See [Quotas and limits](quotas-and-limits.md).
 
 ### How do I see how much I have used?
 
@@ -75,7 +78,8 @@ new proposal in SUPR explaining why the project needs it.
 ### How long does an allocation last?
 
 The duration is set case by case when your proposal is reviewed, and you can
-request a renewal or extension in SUPR.
+request a renewal or extension in SUPR. A facility's round is not time-limited,
+but each project a facility creates inside it is.
 
 ### Where is my data stored?
 
@@ -146,10 +150,11 @@ uptime target or status page. See
 
 ### How will I hear about maintenance and outages?
 
-By email. Planned maintenance windows, outages and server upgrades are all
-announced that way, since there is no status page. Upgrade announcements matter
-even if the downtime does not, because OMERO.insight has to be compatible with
-the server version.
+By email, since there is no status page. There is no regular maintenance
+schedule: maintenance happens occasionally, when the OMERO server or its
+database needs it, and it is announced in advance, as are outages and server
+upgrades. Upgrade announcements matter even if the downtime does not, because
+OMERO.insight has to be compatible with the server version.
 
 ### Something is not working. What should I check first?
 

@@ -5,7 +5,9 @@ How much space a project gets, and what happens when it runs out.
 ## Default and larger allocations
 
 An allocation comes with 100 GB of storage by default. There is no limit on how
-many people are in the group.
+many people are in the group, and no fixed ceiling on how much storage a project
+can be granted: a larger allocation is reviewed case by case rather than capped
+at a published number.
 
 The quota belongs to the project, not to each person in it. Everyone in your
 group draws on the same 100 GB, so one member importing a large screen reduces
@@ -51,6 +53,10 @@ needs it. It is not an email request, because the additional storage is reviewed
 the same way the original allocation was. Say what you have produced so far,
 what is still to come, and why it has to stay in the service rather than in your
 own storage.
+
+There is no maximum you can ask for, but there is also no guarantee: the case
+you make in the proposal is what decides it, so a concrete estimate does better
+than a round number.
 
 Email [omero@scilifelab.se](mailto:omero@scilifelab.se) if you are not sure
 which round to submit it to, or whether more space is the right answer for your

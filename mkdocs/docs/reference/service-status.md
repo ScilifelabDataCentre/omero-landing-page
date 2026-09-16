@@ -18,9 +18,10 @@ let it hold the only copy of data you cannot reproduce.
 
 ## Maintenance and upgrades
 
-Maintenance happens in planned windows, and they are announced in advance by
-email rather than on a status page. Expect the service to be unavailable for the
-duration of a window.
+There is no regular maintenance schedule and no standing window to plan around.
+Maintenance happens occasionally, when the OMERO server or its database needs
+it, and each occasion is announced in advance by email rather than on a status
+page. Expect the service to be unavailable while it is going on.
 
 Server upgrades are announced the same way. Pay attention to those even if the
 downtime does not matter to you, because OMERO.insight and the other desktop

@@ -154,11 +154,23 @@ Tags applied during import are cheap and make later filtering work; see
 [Metadata for publication](../data-management/metadata-for-publication.md).
 
 Nothing you attach may contain personal data, filenames and metadata included.
+See [Data you may not upload](../data-management/sensitive-data.md), which
+covers the two cases a facility is most likely to hit: the slide label
+photographed into a whole-slide image, and the spreadsheet column that comes
+along with a bulk annotation.
 
 ## Retiring a delivered project
 
 The service is for working with data during a project, not for archiving it, and
-it is not backed up. When an allocation ends you get one month of notice, after
-which the data is deleted automatically with no grace period. Make sure the
-researcher, and not only the facility, knows that deadline. See
+it is not backed up.
+
+Your facility's round is not time-limited, so the facility itself faces no
+deadline. The projects you create inside it do. Each carries its own allocation,
+and when one ends you get a month's notice, after which that project's data is
+deleted automatically with no grace period. The deadline is therefore per user
+project rather than per facility, and you will be tracking several at once.
+
+Make sure the researcher, and not only the facility, knows the date for their
+project. Both of you hold data in the same group, and each side tends to assume
+the other has exported it. See
 [When your project ends](../data-management/end-of-project.md).

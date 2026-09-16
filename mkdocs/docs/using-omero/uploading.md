@@ -54,10 +54,13 @@ the screen, plate and well structure from the metadata in your files.
 Import copies your files to the server and then reads them, so the time it takes
 is dominated by your upload bandwidth. Two things to plan for:
 
-- the default quota is 100 GB, so check what you have before starting an import
-  that might exceed it
-- select the master file for multi-file formats rather than the whole directory,
-  as set out in
+- the default quota is 100 GB, shared by everyone in your group. You cannot see
+  the group's consumption in the web client, so ask
+  [omero@scilifelab.se](mailto:omero@scilifelab.se) before starting an import
+  that might exceed it; see
+  [Quotas and limits](../reference/quotas-and-limits.md)
+- for a multi-file format, point the importer at the master file and leave the
+  companion files in place beside it, as set out in
   [supported formats](supported-formats.md)
 
 !!! info "Import over a slow or interrupted connection"
@@ -79,4 +82,8 @@ If an import fails, keep the error message and send it to
 
 ## Before you upload
 
-Uploaded data must contain no personal data. See the [access page](/landing/get-access/) for the full set of rules that apply to your data.
+Uploaded data must contain no personal data, filenames and metadata included.
+[Data you may not upload](../data-management/sensitive-data.md) covers where
+identifiers hide in imaging data and what to check before an import, and the
+[access page](/landing/get-access/) has the full set of rules that apply to your
+data.

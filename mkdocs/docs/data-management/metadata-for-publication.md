@@ -57,7 +57,11 @@ concerned.
 !!! warning "No personal data, including in metadata"
 
     The rule covers key-value pairs, tags, comments and filenames, not only
-    image content. See the [access page](/landing/get-access/).
+    image content. A bulk annotation carries over every column of the
+    spreadsheet it came from, including the ones you did not mean to publish,
+    so review the file first. See
+    [Data you may not upload](sensitive-data.md) and the
+    [access page](/landing/get-access/).
 
 ## Checking a dataset before you write it up
 

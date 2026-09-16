@@ -46,10 +46,13 @@ assumed to exist.
     including data someone else imported. There are no backups, so a deletion is
     permanent.
 
-    Two things no member can do, because both need rights nobody in the group
-    has: move another member's data into a different group, and change who owns
-    any data, their own included. Ask
-    [omero@scilifelab.se](mailto:omero@scilifelab.se) for either.
+    Two things an ordinary member cannot do, because both need rights they do
+    not have: move another member's data into a different group, and change who
+    owns any data, their own included. Ask
+    [omero@scilifelab.se](mailto:omero@scilifelab.se) for either. The one
+    exception is a facility we have granted a restricted administrator
+    privilege; see
+    [Delivering data as a facility](../workflows/facility-delivery.md).
 
     [Sharing with collaborators](../using-omero/sharing.md) explains the four
     permission levels OMERO offers and what to do if read-write is not the right
