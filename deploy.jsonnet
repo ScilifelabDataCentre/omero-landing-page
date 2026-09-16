@@ -164,6 +164,8 @@ function(
                   echo "Checking out repo"
                   git clone %(url)s ./repo
                   cd ./repo && git checkout %(commit)s
+                  echo "Installing MkDocs plugins..."
+                  pip install --no-cache-dir mkdocs-git-revision-date-localized-plugin
                   echo "Building MkDocs site..."
                   cd mkdocs && mkdocs build --site-dir /output
                 ||| % { url: url, commit: commit },
