@@ -59,7 +59,7 @@ give it an hour, then email us.
 
 For a desktop or API client, the two usual causes are:
 
-- **Your SUPR username is in the username field.** It does not belong there.
+- **Your username is in the username field.** It does not belong there.
   The session token goes in *both* the username and the password field, the
   same string twice. Putting your username in one of them is the most common
   way to be refused, because it looks like the obvious thing to do. See

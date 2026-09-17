@@ -42,7 +42,7 @@ conn = BlitzGateway(token, token, host="omero.scilifelab.se", port=4064)
 ```
 
 This is OMERO's mechanism for attaching to an existing session, and it is why
-your SUPR username does not appear anywhere in the connection code.
+your username does not appear anywhere in the connection code.
 
 As with the desktop client, port `4064` is not a web port and may be blocked by
 an institutional firewall even when the web client works.

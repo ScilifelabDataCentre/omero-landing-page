@@ -45,10 +45,11 @@ the allocation.
 
 ## How the researchers you serve get accounts
 
-The same way your own staff do. Add the person to the relevant SUPR project in
-your round, and SUPR creates the account if they do not already have one and
-adds them to the matching OMERO group. There is nothing for them to apply for
-and nothing for us to do.
+The same way your own staff do, with one step to tell them about: they need a
+SUPR account of their own first, registered at [SUPR](https://supr.naiss.se)
+with their institution login. Once they have one, add them to the relevant SUPR
+project in your round and their OMERO account and group membership follow
+automatically. There is nothing for them to apply for and nothing for us to do.
 
 They sign in with their own university or institution account: OMERO sends them
 to SUPR, which authenticates against SWAMID for Swedish institutions and eduGAIN

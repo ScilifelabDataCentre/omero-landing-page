@@ -68,13 +68,14 @@ After the pilot phase, the facility covers the associated storage costs.
 
 To submit the proposal you need a SUPR account, which you register yourself at
 [SUPR](https://supr.naiss.se) using your own university or institution login.
-You can anyone who has a SUPR account to the project. Once the project is approved
-their OMERO account and group membership are created automatically.
-Going to the OMERO web client then sends you to SUPR, which authenticates you 
-against your own university or institution account, so there is no OMERO password to set. 
+You can add anyone to the project once they have registered for a SUPR account
+of their own. Once the project is approved their OMERO account and group
+membership are created automatically.
+Going to the OMERO web client then sends you to SUPR, which authenticates you
+against your own university or institution account, so there is no OMERO password to set.
 SUPR accepts both SWAMID and the international eduGAIN federation, which is how
 collaborators at universities in other countries use their own institution
-login. The [documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks 
+login. The [documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks
 through the first login, and through the session token that the desktop and API clients use
 in place of a username and password.
 

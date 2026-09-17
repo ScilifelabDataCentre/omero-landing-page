@@ -68,8 +68,9 @@ own, usually within an hour. Do not add or remove people directly in OMERO.
 Who does that depends on the route. For a research project it is whoever
 administers the project in SUPR, normally the principal investigator. For a
 facility delivery project it is the facility, which administers its own projects
-inside its own SUPR round. Either way the account itself is created by SUPR, so
-there is nothing to ask us for. See
+inside its own SUPR round. Either way the OMERO account is created by SUPR once
+the person is in the project, so there is nothing to ask us for; they need a
+SUPR account of their own first. See
 [Accounts and login](accounts-and-login.md) and
 [Sharing with collaborators](../using-omero/sharing.md).
 

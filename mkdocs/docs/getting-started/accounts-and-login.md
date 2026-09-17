@@ -9,24 +9,26 @@ session token that the same sign-in produced.
 ## Getting an account
 
 There is no OMERO sign-up form, and you never create an OMERO account yourself:
-it is created for you once you belong to an approved project. Where the SUPR
-account comes from depends on which side of the proposal you are on.
+it is created for you once you belong to an approved project. What you do need
+is a SUPR account of your own, and you register that yourself whichever side of
+the proposal you are on.
 
-If you are the one submitting the proposal, you need a SUPR account first,
-because SUPR is where the proposal is submitted. Register yourself at
-[SUPR](https://supr.naiss.se) using your own university or institution login.
-There is nothing to ask us for at that stage.
+If you are the one submitting the proposal, you need it first, because SUPR is
+where the proposal is submitted. Register at [SUPR](https://supr.naiss.se)
+using your own university or institution login. There is nothing to ask us for
+at that stage.
 
 If you are being added to a project that already exists, whether a research
-project or a facility delivery project, there is nothing for you to do. Whoever
-administers the project adds you to it in SUPR, an account is created for you if
-you do not already have one, and the matching OMERO account and group membership
-follow. The project's allocation becomes visible to you on the SUPR side too.
+project or a facility delivery project, register in the same way and tell
+whoever administers the project. They add you to it in SUPR, and your OMERO
+account and group membership follow automatically. The project's allocation
+becomes visible to you on the SUPR side too.
 
 Either route ends with you being a member of at least one OMERO group; see
 [Groups and membership](groups-and-membership.md).
 
-Your OMERO username is your SUPR username. It is usually the first four
+Your OMERO username is your username on SciLifeLab's OMERO resource, shown in
+SUPR. It is usually the first four
 characters of your first name followed by the first four of your last name,
 sometimes with digits appended to keep it unique, so Jonas Anderson becomes
 `jonaande`. It is how you appear to the rest of your group, and it is shown to
@@ -67,7 +69,7 @@ generate: signing in is what produced it.
 
     Enter the token as **the username and the password**, the same string in
     both boxes. This is not a mistake in the instructions. It is how OMERO lets
-    a client attach to an existing session, and it is why your SUPR username is
+    a client attach to an existing session, and it is why your username is
     not needed anywhere.
 
 Follow **obtain a session token here** on the page above, copy the token, and
@@ -118,7 +120,6 @@ unless someone asks them to. If you reach your institution's login page, sign in
 successfully, and SUPR then reports that it received too little information
 about you, that is a setting at your institution, and their IT department is the
 only party who can change it.
-
 
 ## Adding people to your group
 

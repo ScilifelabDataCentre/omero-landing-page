@@ -11,6 +11,13 @@ facility allocation duration, the absence of a maximum quota, the maintenance
 schedule and the OME-TIFF round trip, all of which are now in the documentation.
 What follows is what was left over.
 
+The account sequence was then revised again: a SUPR account is a prerequisite
+that each person registers themselves at supr.naiss.se, and only the OMERO
+account and group membership are created automatically once they are added to a
+project. The earlier answer, that SUPR creates the account for anyone who does
+not have one, is superseded. All six pages that describe it were aligned on the
+current model.
+
 ## Access and accounts
 
 - **How does someone with no federated login sign in?** Narrower than it looked,

@@ -34,7 +34,7 @@ where the token comes from.
 
     Give the token as both. `-k` is the tidier way to say the same thing on the
     command line, and it keeps the token out of a `user@host` string that is
-    easy to paste somewhere public by accident. Your SUPR username is not used
+    easy to paste somewhere public by accident. Your username is not used
     for logging in at all.
 
 `omero sessions list` shows what you have open and `omero logout` ends the

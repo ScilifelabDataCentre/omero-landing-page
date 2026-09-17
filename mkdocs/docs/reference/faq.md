@@ -42,11 +42,13 @@ conditions of the service.
 
 ### How do I log in?
 
-If you submitted the proposal you already have a SUPR account, since that is
-where you submitted it. If you were added to an approved project, an account is
-created for you. Either way, go to the [OMERO web client](/webclient/) and it
-sends you to SUPR, which authenticates you against your own university or
-institution account. There is no OMERO password.
+You need a SUPR account and you register it yourself at
+[SUPR](https://supr.naiss.se) with your institution login; if you submitted the
+proposal you already have one, since that is where you submitted it. Your OMERO
+account is created for you once you are in an approved project. Go to the
+[OMERO web client](/webclient/) and it sends you to SUPR, which authenticates
+you against your own university or institution account. There is no OMERO
+password.
 The desktop and API clients cannot do single sign-on, so they reuse that session:
 copy the session token from the web client and give it as both the username and
 the password. See

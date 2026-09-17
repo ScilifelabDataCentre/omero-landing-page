@@ -32,7 +32,7 @@ both fields.
 !!! tip "Yes, the same string in both boxes"
 
     Username and password both take the token. That is how OMERO joins an
-    existing session, and it means your SUPR username is not used here at all.
+    existing session, and it means your username is not used here at all.
     See [Accounts and login](../getting-started/accounts-and-login.md).
 
 A token stays valid while it is being used and goes stale after a stretch of
