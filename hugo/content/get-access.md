@@ -68,16 +68,14 @@ After the pilot phase, the facility covers the associated storage costs.
 
 To submit the proposal you need a SUPR account, which you register yourself at
 [SUPR](https://supr.naiss.se) using your own university or institution login.
-Anyone you add to the project once it is approved gets a SUPR account created for
-them if they need one, and an OMERO account and group membership to match. Going
-to the
-OMERO web client then sends you to SUPR, which authenticates you against your own
-university or institution account, so there is no OMERO password to set. SUPR
-accepts both SWAMID and the international eduGAIN federation, which is how
+You can anyone who has a SUPR account to the project. Once the project is approved
+their OMERO account and group membership are created automatically.
+Going to the OMERO web client then sends you to SUPR, which authenticates you 
+against your own university or institution account, so there is no OMERO password to set. 
+SUPR accepts both SWAMID and the international eduGAIN federation, which is how
 collaborators at universities in other countries use their own institution
-login. The
-[documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks through the
-first login, and through the session token that the desktop and API clients use
+login. The [documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks 
+through the first login, and through the session token that the desktop and API clients use
 in place of a username and password.
 
 #### SciLifeLab facility: get in touch by email
@@ -124,15 +122,15 @@ After your first email we follow up on the practical details: scope, storage
 expectations, who needs access, and when you want to start. Your OMERO group is
 shared only with your project members, and who those are is administered through
 your project in SUPR rather than inside OMERO. Adding someone to the project in
-SUPR adds them to the OMERO group.
+SUPR adds them to the OMERO group automatically within one hour at most.
 
 ### When your project ends
 
 You get one month of notice by email before an allocation ends. After that your
 account is disabled and the data is deleted automatically, with no grace period,
 so export everything you need before the deadline. If you need more time,
-request a renewal or an extension in SUPR while the notice period is still
-running.
+request a renewal or an extension by submitting a new proposal in SUPR 
+while the notice period is still running.
 
 ### Before you upload
 
