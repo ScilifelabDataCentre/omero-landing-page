@@ -41,6 +41,12 @@ SUPR accepts both SWAMID, the Swedish identity federation, and eduGAIN, its
 international counterpart. There is no OMERO password to set or remember: you
 are never asked for one.
 
+SUPR does not ask for your institution's password itself. It sends you first to
+a page that only asks which institution you belong to: start typing its name and
+pick it from the list. That page then passes you to your own institution's login
+screen, which is where you actually authenticate. It records nothing about you
+beyond which institution you chose, so that it can offer the same one next time.
+
 Authenticating creates a session, and an interim page confirms who you are and
 offers the two ways of using it.
 
@@ -93,17 +99,26 @@ token. See [Troubleshooting](../reference/troubleshooting.md).
 ## Signing in from outside Sweden
 
 A collaborator abroad does not need a Swedish identity. SUPR, which handles the
-authentication, accepts eduGAIN as well as SWAMID, so an account at a European
-university normally works directly at the same sign-in page. Everything after
-that is identical, session token included.
+authentication, accepts eduGAIN as well as SWAMID, so an account at a university
+outside Sweden normally works directly at the same sign-in page. Everything
+after that is identical, session token included.
 
-!!! info "If your institution is not in the federation"
+!!! info "If your institution is not in the list"
 
-    eduGAIN covers academic institutions. Someone at a hospital, region,
-    company or research institute, or at a university outside the federation,
-    may have no federated login to use. We have not documented a route for that
-    case yet, so email [omero@scilifelab.se](mailto:omero@scilifelab.se) before
-    you count on a collaborator being able to sign in.
+    Fewer employers are outside the federations than people assume: Swedish
+    research institutes and hospitals are commonly in SWAMID, for instance. Look
+    for yours in the institution list at sign-in before concluding you cannot
+    get in. If it genuinely is not there, email
+    [omero@scilifelab.se](mailto:omero@scilifelab.se) before you count on a
+    collaborator being able to sign in.
+
+Being in the list is not quite the same as getting in. Some institutions do not
+release enough information about their users to services in other countries
+unless someone asks them to. If you reach your institution's login page, sign in
+successfully, and SUPR then reports that it received too little information
+about you, that is a setting at your institution, and their IT department is the
+only party who can change it.
+
 
 ## Adding people to your group
 

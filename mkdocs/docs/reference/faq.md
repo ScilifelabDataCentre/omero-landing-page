@@ -20,8 +20,8 @@ covers the storage costs associated with its allocation.
 
 Yes, they can be members of your group. The principal investigator has to be
 based in Sweden. SUPR handles the authentication and accepts eduGAIN as well as
-SWAMID, so an account at a European university normally works directly. Ask us
-first if your collaborator is somewhere outside those federations.
+SWAMID, so an account at a university outside Sweden normally works directly.
+Ask us first if your collaborator is somewhere outside those federations.
 
 ### How do I apply?
 

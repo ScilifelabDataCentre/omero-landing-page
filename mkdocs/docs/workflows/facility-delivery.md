@@ -52,9 +52,11 @@ and nothing for us to do.
 
 They sign in with their own university or institution account: OMERO sends them
 to SUPR, which authenticates against SWAMID for Swedish institutions and eduGAIN
-for the rest of Europe. A researcher with no federated login at all is the one
-case that still needs a conversation with us; see
-[Accounts and login](../getting-started/accounts-and-login.md).
+for institutions in many other countries. That covers more people than it
+sounds like: Swedish research institutes and hospitals are commonly in SWAMID
+too, so a researcher outside a university is not automatically a problem. If an
+institution really is in no federation, that case still needs a conversation
+with us; see [Accounts and login](../getting-started/accounts-and-login.md).
 
 Membership changes reach OMERO within about an hour, so do not add anyone
 directly in OMERO or the two will drift apart.

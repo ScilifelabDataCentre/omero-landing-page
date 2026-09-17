@@ -190,5 +190,6 @@ SUPR
 SWAMID
 :   The Swedish identity federation, one of the two that SUPR authenticates
     against, so you sign in with your own university or institution account.
-    The other is eduGAIN, its international counterpart, which is how a
-    collaborator at a European university signs in.
+    The other is eduGAIN, its international counterpart, which interconnects
+    federations worldwide rather than only in Europe, and is how a collaborator
+    at a university in another country signs in.

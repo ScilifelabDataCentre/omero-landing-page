@@ -74,7 +74,8 @@ to the
 OMERO web client then sends you to SUPR, which authenticates you against your own
 university or institution account, so there is no OMERO password to set. SUPR
 accepts both SWAMID and the international eduGAIN federation, which is how
-collaborators at European universities use their own institution login. The
+collaborators at universities in other countries use their own institution
+login. The
 [documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks through the
 first login, and through the session token that the desktop and API clients use
 in place of a username and password.

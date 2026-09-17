@@ -13,15 +13,32 @@ What follows is what was left over.
 
 ## Access and accounts
 
-- **How does someone with no federated login sign in?** Sign-in goes through
-  SWAMID, and SUPR accepts eduGAIN, so academic identities in Europe are covered.
-  What is not covered is a researcher or collaborator at a hospital, region,
-  company or research institute, or at a university outside the federation.
-  Eligibility explicitly includes non-university researchers in Sweden, so this
-  is a mainstream case rather than an edge one.
+- **How does someone with no federated login sign in?** Narrower than it looked,
+  but still open. Two things were checked in the SUPR institution picker in
+  September 2026: RISE and Karolinska are both listed, so Swedish institutes and
+  hospitals are largely already covered and the affected population is smaller
+  than this entry previously assumed; and ETH, Max Planck and the University of
+  Michigan are listed too, so SUPR is not filtering the picker to Swedish
+  identity providers and the claims about collaborators abroad hold.
+
+  The likely answer for whoever is left is eduID.se, a SWAMID-operated identity
+  provider for individuals rather than institutions. Verification works with
+  BankID or Freja+ for a Swedish personal number, with eIDAS for EU citizens,
+  and with Freja eID plus a biometric passport for most other countries. C3SE's
+  own SUPR documentation already recommends it. It is deliberately not in the
+  user-facing documentation yet, for two reasons: nobody has tried it against
+  this deployment, and a PI's Swedish affiliation is established by signing in
+  through a Swedish institution, so eduID could at best serve project members
+  and collaborators, never a PI. SUPR separately offers registration without a
+  federated identity, using an email address and password, which is also
+  untried here and may require the NAISS User Agreement on paper because a
+  weakly verified identity cannot accept it digitally.
+
+  Until someone tests one of those,
   `mkdocs/docs/getting-started/accounts-and-login.md` and
-  `mkdocs/docs/using-omero/sharing.md` both tell such a person to email us,
-  which is a holding position rather than an answer.
+  `mkdocs/docs/using-omero/sharing.md` tell such a person to look for their
+  institution in the list first and then email us, which is an improvement on
+  the previous flat "email us" but still a holding position.
 
 ## Legal
 

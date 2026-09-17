@@ -113,7 +113,7 @@ Bio-Formats question.
 ## Slow transfers
 
 The service is in Sweden, at Chalmers e-Commons and SciLifeLab Data Centre, and
-reaching it from elsewhere in Europe adds latency that shows up most on many
+reaching it from further away adds latency that shows up most on many
 small files. Some things that help:
 
 - Import and export from the command line rather than a desktop client for

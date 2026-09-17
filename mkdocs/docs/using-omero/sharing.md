@@ -64,16 +64,17 @@ getting an account is a separate question from being added to a group.
 
 SUPR handles the authentication, and it accepts eduGAIN, the international
 federation, as well as SWAMID, the Swedish one. A collaborator with an account at
-a European university can therefore normally sign in with it directly. See
+a university outside Sweden can therefore normally sign in with it directly. See
 [Accounts and login](../getting-started/accounts-and-login.md).
 
-!!! info "Institutions outside the federation"
+!!! info "Institutions outside the federations"
 
-    Both federations cover academic institutions. Someone at a hospital, region,
-    company or research institute, or at a university in neither, may have no
-    federated login to use, and we have not documented a route for that case.
-    Email [omero@scilifelab.se](mailto:omero@scilifelab.se) before promising
-    access to anyone in that position.
+    Not every employer is in one, but fewer are outside than people assume:
+    Swedish research institutes and hospitals are commonly in SWAMID. Have your
+    collaborator look for their institution in the list at sign-in before either
+    of you concludes they cannot get in. If it is genuinely absent, email
+    [omero@scilifelab.se](mailto:omero@scilifelab.se) before promising access to
+    anyone in that position.
 
 ## Sharing a link to an image
 
