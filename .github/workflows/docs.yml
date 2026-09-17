@@ -1,0 +1,49 @@
+name: Documentation
+
+# The deployment builds the docs with strict: false on purpose: the docs and the
+# landing page share a pod, so failing the docs build on a warning would take
+# the landing page down with it. The consequence is that broken links and dead
+# anchors never surface at deploy time. This workflow is where they get caught
+# instead.
+on:
+  pull_request:
+    paths:
+      - 'mkdocs/**'
+      - '.github/workflows/docs.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'mkdocs/**'
+      - '.github/workflows/docs.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Strict build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # git-revision-date-localized reads each page's own commit history, so
+          # a shallow clone would quietly fall back to the build date on every
+          # page instead of failing visibly.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install MkDocs and plugins
+        # mkdocs-material is pinned to the image tag in deploy.jsonnet so that
+        # this check and the deployment agree on what counts as a warning.
+        run: |
+          pip install \
+            mkdocs-material==9.7.7 \
+            mkdocs-git-revision-date-localized-plugin
+
+      - name: Build with warnings as errors
+        working-directory: mkdocs
+        run: mkdocs build --strict --site-dir "$RUNNER_TEMP/docs"

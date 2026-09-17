@@ -1,0 +1,6 @@
+{{- /* Step flow diagram. Wraps "step" shortcodes.
+       direction: "vertical" (default) or "horizontal" (stacks below lg). */ -}}
+{{- $direction := default "vertical" (.Get "direction") -}}
+<ol class="scilife-flow scilife-flow--{{ $direction }}">
+    {{ .Inner }}
+</ol>

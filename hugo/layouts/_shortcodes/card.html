@@ -1,0 +1,28 @@
+{{- /* A single capability card, used inside the "cards" shortcode.
+       icon: a bootstrap-icons class name, for example "bi-cloud-upload".
+       title: the card heading.
+       url: optional. Makes the whole card a link to that target.
+       docs: optional. Same, for a path inside the documentation, resolved against
+             site.Params.docsURL. Shortcode arguments are literal strings and
+             cannot call the "docs" shortcode, hence the separate argument.
+       The icon repeats the title visually, so it is hidden from screen readers.
+
+       The link goes on the title rather than around the whole card, so that its
+       accessible name is the title alone instead of the title plus the body text.
+       The card is still clickable across its full area, through an overlay drawn
+       on the link in .scilife-feature-card-linked. */ -}}
+{{- $url := .Get "url" -}}
+{{- with .Get "docs" }}{{ $url = printf "%s%s" site.Params.docsURL . }}{{ end -}}
+<div class="col">
+    <div class="scilife-feature-card{{ with $url }} scilife-feature-card-linked{{ end }}">
+        <i class="bi {{ .Get "icon" }} scilife-feature-icon" aria-hidden="true"></i>
+        <h4>
+            {{- with $url -}}
+                <a href="{{ . }}">{{ $.Get "title" }}</a>
+            {{- else -}}
+                {{ $.Get "title" }}
+            {{- end -}}
+        </h4>
+        {{ .Inner | markdownify }}
+    </div>
+</div>

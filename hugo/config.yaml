@@ -1,10 +1,17 @@
 baseURL: "https://omero.scilifelab.se/"
 languageCode: "en-us"
-title: "Swedish National OMERO resource, hosted by SciLifeLab"
+title: "SciLifeLab OMERO, a prototype service for bioimage data management"
 buildFuture: true
 
 params:
-  maxSpeciesPerPage: 8
+  # Root of the MkDocs documentation build. It is a sibling path prefix on the
+  # same host, not part of this Hugo site, and deploy.jsonnet takes it as the
+  # docsSubPath parameter, so it is kept here rather than repeated across pages.
+  # Templates read site.Params.docsURL; content files go through the "docs"
+  # shortcode, since they cannot evaluate site.Params themselves. The navbar
+  # entries in menus below are the one exception, as menu definitions in this
+  # file cannot reference a param either.
+  docsURL: /docs/
 
 markup:
   goldmark:
@@ -15,6 +22,12 @@ markup:
     endLevel: 4
     ordered: false
 
+# Entries carrying params.href point at sibling paths on the same host rather
+# than at pages of this site: the documentation at /docs. This site itself sits
+# under the /landing prefix, and Hugo prefixes a relative menu "url" with the
+# baseURL path, which would produce /landing/docs/, so those entries carry the
+# path in params.href instead and the navbar renders it verbatim. Keeping them
+# host-relative means a staging deployment does not link to production.
 menus:
   main:
   - name: About
@@ -26,5 +39,25 @@ menus:
   - name: Contact us
     pageRef: /contact
     weight: 3
+  - name: Documentation
+    weight: 4
+    params:
+      href: /docs/
+
+  # Shown instead of main when the navbar collapses below the lg breakpoint
+  mobile:
+  - name: About
+    pageRef: /
+    weight: 1
+  - name: Get access
+    pageRef: /get-access
+    weight: 2
+  - name: Contact us
+    pageRef: /contact
+    weight: 3
+  - name: Documentation
+    weight: 4
+    params:
+      href: /docs/
 
 

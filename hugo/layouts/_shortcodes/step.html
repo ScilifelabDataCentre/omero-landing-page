@@ -1,0 +1,11 @@
+{{- /* One step inside the "flow" shortcode.
+       icon: a bootstrap-icons class name, for example "bi-envelope".
+       The step number comes from a CSS counter rather than from here, because
+       .Ordinal counts every step on the page and would not restart per flow.
+       Icon and number both restate the ordered list, so both are hidden from
+       screen readers. */ -}}
+<li class="scilife-flow-step">
+    <span class="scilife-step-badge" aria-hidden="true"><i class="bi {{ .Get "icon" }}"></i></span>
+    <span class="scilife-step-number" aria-hidden="true"></span>
+    {{ .Inner | markdownify }}
+</li>
