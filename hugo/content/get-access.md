@@ -75,9 +75,7 @@ Going to the OMERO web client then sends you to SUPR, which authenticates you
 against your own university or institution account, so there is no OMERO password to set.
 SUPR accepts both SWAMID and the international eduGAIN federation, which is how
 collaborators at universities in other countries use their own institution
-login. The [documentation]({{< docs "getting-started/accounts-and-login/" >}}) walks
-through the first login, and through the session token that the desktop and API clients use
-in place of a username and password.
+login.
 
 #### SciLifeLab facility: get in touch by email
 
@@ -137,8 +135,8 @@ while the notice period is still running.
 
 SciLifeLab OMERO reads the image formats supported by recent
 [Bio-Formats](https://www.openmicroscopy.org/bio-formats/) releases. See
-[supported formats]({{< docs "using-omero/supported-formats/" >}}) for the details and
-the known caveats.
+[supported formats](https://bio-formats.readthedocs.io/en/stable/supported-formats.html)
+for the details and the known caveats.
 
 {{< info_block >}} Important:
 

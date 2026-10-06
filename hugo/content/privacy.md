@@ -28,7 +28,6 @@ When a project allocation ends, the image data and its annotations are deleted a
   This section was added alongside the 2026 content review and has not yet been
   through a DPO or legal review at SciLifeLab. The controller and processor
   roles for service data are still to be confirmed.
-  See docs/open-service-questions.md.
 -->
 
 ### Log data

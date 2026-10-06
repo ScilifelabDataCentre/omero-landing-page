@@ -92,47 +92,10 @@ validation:
   unrecognized_links: warn
   anchors: warn
 
-# Every page is now written and in the navigation. If a new skeleton is added,
-# list it here so it stays out of the sidebar until it has real content, and
-# move it into nav below once it does.
+# Pages added later have to be listed in nav below. List one here instead to
+# keep it out of the sidebar until it has real content, then move it into nav.
 not_in_nav: ""
 
 nav:
   - Home: index.md
-  - Getting started:
-      - Accounts and login: getting-started/accounts-and-login.md
-      - First steps: getting-started/first-steps.md
-      - Groups and membership: getting-started/groups-and-membership.md
-  - Using OMERO:
-      - Organising your data: using-omero/organising-data.md
-      - Uploading data: using-omero/uploading.md
-      - Supported formats: using-omero/supported-formats.md
-      - Viewing and annotating: using-omero/viewing-and-annotating.md
-      - Searching: using-omero/searching.md
-      - Sharing with collaborators: using-omero/sharing.md
-  - Clients and APIs:
-      - OMERO.web: clients-and-apis/web-client.md
-      - OMERO.insight: clients-and-apis/omero-insight.md
-      - Fiji and ImageJ: clients-and-apis/fiji-imagej.md
-      - napari: clients-and-apis/napari.md
-      - Python API: clients-and-apis/python-api.md
-      - Command line: clients-and-apis/command-line.md
-  - Workflows:
-      - Analysing data on your own machine: workflows/local-analysis.md
-      - Batch operations: workflows/batch-operations.md
-      - Working from an HPC system: workflows/hpc.md
-      - Delivering data as a facility: workflows/facility-delivery.md
-  - Data management:
-      - Data you may not upload: data-management/sensitive-data.md
-      - Exporting your data: data-management/exporting.md
-      - Metadata for publication: data-management/metadata-for-publication.md
-      - Publishing to a public repository: data-management/publishing.md
-      - When your project ends: data-management/end-of-project.md
-  - Reference:
-      - Frequently asked questions: reference/faq.md
-      - Quotas and limits: reference/quotas-and-limits.md
-      - Service status and availability: reference/service-status.md
-      - Troubleshooting: reference/troubleshooting.md
-      - Glossary: reference/glossary.md
-  - Getting help: support.md
   - SciLifeLab OMERO service site: /landing/
