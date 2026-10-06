@@ -88,9 +88,10 @@ validation:
   # or at the OMERO web client at /webclient, so they are deliberate. Never set
   # this to relative_to_docs: that would try to resolve them inside docs_dir and
   # report them as broken.
-  absolute_links: ignore
-  unrecognized_links: warn
-  anchors: warn
+  links:
+    absolute_links: ignore
+    unrecognized_links: warn
+    anchors: warn
 
 # Pages added later have to be listed in nav below. List one here instead to
 # keep it out of the sidebar until it has real content, then move it into nav.
