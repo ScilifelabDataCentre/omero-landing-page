@@ -1,0 +1,5 @@
+# Pinned so the init container build is reproducible. The container image in
+# deploy.jsonnet already ships these versions; this file is what you install
+# when serving the docs locally with `mkdocs serve`.
+mkdocs==1.6.1
+mkdocs-material==9.7.7

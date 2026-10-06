@@ -1,0 +1,102 @@
+# User documentation for the SciLifeLab OMERO prototype service.
+# Built into its own volume by an init container and served by the same nginx
+# that serves the landing page, under the /docs path prefix. See deploy.jsonnet
+# and docs/architecture/001_technical-setup.md.
+
+# The header shows the SciLifeLab OMERO wordmark next to this, so the site name
+# only needs to supply the second half. The full browser title is assembled in
+# overrides/main.html.
+site_name: Documentation
+site_description: How to use the SciLifeLab OMERO prototype service, from first login to exporting your data at the end of a project.
+# Drives the canonical tags and the sitemap, so unlike the cross-site links below
+# it needs a real hostname. deploy.jsonnet passes DOCS_SITE_URL from its own
+# hostname parameter, so a staging deployment gets its own canonicals without
+# anyone editing this file.
+site_url: !ENV [DOCS_SITE_URL, "https://omero-staging.c3se.chalmers.se/docs/"] 
+use_directory_urls: true
+
+# Not strict. The docs share a pod with the landing page, so both init
+# containers have to succeed for either site to come up. Failing the docs build
+# on a warning would take the landing page down with it.
+strict: false
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/scilifelab_omero_logo.svg
+  favicon: assets/favicon-32x32.png
+  # Google Fonts disabled. Roboto is the SciLifeLab brand typeface and is
+  # self-hosted in assets/stylesheets/extra.css, so that no visitor data leaves
+  # our infrastructure. Same reasoning as the landing page stylesheet.
+  font: false
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+  # Puts a "Last update" date at the foot of each page, read from the file's own
+  # git history. These pages describe a prototype whose facts are still moving,
+  # so a reader needs to see how old one is. Not part of the mkdocs-material
+  # image, so deploy.jsonnet installs it before building.
+  - git-revision-date-localized:
+      type: date
+      # The deployment clones the repo, so the history is normally present.
+      # Falling back to the build date rather than failing is deliberate: a
+      # failed docs build takes the landing page down with it, and a missing
+      # date is not worth that.
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+validation:
+  # Absolute links here point at the Hugo site under the sibling /landing prefix,
+  # or at the OMERO web client at /webclient, so they are deliberate. Never set
+  # this to relative_to_docs: that would try to resolve them inside docs_dir and
+  # report them as broken.
+  links:
+    absolute_links: ignore
+    unrecognized_links: warn
+    anchors: warn
+
+# Pages added later have to be listed in nav below. List one here instead to
+# keep it out of the sidebar until it has real content, then move it into nav.
+not_in_nav: ""
+
+nav:
+  - Home: index.md
+  - SciLifeLab OMERO service site: /landing/

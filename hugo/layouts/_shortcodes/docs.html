@@ -1,0 +1,13 @@
+{{- /* Emits the URL of a documentation page. The docs are a separate MkDocs build
+       served under its own path prefix on the same host, so they cannot be
+       reached with ref or relref and the prefix has to come from a param.
+
+       Takes an optional positional argument, the path of a page within the
+       documentation, and returns the documentation root without it:
+
+         [the documentation]({{< docs >}})
+         [supported formats]({{< docs "using-omero/supported-formats/" >}})
+
+       Content files cannot evaluate site.Params directly, which is why this
+       exists; templates should use site.Params.docsURL instead. */ -}}
+{{- site.Params.docsURL -}}{{- with .Get 0 }}{{ . }}{{ end -}}
