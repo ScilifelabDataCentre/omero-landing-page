@@ -63,6 +63,10 @@ a:hover {
   outline: 0.15rem solid var(--scilife-teal);
   outline-offset: 0.15rem;
 }
+[data-bs-theme="dark"] :focus-visible,
+[data-bs-theme="dark"] .btn:focus-visible {
+  outline-color: var(--scilife-aqua);
+}
 
 body {
   font-family: "Roboto", Arial, sans-serif;
