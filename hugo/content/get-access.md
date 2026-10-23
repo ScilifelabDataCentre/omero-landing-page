@@ -128,7 +128,7 @@ SUPR adds them to the OMERO group automatically within one hour at most.
 You get one month of notice by email before an allocation ends. After that your
 account is disabled and the data is deleted automatically, with no grace period,
 so export everything you need before the deadline. If you need more time,
-request a renewal or an extension by submitting a new proposal in SUPR 
+request a renewal or an extension by submitting a new proposal in SUPR
 while the notice period is still running.
 
 ### Before you upload
@@ -147,6 +147,7 @@ for the details and the known caveats.
 - You must keep an independent backup of your raw image data, outside the SciLifeLab OMERO service.
 
 - You must export your data and associated results before your project ends.
+
 {{< /info_block >}}
 
 Not sure whether OMERO fits your project?

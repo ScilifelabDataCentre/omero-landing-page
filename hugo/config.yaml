@@ -30,34 +30,32 @@ markup:
 # host-relative means a staging deployment does not link to production.
 menus:
   main:
-  - name: About
-    pageRef: /
-    weight: 1
-  - name: Get access
-    pageRef: /get-access
-    weight: 2
-  - name: Contact us
-    pageRef: /contact
-    weight: 3
-  - name: Documentation
-    weight: 4
-    params:
-      href: /docs/
+    - name: About
+      pageRef: /
+      weight: 1
+    - name: Get access
+      pageRef: /get-access
+      weight: 2
+    - name: Contact us
+      pageRef: /contact
+      weight: 3
+    - name: Documentation
+      weight: 4
+      params:
+        href: /docs/
 
   # Shown instead of main when the navbar collapses below the lg breakpoint
   mobile:
-  - name: About
-    pageRef: /
-    weight: 1
-  - name: Get access
-    pageRef: /get-access
-    weight: 2
-  - name: Contact us
-    pageRef: /contact
-    weight: 3
-  - name: Documentation
-    weight: 4
-    params:
-      href: /docs/
-
-
+    - name: About
+      pageRef: /
+      weight: 1
+    - name: Get access
+      pageRef: /get-access
+      weight: 2
+    - name: Contact us
+      pageRef: /contact
+      weight: 3
+    - name: Documentation
+      weight: 4
+      params:
+        href: /docs/

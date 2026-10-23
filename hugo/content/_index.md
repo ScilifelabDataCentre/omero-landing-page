@@ -62,4 +62,5 @@ the international eduGAIN federation.
 - Your data is stored in Sweden, at Chalmers e-Commons in Gothenburg and at SciLifeLab Data Centre in Stockholm.
 
 - Availability is best effort and there is no uptime target. Maintenance, outages and server upgrades are announced by email.
+
 {{< /info_block >}}

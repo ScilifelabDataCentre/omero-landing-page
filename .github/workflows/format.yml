@@ -1,0 +1,31 @@
+name: Format
+
+# Prettier covers the Markdown, CSS and YAML. The Hugo layouts are excluded in
+# .prettierignore: they are Go templates, and Prettier's HTML parser reads the
+# double quote inside a {{ }} expression as the end of the surrounding
+# attribute, so it cannot parse them at all.
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  prettier:
+    name: Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      # The version is pinned in package.json so that this check and a local
+      # run agree on what counts as formatted.
+      - run: npm ci
+      - run: npm run format:check

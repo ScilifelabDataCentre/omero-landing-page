@@ -3,3 +3,6 @@ hugo/public
 hugo/.hugo_build.lock
 old_docs
 .DS_Store
+
+# Node, for the Prettier dev dependency
+node_modules

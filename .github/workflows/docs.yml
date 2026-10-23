@@ -8,14 +8,14 @@ name: Documentation
 on:
   pull_request:
     paths:
-      - 'mkdocs/**'
-      - '.github/workflows/docs.yml'
+      - "mkdocs/**"
+      - ".github/workflows/docs.yml"
   push:
     branches:
       - main
     paths:
-      - 'mkdocs/**'
-      - '.github/workflows/docs.yml'
+      - "mkdocs/**"
+      - ".github/workflows/docs.yml"
 
 permissions:
   contents: read
@@ -34,7 +34,7 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install MkDocs and plugins
         # mkdocs-material is pinned to the image tag in deploy.jsonnet so that
