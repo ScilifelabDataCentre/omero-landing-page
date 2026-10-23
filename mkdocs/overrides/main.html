@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{#
+  site_name is only the second half of the wordmark in the header, so the
+  browser title has to be assembled here instead of using Material's default of
+  "page title - site_name".
+#}
+{% block htmltitle %}
+  {% if page.is_homepage %}
+    <title>SciLifeLab OMERO documentation</title>
+  {% else %}
+    <title>{{ page.title }} | SciLifeLab OMERO documentation</title>
+  {% endif %}
+{% endblock %}
+
+{#
+  The docs and the landing page are separate builds under sibling path
+  prefixes, so there is no shared navigation between them. This bar is the way
+  back.
+#}
+{% block announce %}
+  Documentation for the SciLifeLab OMERO prototype service.
+  <a href="/landing/">About the service and how to get access</a>
+{% endblock %}

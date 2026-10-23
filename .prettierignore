@@ -1,0 +1,18 @@
+# Build output
+hugo/public/
+mkdocs/site/
+
+# Hugo layouts are Go templates. Prettier's HTML parser reads the double quote
+# inside a {{ }} expression as the end of the surrounding attribute and fails
+# to parse the file. Six of the twelve layouts hit this.
+hugo/layouts/
+
+# Jinja template for the Material theme override, same reason.
+mkdocs/overrides/
+
+# Vendored font binaries and their upstream licence text
+hugo/assets/fonts/
+mkdocs/docs/assets/fonts/
+
+# Scratch directory, untracked
+old_docs/

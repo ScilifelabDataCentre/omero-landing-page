@@ -1,0 +1,90 @@
+/* Roboto is the SciLifeLab brand typeface. Self-hosted rather than loaded from
+   Google Fonts, so no visitor data leaves our infrastructure. Material's own
+   font loading is disabled with `font: false` in mkdocs.yml. One variable file
+   covers every weight the theme uses. See ../fonts/LICENSE.txt. */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/roboto-latin-wght-normal.woff2") format("woff2");
+}
+
+:root {
+  --md-text-font: "Roboto", Arial, sans-serif;
+  --md-code-font: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Brand colors, kept in step with hugo/assets/css/styles.css */
+:root {
+  --scilife-lime: #a7c947;
+  --scilife-grape: #491f53;
+  --scilife-teal: #045c64;
+  --scilife-teal-025: #c0d6d8;
+  --scilife-teal-light: #e6f2f3;
+  --scilife-aqua: #4c979f;
+  --scilife-aqua-025: #d2e5e7;
+  --scilife-light-grey: #e5e5e5;
+  --scilife-dark-grey: #3f3f3f;
+  --scilife-teal-hover: #034248;
+}
+
+/* The logo is a teal and lime wordmark, so the header has to stay light for it
+   to be legible. Material tints the header with the primary colour, so primary
+   is white here and the teal is moved to the foreground colour that the header
+   uses for its text and icons. */
+[data-md-color-scheme="default"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: var(--scilife-teal-hover);
+  --md-primary-bg-color: var(--scilife-teal);
+  --md-primary-bg-color--light: var(--scilife-dark-grey);
+  --md-typeset-a-color: var(--scilife-teal);
+}
+
+[data-md-color-scheme="default"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--scilife-teal-hover);
+  --md-accent-fg-color--transparent: var(--scilife-teal-light);
+}
+
+/* The wordmark stays legible on the dark header, so the slate scheme keeps
+   Material's usual arrangement and only swaps in the aqua tint the landing page
+   uses for dark mode. */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #212121;
+  --md-primary-fg-color--light: #3f3f3f;
+  --md-primary-fg-color--dark: #0e1111;
+  --md-primary-bg-color: #ffffff;
+  --md-typeset-a-color: var(--scilife-aqua);
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--scilife-aqua);
+  --md-accent-fg-color--transparent: rgba(76, 151, 159, 0.1);
+}
+
+/* A white header would otherwise blend into the page. */
+[data-md-color-scheme="default"] .md-header {
+  border-bottom: 1px solid var(--scilife-light-grey);
+}
+
+/* The logo is a wide wordmark rather than a square mark, so Material's default
+   square sizing has to be relaxed. */
+.md-header__button.md-logo img {
+  width: auto;
+  height: 1.5rem;
+}
+
+/* Sits above the header and is the only route back to the landing page. */
+.md-banner {
+  background-color: var(--scilife-teal);
+  color: #ffffff;
+}
+.md-banner__inner {
+  font-size: 0.7rem;
+  text-align: center;
+}
+.md-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+}
